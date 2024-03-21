@@ -1,0 +1,645 @@
+Dependencies for Project 'G431_test', Target 'G431_test': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (..\Mcu\g431\Startup\startup_stm32g431xx.s)(0x659D4E0A)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32G431xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o g431_test/startup_stm32g431xx.o)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_adc.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_adc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_comp.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_comp.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_cordic.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_cordic.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cordic.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_crc.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_crc.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_crs.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_crs.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_dac.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_dac.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dac.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_dma.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_dma.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_exti.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_exti.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_fmac.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_fmac.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_fmac.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_gpio.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_gpio.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_hrtim.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_hrtim.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_hrtim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_i2c.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_i2c.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_i2c.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_lptim.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_lptim.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_lptim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_lpuart.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_lpuart.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_lpuart.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_opamp.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_opamp.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_opamp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_pwr.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_pwr.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_rcc.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_rcc.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_rng.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_rng.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rng.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_rtc.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_rtc.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rtc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_spi.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_spi.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_spi.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_tim.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_tim.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_ucpd.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_ucpd.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_ucpd.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_usart.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_usart.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_usart.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+F (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_utils.c)(0x659D4DEB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_ll_utils.o -MD)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+F (..\Src\dshot.c)(0x659FFA19)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/dshot.o -MD)
+I (..\Inc\dshot.h)(0x654640DB)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Mcu\g431\Inc\IO.h)(0x654640DD)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Inc\sounds.h)(0x654640DB)
+F (..\Src\firmwareversion.c)(0x63F3CBB1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/firmwareversion.o -MD)
+I (..\Inc\firmwareversion.h)(0x63F3CBE2)
+I (..\Inc\targets.h)(0x659EBDB3)
+F (..\Src\functions.c)(0x659EB523)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/functions.o -MD)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\targets.h)(0x659EBDB3)
+F (..\Src\main.c)(0x659E937B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/main.o -MD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Mcu\g431\Inc\ADC.h)(0x654640DD)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\IO.h)(0x654640DD)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Mcu\g431\Inc\comparator.h)(0x654640DD)
+I (..\Inc\dshot.h)(0x654640DB)
+I (..\Mcu\g431\Inc\eeprom.h)(0x654640DD)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Mcu\g431\Inc\peripherals.h)(0x659DC41B)
+I (..\Mcu\g431\Inc\phaseouts.h)(0x64FA0D3F)
+I (..\Mcu\g431\Inc\serial_telemetry.h)(0x654640DD)
+I (..\Inc\signal.h)(0x654640DB)
+I (..\Inc\sounds.h)(0x654640DB)
+F (..\Src\signal.c)(0x654A913F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/signal.o -MD)
+I (..\Inc\signal.h)(0x654640DB)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Mcu\g431\Inc\IO.h)(0x654640DD)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Inc\dshot.h)(0x654640DB)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\serial_telemetry.h)(0x654640DD)
+I (..\Inc\sounds.h)(0x654640DB)
+F (..\Src\sounds.c)(0x659EB1CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/sounds.o -MD)
+I (..\Inc\sounds.h)(0x654640DB)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Mcu\g431\Inc\eeprom.h)(0x654640DD)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\peripherals.h)(0x659DC41B)
+I (..\Mcu\g431\Inc\ADC.h)(0x654640DD)
+I (..\Mcu\g431\Inc\phaseouts.h)(0x64FA0D3F)
+F (..\Mcu\g431\Src\ADC.c)(0x659D71C1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/adc.o -MD)
+F (..\Mcu\g431\Src\comparator.c)(0x659EBCF6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/comparator.o -MD)
+I (..\Mcu\g431\Inc\comparator.h)(0x654640DD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Inc\targets.h)(0x659EBDB3)
+F (..\Mcu\g431\Src\eeprom.c)(0x659D6694)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/eeprom.o -MD)
+I (..\Mcu\g431\Inc\eeprom.h)(0x654640DD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+F (..\Mcu\g431\Src\IO.c)(0x659FFA11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/io.o -MD)
+I (..\Mcu\g431\Inc\IO.h)(0x654640DD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\common.h)(0x654640DB)
+I (..\Inc\dshot.h)(0x654640DB)
+I (..\Inc\functions.h)(0x654640DB)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\serial_telemetry.h)(0x654640DD)
+F (..\Mcu\g431\Src\peripherals.c)(0x659EBCC2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/peripherals.o -MD)
+I (..\Mcu\g431\Inc\peripherals.h)(0x659DC41B)
+I (..\Mcu\g431\Inc\ADC.h)(0x654640DD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\serial_telemetry.h)(0x654640DD)
+F (..\Mcu\g431\Src\phaseouts.c)(0x654640DD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/phaseouts.o -MD)
+I (..\Mcu\g431\Inc\phaseouts.h)(0x64FA0D3F)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Inc\targets.h)(0x659EBDB3)
+F (..\Mcu\g431\Src\serial_telemetry.c)(0x659D71AA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/serial_telemetry.o -MD)
+F (..\Mcu\g431\Src\stm32g4xx_it.c)(0x659EB504)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/stm32g4xx_it.o -MD)
+I (..\Mcu\g431\Inc\main.h)(0x659D6969)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_comp.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_iwdg.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h)(0x659D4DEB)
+I (..\Mcu\g431\Inc\stm32g4xx_it.h)(0x659EAC98)
+I (..\Mcu\g431\Inc\ADC.h)(0x654640DD)
+I (..\Inc\targets.h)(0x659EBDB3)
+I (..\Mcu\g431\Inc\IO.h)(0x654640DD)
+I (..\Mcu\g431\Inc\WS2812.h)(0x64FA0D3F)
+F (..\Mcu\g431\Src\system_stm32g4xx.c)(0x659DBC2F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/system_stm32g4xx.o -MD)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h)(0x659D4DEB)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x659D4DEB)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\KeilPacks\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (..\Mcu\g431\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x659D4DEB)
+F (..\Mcu\g431\Src\WS2812.c)(0x659D7177)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Mcu/g431/Drivers/STM32G4xx_HAL_Driver/Inc -I ../Mcu/g431/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Inc -I ../Mcu/g431/Inc-I./RTE/_G431_test-IC:/KeilPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/KeilPacks/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G431xx -D_RTE_ -DREF_G431 -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o g431_test/ws2812.o -MD)
