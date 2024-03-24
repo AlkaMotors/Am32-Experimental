@@ -21,20 +21,9 @@ AM32 has the following features:
 
 ## Firmware Release & Configuration Tool
 
-The latest release of the firmware can be found [here](https://github.com/AlkaMotors/AM32-MultiRotor-ESC-firmware/releases/).
-
 To configure AM32 and upload firmware you can use the Multi_ESC config tool using Betaflight passthrough. They can be downloaded from here:
 
 [WINDOWS](https://drive.google.com/file/d/1fO9hSQXID2EZnVr5cmi54BLtMpFt9l10/view?usp=sharing)
-
-
-Alternately you can use the [BlHeli-Configurator](https://github.com/blheli-configurator/blheli-configurator-nightlies/releases/tag/v20201229.20) to flash or change settings. Currently only nightly builds support AM32.
-
-
-
-## Hardware
-Target compatibility List can be found [here](https://github.com/AlkaMotors/AM32-MultiRotor-ESC-firmware/wiki/List-of-Supported-Hardware) (DEC 2020)
-
 
 ## Installation & Documentation
 
