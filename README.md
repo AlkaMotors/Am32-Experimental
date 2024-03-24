@@ -1,5 +1,6 @@
 # AM32-MultiRotor-ESC-firmware
-Firmware for STM32F051 based speed controllers for use with mutirotors
+Firmware for ARMbased speed controllers for use with many vehicles.
+This is an experimental version of the firmware. It can only be used with config tool version 2.0 .. see download link below. The firmware is not compatible with older versions of the config tool and the tool is not compatible with older version of the firmware.
 <p align="left">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-brightgreen" alt="GitHub license" /></a>
 </p>
@@ -24,8 +25,8 @@ The latest release of the firmware can be found [here](https://github.com/AlkaMo
 
 To configure AM32 and upload firmware you can use the Multi_ESC config tool using Betaflight passthrough. They can be downloaded from here:
 
-[WINDOWS](https://drive.google.com/file/d/1o5XP8kSecdH3bPRClUwI7150Od7UdhkG/view?usp=sharing),
-[LINUX](https://drive.google.com/file/d/164mF-7khqH822kLzF8sP5VAckHecoKGG/view?usp=sharing)
+[WINDOWS](https://drive.google.com/file/d/1fO9hSQXID2EZnVr5cmi54BLtMpFt9l10/view?usp=sharing)
+
 
 Alternately you can use the [BlHeli-Configurator](https://github.com/blheli-configurator/blheli-configurator-nightlies/releases/tag/v20201229.20) to flash or change settings. Currently only nightly builds support AM32.
 
@@ -48,18 +49,4 @@ There's a dedicated Slack chat channel here:
 
 https://am32-invite.herokuapp.com/
 
-Etiquette: Don't ask to ask and please wait around long enough for a reply - sometimes people are out flying, asleep or at work and can't answer immediately.
 
-## Contributors
-A big thanks to all those who contributed time, advice and code to the AM32 project.\
-Hugo Chiang (Dusking)\
-Micheal Keller (Mikeller)\
-ColinNiu\
-Jacob Walser
-
-And for feedback from pilots and drivers:\
-Jye Smith\
-Markus Gritsch\
-Voodoobrew 
-
-(and many more)
