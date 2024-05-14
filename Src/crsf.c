@@ -84,15 +84,15 @@ if(bi_direction){
 	newinput = 1000;
 	}else{
 	newinput = map(crsf_channels[crsf_input_channel], 174, 1810, 0, 2000);
-  crsf_second_input = map(crsf_channels[crsf_second_input_channel], 174, 1810, 0, 2000);
     }
+	crsf_second_input = map(crsf_channels[crsf_second_input_channel], 174, 1810, 0, 2000);
 }else{
     if(crsf_channels[crsf_input_channel]<= 174){
     	newinput = 0;
     }else{
     newinput = map(crsf_channels[crsf_input_channel], 174, 1810, 48, 2047);
-	  crsf_second_input = map(crsf_channels[crsf_second_input_channel], 174, 1810, 48, 2047);
 	}
+	crsf_second_input = map(crsf_channels[crsf_second_input_channel], 174, 1810, 48, 2047);
 }
     signaltimeout = 0;
     if((adjusted_input == 0) && !armed){
