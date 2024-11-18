@@ -91,9 +91,9 @@ Section Cross References
     main.o(.text.setInput) refers to sounds.o(.text.playBeaconTune3) for playBeaconTune3
     main.o(.text.setInput) refers to sounds.o(.text.playInputTune2) for playInputTune2
     main.o(.text.setInput) refers to phaseouts.o(.text.fullBrake) for fullBrake
-    main.o(.text.setInput) refers to fcmple.o(.text) for __aeabi_fcmple
     main.o(.text.setInput) refers to phaseouts.o(.text.proportionalBrake) for proportionalBrake
     main.o(.text.setInput) refers to functions.o(.text.getAbsDif) for getAbsDif
+    main.o(.text.setInput) refers to fcmple.o(.text) for __aeabi_fcmple
     main.o(.text.setInput) refers to main.o(.data..L_MergedGlobals.1) for [Anonymous Symbol]
     main.o(.ARM.exidx.text.setInput) refers to main.o(.text.setInput) for [Anonymous Symbol]
     main.o(.text.tenKhzRoutine) refers to sounds.o(.text.playInputTune) for playInputTune
@@ -194,8 +194,8 @@ Section Cross References
     main.o(.text.main) refers to phaseouts.o(.text.comStep) for comStep
     main.o(.text.main) refers to comparator.o(.text.changeCompInput) for changeCompInput
     main.o(.text.main) refers to comparator.o(.text.enableCompInterrupts) for enableCompInterrupts
-    main.o(.text.main) refers to peripherals.o(.text.generatePwmTimerEvent) for generatePwmTimerEvent
     main.o(.text.main) refers to main.o(.text.runBrushedLoop) for runBrushedLoop
+    main.o(.text.main) refers to peripherals.o(.text.generatePwmTimerEvent) for generatePwmTimerEvent
     main.o(.text.main) refers to peripherals.o(.text.resetInputCaptureTimer) for resetInputCaptureTimer
     main.o(.text.main) refers to memseta.o(.text) for __aeabi_memclr4
     main.o(.text.main) refers to io.o(.bss.dma_buffer) for dma_buffer
@@ -2389,519 +2389,520 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08001670   Section        0  gd32e23x_it.o(.text.NMI_Handler)
     [Anonymous Symbol]                       0x08001672   Section        0  gd32e23x_it.o(.text.PendSV_Handler)
     [Anonymous Symbol]                       0x08001674   Section        0  main.o(.text.PeriodElapsedCallback)
-    __arm_cp.6_0                             0x08001754   Number         4  main.o(.text.PeriodElapsedCallback)
-    __arm_cp.6_1                             0x08001758   Number         4  main.o(.text.PeriodElapsedCallback)
-    __arm_cp.6_2                             0x0800175c   Number         4  main.o(.text.PeriodElapsedCallback)
-    __arm_cp.6_3                             0x08001760   Number         4  main.o(.text.PeriodElapsedCallback)
-    __arm_cp.6_4                             0x08001764   Number         4  main.o(.text.PeriodElapsedCallback)
-    [Anonymous Symbol]                       0x08001768   Section        0  gd32e23x_it.o(.text.SVC_Handler)
-    [Anonymous Symbol]                       0x0800176a   Section        0  gd32e23x_it.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x08001770   Section        0  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_0                             0x08001914   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_1                             0x08001918   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_2                             0x0800191c   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_3                             0x08001920   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_4                             0x08001924   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_5                             0x08001928   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_6                             0x0800192c   Number         4  system_gd32e23x.o(.text.SystemInit)
-    __arm_cp.0_7                             0x08001930   Number         4  system_gd32e23x.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08001934   Section        0  peripherals.o(.text.TIM0_Init)
-    __arm_cp.3_0                             0x08001b0c   Number         4  peripherals.o(.text.TIM0_Init)
-    __arm_cp.3_1                             0x08001b10   Number         4  peripherals.o(.text.TIM0_Init)
-    __arm_cp.3_2                             0x08001b14   Number         4  peripherals.o(.text.TIM0_Init)
-    __arm_cp.3_3                             0x08001b18   Number         4  peripherals.o(.text.TIM0_Init)
-    [Anonymous Symbol]                       0x08001b1c   Section        0  gd32e23x_it.o(.text.TIMER13_IRQHandler)
-    __arm_cp.8_0                             0x08001b30   Number         4  gd32e23x_it.o(.text.TIMER13_IRQHandler)
-    [Anonymous Symbol]                       0x08001b34   Section        0  gd32e23x_it.o(.text.TIMER14_IRQHandler)
-    __arm_cp.10_0                            0x08001b3c   Number         4  gd32e23x_it.o(.text.TIMER14_IRQHandler)
-    [Anonymous Symbol]                       0x08001b40   Section        0  gd32e23x_it.o(.text.TIMER15_IRQHandler)
-    __arm_cp.9_0                             0x08001b60   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
-    __arm_cp.9_1                             0x08001b64   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
-    __arm_cp.9_2                             0x08001b68   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
-    [Anonymous Symbol]                       0x08001b6c   Section        0  gd32e23x_it.o(.text.TIMER2_IRQHandler)
-    [Anonymous Symbol]                       0x08001b70   Section        0  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_1                            0x08001c20   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_2                            0x08001c24   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_3                            0x08001c28   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_4                            0x08001c2c   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_5                            0x08001c30   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_6                            0x08001c34   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_7                            0x08001c38   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_8                            0x08001c3c   Number         4  peripherals.o(.text.UN_TIM_Init)
-    __arm_cp.11_9                            0x08001c40   Number         4  peripherals.o(.text.UN_TIM_Init)
-    [Anonymous Symbol]                       0x08001c44   Section        0  gd32e23x_it.o(.text.USART0_IRQHandler)
-    __arm_cp.11_0                            0x08001c68   Number         4  gd32e23x_it.o(.text.USART0_IRQHandler)
-    __arm_cp.11_1                            0x08001c6c   Number         4  gd32e23x_it.o(.text.USART0_IRQHandler)
-    [Anonymous Symbol]                       0x08001c70   Section        0  gd32e23x_adc.o(.text.adc_calibration_enable)
-    [Anonymous Symbol]                       0x08001cb4   Section        0  gd32e23x_adc.o(.text.adc_dma_mode_enable)
-    [Anonymous Symbol]                       0x08001cc4   Section        0  gd32e23x_adc.o(.text.adc_enable)
-    [Anonymous Symbol]                       0x08001cd8   Section        0  gd32e23x_adc.o(.text.adc_software_trigger_enable)
-    __arm_cp.17_0                            0x08001d00   Number         4  gd32e23x_adc.o(.text.adc_software_trigger_enable)
-    [Anonymous Symbol]                       0x08001d04   Section        0  phaseouts.o(.text.allOff)
-    __arm_cp.11_0                            0x08001d78   Number         4  phaseouts.o(.text.allOff)
-    [Anonymous Symbol]                       0x08001d7c   Section        0  phaseouts.o(.text.allpwm)
-    __arm_cp.14_0                            0x08001e04   Number         4  phaseouts.o(.text.allpwm)
-    __arm_cp.14_1                            0x08001e08   Number         4  phaseouts.o(.text.allpwm)
-    [Anonymous Symbol]                       0x08001e0c   Section        0  comparator.o(.text.changeCompInput)
-    __arm_cp.3_0                             0x08001e64   Number         4  comparator.o(.text.changeCompInput)
-    __arm_cp.3_2                             0x08001e68   Number         4  comparator.o(.text.changeCompInput)
-    __arm_cp.3_3                             0x08001e6c   Number         4  comparator.o(.text.changeCompInput)
-    __arm_cp.3_4                             0x08001e70   Number         4  comparator.o(.text.changeCompInput)
-    [Anonymous Symbol]                       0x08001e74   Section        0  gd32e23x_cmp.o(.text.cmp_enable)
-    [Anonymous Symbol]                       0x08001e80   Section        0  gd32e23x_cmp.o(.text.cmp_mode_init)
-    __arm_cp.1_1                             0x08001ea0   Number         4  gd32e23x_cmp.o(.text.cmp_mode_init)
-    [Anonymous Symbol]                       0x08001ea4   Section        0  gd32e23x_cmp.o(.text.cmp_output_init)
-    [Anonymous Symbol]                       0x08001ec4   Section        0  gd32e23x_cmp.o(.text.cmp_output_level_get)
-    __arm_cp.7_0                             0x08001ed0   Number         4  gd32e23x_cmp.o(.text.cmp_output_level_get)
-    [Anonymous Symbol]                       0x08001ed4   Section        0  phaseouts.o(.text.comStep)
-    __arm_cp.12_0                            0x0800219c   Number         4  phaseouts.o(.text.comStep)
-    __arm_cp.12_1                            0x080021a0   Number         4  phaseouts.o(.text.comStep)
-    [Anonymous Symbol]                       0x080021a4   Section        0  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_0                             0x0800255c   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_1                             0x08002560   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_2                             0x08002564   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_3                             0x08002568   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_4                             0x0800256c   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_5                             0x08002570   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_7                             0x08002574   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_8                             0x08002578   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_10                            0x0800257c   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_11                            0x08002580   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_12                            0x08002584   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_13                            0x08002588   Number         4  dshot.o(.text.computeDshotDMA)
-    __arm_cp.0_15                            0x0800258c   Number         4  dshot.o(.text.computeDshotDMA)
-    [Anonymous Symbol]                       0x08002590   Section        0  signal.o(.text.computeServoInput)
-    __arm_cp.1_0                             0x080026f4   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_1                             0x080026f8   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_2                             0x080026fc   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_3                             0x08002700   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_4                             0x08002704   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_5                             0x08002708   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_6                             0x0800270c   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_7                             0x08002710   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_8                             0x08002714   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_9                             0x08002718   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_10                            0x0800271c   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_11                            0x08002720   Number         4  signal.o(.text.computeServoInput)
-    __arm_cp.1_12                            0x08002724   Number         4  signal.o(.text.computeServoInput)
-    [Anonymous Symbol]                       0x08002728   Section        0  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_0                            0x080027f0   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_1                            0x080027f4   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_2                            0x080027f8   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_3                            0x080027fc   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_4                            0x08002800   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_5                            0x08002804   Number         4  peripherals.o(.text.crsf_UART_Init)
-    __arm_cp.19_6                            0x08002808   Number         4  peripherals.o(.text.crsf_UART_Init)
-    [Anonymous Symbol]                       0x0800280c   Section        0  functions.o(.text.delayMicros)
-    [Anonymous Symbol]                       0x0800282c   Section        0  functions.o(.text.delayMillis)
-    __arm_cp.3_0                             0x08002870   Number         4  functions.o(.text.delayMillis)
-    __arm_cp.3_1                             0x08002874   Number         4  functions.o(.text.delayMillis)
-    [Anonymous Symbol]                       0x08002878   Section        0  systick.o(.text.delay_decrement)
-    __arm_cp.2_0                             0x08002888   Number         4  systick.o(.text.delay_decrement)
-    [Anonymous Symbol]                       0x0800288c   Section        0  signal.o(.text.detectInput)
-    __arm_cp.5_0                             0x08002a64   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_1                             0x08002a68   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_2                             0x08002a6c   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_3                             0x08002a70   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_4                             0x08002a74   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_5                             0x08002a78   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_6                             0x08002a7c   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_7                             0x08002a80   Number         4  signal.o(.text.detectInput)
-    __arm_cp.5_8                             0x08002a84   Number         4  signal.o(.text.detectInput)
-    [Anonymous Symbol]                       0x08002a88   Section        0  gd32e23x_dma.o(.text.dma_channel_disable)
-    [Anonymous Symbol]                       0x08002a98   Section        0  gd32e23x_dma.o(.text.dma_channel_enable)
-    [Anonymous Symbol]                       0x08002aa8   Section        0  gd32e23x_dma.o(.text.dma_circulation_disable)
-    [Anonymous Symbol]                       0x08002ab8   Section        0  gd32e23x_dma.o(.text.dma_circulation_enable)
-    [Anonymous Symbol]                       0x08002ac8   Section        0  gd32e23x_dma.o(.text.dma_deinit)
-    [Anonymous Symbol]                       0x08002af4   Section        0  gd32e23x_dma.o(.text.dma_init)
-    __arm_cp.2_0                             0x08002b64   Number         4  gd32e23x_dma.o(.text.dma_init)
-    [Anonymous Symbol]                       0x08002b68   Section        0  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
-    __arm_cp.24_0                            0x08002b78   Number         4  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
-    [Anonymous Symbol]                       0x08002b7c   Section        0  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
-    __arm_cp.23_0                            0x08002bb4   Number         4  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
-    [Anonymous Symbol]                       0x08002bb8   Section        0  gd32e23x_dma.o(.text.dma_memory_address_config)
-    __arm_cp.10_0                            0x08002bc4   Number         4  gd32e23x_dma.o(.text.dma_memory_address_config)
-    [Anonymous Symbol]                       0x08002bc8   Section        0  gd32e23x_dma.o(.text.dma_periph_address_config)
-    __arm_cp.9_0                             0x08002bd4   Number         4  gd32e23x_dma.o(.text.dma_periph_address_config)
-    [Anonymous Symbol]                       0x08002bd8   Section        0  gd32e23x_dma.o(.text.dma_struct_para_init)
-    [Anonymous Symbol]                       0x08002bec   Section        0  comparator.o(.text.enableCompInterrupts)
-    [Anonymous Symbol]                       0x08002bfc   Section        0  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_0                            0x08002cf8   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_1                            0x08002cfc   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_2                            0x08002d00   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_3                            0x08002d04   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_4                            0x08002d08   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_5                            0x08002d0c   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_6                            0x08002d10   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_7                            0x08002d14   Number         4  peripherals.o(.text.enableCorePeripherals)
-    __arm_cp.18_8                            0x08002d18   Number         4  peripherals.o(.text.enableCorePeripherals)
-    [Anonymous Symbol]                       0x08002d1c   Section        0  gd32e23x_exti.o(.text.exti_flag_clear)
-    [Anonymous Symbol]                       0x08002d24   Section        0  gd32e23x_exti.o(.text.exti_init)
-    __arm_cp.1_0                             0x08002d8c   Number         4  gd32e23x_exti.o(.text.exti_init)
-    [Anonymous Symbol]                       0x08002d90   Section        0  gd32e23x_exti.o(.text.exti_interrupt_flag_clear)
-    [Anonymous Symbol]                       0x08002d98   Section        0  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
-    __arm_cp.10_0                            0x08002da4   Number         4  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
-    [Anonymous Symbol]                       0x08002da8   Section        0  gd32e23x_fmc.o(.text.fmc_flag_clear)
-    [Anonymous Symbol]                       0x08002db0   Section        0  gd32e23x_fmc.o(.text.fmc_lock)
-    __arm_cp.1_0                             0x08002dbc   Number         4  gd32e23x_fmc.o(.text.fmc_lock)
-    [Anonymous Symbol]                       0x08002dc0   Section        0  gd32e23x_fmc.o(.text.fmc_page_erase)
-    [Anonymous Symbol]                       0x08002f38   Section        0  gd32e23x_fmc.o(.text.fmc_prefetch_enable)
-    [Anonymous Symbol]                       0x08002f44   Section        0  gd32e23x_fmc.o(.text.fmc_unlock)
-    __arm_cp.0_0                             0x08002f58   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
-    __arm_cp.0_1                             0x08002f5c   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
-    __arm_cp.0_2                             0x08002f60   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
-    [Anonymous Symbol]                       0x08002f64   Section        0  gd32e23x_fmc.o(.text.fmc_word_program)
-    __arm_cp.9_0                             0x080030d4   Number         4  gd32e23x_fmc.o(.text.fmc_word_program)
-    __arm_cp.9_1                             0x080030d8   Number         4  gd32e23x_fmc.o(.text.fmc_word_program)
-    [Anonymous Symbol]                       0x080030dc   Section        0  gd32e23x_fmc.o(.text.fmc_wscnt_set)
-    __arm_cp.2_0                             0x080030ec   Number         4  gd32e23x_fmc.o(.text.fmc_wscnt_set)
-    [Anonymous Symbol]                       0x080030f0   Section        0  phaseouts.o(.text.fullBrake)
-    __arm_cp.13_0                            0x08003164   Number         4  phaseouts.o(.text.fullBrake)
-    [Anonymous Symbol]                       0x08003168   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    __arm_cp.7_0                             0x080031f0   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    __arm_cp.7_1                             0x080031f4   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    __arm_cp.7_2                             0x080031f8   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    __arm_cp.7_3                             0x080031fc   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    [Anonymous Symbol]                       0x08003200   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
-    __arm_cp.6_1                             0x08003208   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
-    [Anonymous Symbol]                       0x0800320c   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_enable)
-    __arm_cp.2_0                             0x08003214   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_enable)
-    __arm_cp.2_1                             0x08003218   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_enable)
-    [Anonymous Symbol]                       0x0800321c   Section        0  peripherals.o(.text.generatePwmTimerEvent)
-    __arm_cp.15_0                            0x08003224   Number         4  peripherals.o(.text.generatePwmTimerEvent)
-    [Anonymous Symbol]                       0x08003228   Section        0  functions.o(.text.getAbsDif)
-    [Anonymous Symbol]                       0x08003232   Section        0  comparator.o(.text.getCompOutputLevel)
-    [Anonymous Symbol]                       0x0800323c   Section        0  io.o(.text.getInputPinState)
-    __arm_cp.2_0                             0x08003248   Number         4  io.o(.text.getInputPinState)
-    [Anonymous Symbol]                       0x0800324c   Section        0  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_0                            0x08003364   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_1                            0x08003368   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_2                            0x0800336c   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_3                            0x08003370   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_4                            0x08003374   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    __arm_cp.11_5                            0x08003378   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
-    [Anonymous Symbol]                       0x0800337c   Section        0  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_0                             0x08003558   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_1                             0x0800355c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_2                             0x08003560   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_3                             0x08003564   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_4                             0x08003568   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_5                             0x0800356c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_6                             0x08003570   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_7                             0x08003574   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_8                             0x08003578   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_9                             0x0800357c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_10                            0x08003580   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    __arm_cp.1_11                            0x08003584   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
-    [Anonymous Symbol]                       0x08003588   Section        0  gd32e23x_gpio.o(.text.gpio_output_options_set)
-    [Anonymous Symbol]                       0x080036bc   Section        0  peripherals.o(.text.initAfterJump)
-    [Anonymous Symbol]                       0x080036d0   Section        0  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_0                             0x080037fc   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_1                             0x08003800   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_2                             0x08003804   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_3                             0x08003808   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_4                             0x0800380c   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_5                             0x08003810   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_6                             0x08003814   Number         4  peripherals.o(.text.initCorePeripherals)
-    __arm_cp.0_7                             0x08003818   Number         4  peripherals.o(.text.initCorePeripherals)
-    [Anonymous Symbol]                       0x0800381c   Section        0  main.o(.text.interruptRoutine)
-    __arm_cp.7_0                             0x080038ec   Number         4  main.o(.text.interruptRoutine)
-    __arm_cp.7_1                             0x080038f0   Number         4  main.o(.text.interruptRoutine)
-    __arm_cp.7_2                             0x080038f4   Number         4  main.o(.text.interruptRoutine)
-    __arm_cp.7_3                             0x080038f8   Number         4  main.o(.text.interruptRoutine)
-    __arm_cp.7_4                             0x080038fc   Number         4  main.o(.text.interruptRoutine)
-    [Anonymous Symbol]                       0x08003900   Section        0  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_0                             0x08003cac   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_1                             0x08003cb0   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_2                             0x08003cb4   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_3                             0x08003cb8   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_4                             0x08003cbc   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_5                             0x08003cc0   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_6                             0x08003cc4   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_7                             0x08003cc8   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_8                             0x08003ccc   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_9                             0x08003cd0   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_10                            0x08003cd4   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_11                            0x08003cd8   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_12                            0x08003cdc   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_13                            0x08003ce0   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_14                            0x08003ce4   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_15                            0x08003ce8   Number         4  main.o(.text.loadEEpromSettings)
-    __arm_cp.1_16                            0x08003cec   Number         4  main.o(.text.loadEEpromSettings)
-    [Anonymous Symbol]                       0x08003cf0   Section        0  main.o(.text.main)
-    __arm_cp.15_34                           0x08004028   Number         4  main.o(.text.main)
-    __arm_cp.15_37                           0x08004040   Number         4  main.o(.text.main)
-    __arm_cp.15_38                           0x08004044   Number         4  main.o(.text.main)
-    __arm_cp.15_42                           0x08004054   Number         4  main.o(.text.main)
-    __arm_cp.15_43                           0x08004058   Number         4  main.o(.text.main)
-    __arm_cp.15_44                           0x0800405c   Number         4  main.o(.text.main)
-    __arm_cp.15_45                           0x08004060   Number         4  main.o(.text.main)
-    __arm_cp.15_46                           0x08004064   Number         4  main.o(.text.main)
-    __arm_cp.15_47                           0x08004068   Number         4  main.o(.text.main)
-    __arm_cp.15_48                           0x0800406c   Number         4  main.o(.text.main)
-    __arm_cp.15_51                           0x08004450   Number         4  main.o(.text.main)
-    __arm_cp.15_52                           0x08004454   Number         4  main.o(.text.main)
-    __arm_cp.15_55                           0x08004460   Number         4  main.o(.text.main)
-    __arm_cp.15_56                           0x08004464   Number         4  main.o(.text.main)
-    __arm_cp.15_57                           0x08004468   Number         4  main.o(.text.main)
-    __arm_cp.15_58                           0x0800446c   Number         4  main.o(.text.main)
-    __arm_cp.15_60                           0x08004474   Number         4  main.o(.text.main)
-    __arm_cp.15_64                           0x08004484   Number         4  main.o(.text.main)
-    __arm_cp.15_65                           0x08004488   Number         4  main.o(.text.main)
-    __arm_cp.15_66                           0x0800448c   Number         4  main.o(.text.main)
-    __arm_cp.15_70                           0x08004890   Number         4  main.o(.text.main)
-    __arm_cp.15_71                           0x08004894   Number         4  main.o(.text.main)
-    __arm_cp.15_2                            0x080049a4   Number         4  main.o(.text.main)
-    __arm_cp.15_7                            0x080049a8   Number         4  main.o(.text.main)
-    __arm_cp.15_8                            0x080049ac   Number         4  main.o(.text.main)
-    __arm_cp.15_9                            0x080049b0   Number         4  main.o(.text.main)
-    __arm_cp.15_10                           0x080049b4   Number         4  main.o(.text.main)
-    __arm_cp.15_11                           0x080049b8   Number         4  main.o(.text.main)
-    __arm_cp.15_13                           0x080049bc   Number         4  main.o(.text.main)
-    __arm_cp.15_15                           0x080049c0   Number         4  main.o(.text.main)
-    __arm_cp.15_17                           0x080049c4   Number         4  main.o(.text.main)
-    __arm_cp.15_28                           0x080049c8   Number         4  main.o(.text.main)
-    __arm_cp.15_33                           0x080049cc   Number         4  main.o(.text.main)
-    [Anonymous Symbol]                       0x080049d0   Section        0  serial_telemetry.o(.text.makeTelemPackage)
-    __arm_cp.3_0                             0x08004a40   Number         4  serial_telemetry.o(.text.makeTelemPackage)
-    __arm_cp.3_1                             0x08004a44   Number         4  serial_telemetry.o(.text.makeTelemPackage)
-    [Anonymous Symbol]                       0x08004a48   Section        0  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_0                             0x08004bf4   Number         4  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_1                             0x08004bf8   Number         4  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_2                             0x08004bfc   Number         4  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_3                             0x08004c00   Number         4  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_4                             0x08004c04   Number         4  dshot.o(.text.make_dshot_package)
-    __arm_cp.1_5                             0x08004c08   Number         4  dshot.o(.text.make_dshot_package)
-    [Anonymous Symbol]                       0x08004c0c   Section        0  functions.o(.text.map)
-    [Anonymous Symbol]                       0x08004c54   Section        0  comparator.o(.text.maskPhaseInterrupts)
-    __arm_cp.1_0                             0x08004c64   Number         4  comparator.o(.text.maskPhaseInterrupts)
-    [Anonymous Symbol]                       0x08004c68   Section        0  gd32e23x_misc.o(.text.nvic_irq_enable)
-    __arm_cp.0_0                             0x08004cb4   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
-    __arm_cp.0_1                             0x08004cb8   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
-    __arm_cp.0_2                             0x08004cbc   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
-    [Anonymous Symbol]                       0x08004cc0   Section        0  gd32e23x_misc.o(.text.nvic_vector_table_set)
-    __arm_cp.3_0                             0x08004cd0   Number         4  gd32e23x_misc.o(.text.nvic_vector_table_set)
-    __arm_cp.3_1                             0x08004cd4   Number         4  gd32e23x_misc.o(.text.nvic_vector_table_set)
-    [Anonymous Symbol]                       0x08004cd8   Section        0  sounds.o(.text.playBeaconTune3)
-    [Anonymous Symbol]                       0x08004d30   Section        0  sounds.o(.text.playBlueJayTune)
-    __arm_cp.5_2                             0x08004df0   Number         4  sounds.o(.text.playBlueJayTune)
-    __arm_cp.5_3                             0x08004df4   Number         4  sounds.o(.text.playBlueJayTune)
-    __arm_cp.5_4                             0x08004df8   Number         4  sounds.o(.text.playBlueJayTune)
-    __arm_cp.5_7                             0x08004dfc   Number         4  sounds.o(.text.playBlueJayTune)
-    [Anonymous Symbol]                       0x08004e00   Section        0  sounds.o(.text.playBrushedStartupTune)
-    [Anonymous Symbol]                       0x08004e78   Section        0  sounds.o(.text.playChangedTone)
-    [Anonymous Symbol]                       0x08004ec0   Section        0  sounds.o(.text.playDefaultTone)
-    [Anonymous Symbol]                       0x08004f08   Section        0  sounds.o(.text.playInputTune)
-    [Anonymous Symbol]                       0x08004f60   Section        0  sounds.o(.text.playInputTune2)
-    [Anonymous Symbol]                       0x08004fbc   Section        0  sounds.o(.text.playStartupTune)
-    __arm_cp.6_0                             0x0800502c   Number         4  sounds.o(.text.playStartupTune)
-    __arm_cp.6_1                             0x08005030   Number         4  sounds.o(.text.playStartupTune)
-    __arm_cp.6_2                             0x08005034   Number         4  sounds.o(.text.playStartupTune)
-    __arm_cp.6_3                             0x08005038   Number         4  sounds.o(.text.playStartupTune)
-    __arm_cp.6_4                             0x0800503c   Number         4  sounds.o(.text.playStartupTune)
-    __arm_cp.6_5                             0x08005040   Number         4  sounds.o(.text.playStartupTune)
-    [Anonymous Symbol]                       0x08005044   Section        0  main.o(.text.processDshot)
-    __arm_cp.12_0                            0x08005074   Number         4  main.o(.text.processDshot)
-    __arm_cp.12_1                            0x08005078   Number         4  main.o(.text.processDshot)
-    [Anonymous Symbol]                       0x0800507c   Section        0  phaseouts.o(.text.proportionalBrake)
-    __arm_cp.1_0                             0x080050e4   Number         4  phaseouts.o(.text.proportionalBrake)
-    [Anonymous Symbol]                       0x080050e8   Section        0  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_0                            0x0800525c   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_1                            0x08005260   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_2                            0x08005264   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_4                            0x08005278   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_5                            0x0800527c   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    __arm_cp.38_6                            0x08005280   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    [Anonymous Symbol]                       0x08005284   Section        0  gd32e23x_rcu.o(.text.rcu_periph_clock_disable)
-    [Anonymous Symbol]                       0x08005298   Section        0  gd32e23x_rcu.o(.text.rcu_periph_clock_enable)
-    [Anonymous Symbol]                       0x080052ac   Section        0  gd32e23x_rcu.o(.text.rcu_periph_reset_disable)
-    [Anonymous Symbol]                       0x080052c0   Section        0  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
-    __arm_cp.5_0                             0x080052d4   Number         4  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
-    [Anonymous Symbol]                       0x080052d8   Section        0  eeprom.o(.text.read_flash_bin)
-    [Anonymous Symbol]                       0x08005328   Section        0  peripherals.o(.text.receiveCRSF)
-    __arm_cp.20_0                            0x08005340   Number         4  peripherals.o(.text.receiveCRSF)
-    __arm_cp.20_1                            0x08005344   Number         4  peripherals.o(.text.receiveCRSF)
-    [Anonymous Symbol]                       0x08005348   Section        0  io.o(.text.receiveDshotDma)
-    __arm_cp.0_0                             0x080053b4   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_1                             0x080053b8   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_2                             0x080053bc   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_3                             0x080053c0   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_4                             0x080053c4   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_5                             0x080053c8   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_6                             0x080053cc   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_7                             0x080053d0   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_8                             0x080053d4   Number         4  io.o(.text.receiveDshotDma)
-    __arm_cp.0_9                             0x080053d8   Number         4  io.o(.text.receiveDshotDma)
-    [Anonymous Symbol]                       0x080053dc   Section        0  peripherals.o(.text.resetInputCaptureTimer)
-    __arm_cp.16_0                            0x080053e8   Number         4  peripherals.o(.text.resetInputCaptureTimer)
-    [Anonymous Symbol]                       0x080053ec   Section        0  main.o(.text.runBrushedLoop)
-    __arm_cp.14_1                            0x0800570c   Number         4  main.o(.text.runBrushedLoop)
-    __arm_cp.14_3                            0x08005710   Number         4  main.o(.text.runBrushedLoop)
-    __arm_cp.14_4                            0x08005714   Number         4  main.o(.text.runBrushedLoop)
-    __arm_cp.14_5                            0x08005718   Number         4  main.o(.text.runBrushedLoop)
-    __arm_cp.14_6                            0x0800571c   Number         4  main.o(.text.runBrushedLoop)
-    [Anonymous Symbol]                       0x08005720   Section        0  main.o(.text.saveEEpromSettings)
-    __arm_cp.2_0                             0x08005778   Number         4  main.o(.text.saveEEpromSettings)
-    __arm_cp.2_1                             0x0800577c   Number         4  main.o(.text.saveEEpromSettings)
-    __arm_cp.2_2                             0x08005780   Number         4  main.o(.text.saveEEpromSettings)
-    __arm_cp.2_3                             0x08005784   Number         4  main.o(.text.saveEEpromSettings)
-    [Anonymous Symbol]                       0x08005788   Section        0  eeprom.o(.text.save_flash_nolib)
-    [Anonymous Symbol]                       0x0800592c   Section        0  io.o(.text.sendDshotDma)
-    __arm_cp.1_0                             0x080059a0   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_1                             0x080059a4   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_2                             0x080059a8   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_3                             0x080059ac   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_4                             0x080059b0   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_5                             0x080059b4   Number         4  io.o(.text.sendDshotDma)
-    __arm_cp.1_6                             0x080059b8   Number         4  io.o(.text.sendDshotDma)
-    [Anonymous Symbol]                       0x080059bc   Section        0  serial_telemetry.o(.text.send_telem_DMA)
-    __arm_cp.1_0                             0x080059fc   Number         4  serial_telemetry.o(.text.send_telem_DMA)
-    __arm_cp.1_1                             0x08005a00   Number         4  serial_telemetry.o(.text.send_telem_DMA)
-    __arm_cp.1_2                             0x08005a04   Number         4  serial_telemetry.o(.text.send_telem_DMA)
-    [Anonymous Symbol]                       0x08005a08   Section        0  crsf.o(.text.setChannels)
-    __arm_cp.1_0                             0x08005c34   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_1                             0x08005c38   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_2                             0x08005c3c   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_3                             0x08005c40   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_4                             0x08005c44   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_5                             0x08005c48   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_6                             0x08005c4c   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_7                             0x08005c50   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_8                             0x08005c54   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_9                             0x08005c58   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_10                            0x08005c5c   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_11                            0x08005c60   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_12                            0x08005c64   Number         4  crsf.o(.text.setChannels)
-    __arm_cp.1_13                            0x08005c68   Number         4  crsf.o(.text.setChannels)
-    [Anonymous Symbol]                       0x08005c6c   Section        0  main.o(.text.setInput)
-    __arm_cp.9_11                            0x08006068   Number         4  main.o(.text.setInput)
-    __arm_cp.9_1                             0x08006378   Number         4  main.o(.text.setInput)
-    __arm_cp.9_2                             0x0800637c   Number         4  main.o(.text.setInput)
-    __arm_cp.9_3                             0x08006380   Number         4  main.o(.text.setInput)
-    __arm_cp.9_4                             0x08006384   Number         4  main.o(.text.setInput)
-    __arm_cp.9_5                             0x08006388   Number         4  main.o(.text.setInput)
-    __arm_cp.9_6                             0x0800638c   Number         4  main.o(.text.setInput)
-    __arm_cp.9_7                             0x08006390   Number         4  main.o(.text.setInput)
-    __arm_cp.9_8                             0x08006394   Number         4  main.o(.text.setInput)
-    __arm_cp.9_9                             0x08006398   Number         4  main.o(.text.setInput)
-    [Anonymous Symbol]                       0x0800639c   Section        0  io.o(.text.setInputPullUp)
-    [Anonymous Symbol]                       0x080063a8   Section        0  peripherals.o(.text.setPWMCompare1)
-    __arm_cp.12_0                            0x080063b0   Number         4  peripherals.o(.text.setPWMCompare1)
-    [Anonymous Symbol]                       0x080063b4   Section        0  peripherals.o(.text.setPWMCompare2)
-    __arm_cp.13_0                            0x080063bc   Number         4  peripherals.o(.text.setPWMCompare2)
-    [Anonymous Symbol]                       0x080063c0   Section        0  peripherals.o(.text.setPWMCompare3)
-    __arm_cp.14_0                            0x080063c8   Number         4  peripherals.o(.text.setPWMCompare3)
-    [Anonymous Symbol]                       0x080063cc   Section        0  sounds.o(.text.setVolume)
-    __arm_cp.1_0                             0x080063dc   Number         4  sounds.o(.text.setVolume)
-    [Anonymous Symbol]                       0x080063e0   Section        0  main.o(.text.startMotor)
-    __arm_cp.8_0                             0x08006484   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_1                             0x08006488   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_2                             0x0800648c   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_3                             0x08006490   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_4                             0x08006494   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_5                             0x08006498   Number         4  main.o(.text.startMotor)
-    __arm_cp.8_6                             0x0800649c   Number         4  main.o(.text.startMotor)
-    [Anonymous Symbol]                       0x080064a0   Section        0  serial_telemetry.o(.text.telem_UART_Init)
-    __arm_cp.0_0                             0x0800655c   Number         4  serial_telemetry.o(.text.telem_UART_Init)
-    __arm_cp.0_1                             0x08006560   Number         4  serial_telemetry.o(.text.telem_UART_Init)
-    __arm_cp.0_2                             0x08006564   Number         4  serial_telemetry.o(.text.telem_UART_Init)
-    __arm_cp.0_3                             0x08006568   Number         4  serial_telemetry.o(.text.telem_UART_Init)
-    __arm_cp.0_4                             0x0800656c   Number         4  serial_telemetry.o(.text.telem_UART_Init)
-    [Anonymous Symbol]                       0x08006570   Section        0  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_10                           0x0800691c   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_11                           0x08006920   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_2                            0x080069bc   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_3                            0x080069c0   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_4                            0x080069c4   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_5                            0x080069c8   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_6                            0x080069cc   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_7                            0x080069d0   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_8                            0x080069d4   Number         4  main.o(.text.tenKhzRoutine)
-    __arm_cp.10_9                            0x080069d8   Number         4  main.o(.text.tenKhzRoutine)
-    [Anonymous Symbol]                       0x080069dc   Section        0  gd32e23x_timer.o(.text.timer_auto_reload_shadow_disable)
-    [Anonymous Symbol]                       0x080069e6   Section        0  gd32e23x_timer.o(.text.timer_auto_reload_shadow_enable)
-    [Anonymous Symbol]                       0x080069f0   Section        0  gd32e23x_timer.o(.text.timer_break_config)
-    [Anonymous Symbol]                       0x08006a0e   Section        0  gd32e23x_timer.o(.text.timer_break_struct_para_init)
-    [Anonymous Symbol]                       0x08006a20   Section        0  gd32e23x_timer.o(.text.timer_channel_complementary_output_state_config)
-    [Anonymous Symbol]                       0x08006a56   Section        0  gd32e23x_timer.o(.text.timer_channel_input_struct_para_init)
-    [Anonymous Symbol]                       0x08006a64   Section        0  gd32e23x_timer.o(.text.timer_channel_output_config)
-    __arm_cp.42_0                            0x08006c74   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
-    __arm_cp.42_3                            0x08006c78   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
-    __arm_cp.42_4                            0x08006c7c   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
-    [Anonymous Symbol]                       0x08006c80   Section        0  gd32e23x_timer.o(.text.timer_channel_output_mode_config)
-    [Anonymous Symbol]                       0x08006cdc   Section        0  gd32e23x_timer.o(.text.timer_channel_output_shadow_config)
-    [Anonymous Symbol]                       0x08006d38   Section        0  gd32e23x_timer.o(.text.timer_channel_output_state_config)
-    [Anonymous Symbol]                       0x08006d92   Section        0  gd32e23x_timer.o(.text.timer_channel_output_struct_para_init)
-    [Anonymous Symbol]                       0x08006da4   Section        0  gd32e23x_timer.o(.text.timer_deinit)
-    __arm_cp.0_0                             0x08006e08   Number         4  gd32e23x_timer.o(.text.timer_deinit)
-    __arm_cp.0_1                             0x08006e0c   Number         4  gd32e23x_timer.o(.text.timer_deinit)
-    __arm_cp.0_2                             0x08006e10   Number         4  gd32e23x_timer.o(.text.timer_deinit)
-    __arm_cp.0_8                             0x08006e14   Number         4  gd32e23x_timer.o(.text.timer_deinit)
-    [Anonymous Symbol]                       0x08006e18   Section        0  gd32e23x_timer.o(.text.timer_enable)
-    [Anonymous Symbol]                       0x08006e22   Section        0  gd32e23x_timer.o(.text.timer_event_software_generate)
-    [Anonymous Symbol]                       0x08006e2a   Section        0  gd32e23x_timer.o(.text.timer_flag_clear)
-    [Anonymous Symbol]                       0x08006e30   Section        0  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_0                             0x08006ec0   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_1                             0x08006ec4   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_2                             0x08006ec8   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_3                             0x08006ecc   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_4                             0x08006ed0   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_5                             0x08006ed4   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_6                             0x08006ed8   Number         4  gd32e23x_timer.o(.text.timer_init)
-    __arm_cp.2_7                             0x08006edc   Number         4  gd32e23x_timer.o(.text.timer_init)
-    [Anonymous Symbol]                       0x08006ee0   Section        0  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
-    __arm_cp.56_0                            0x08007038   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
-    __arm_cp.56_1                            0x0800703c   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
-    __arm_cp.56_2                            0x08007040   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
-    [Anonymous Symbol]                       0x08007044   Section        0  gd32e23x_timer.o(.text.timer_interrupt_disable)
-    [Anonymous Symbol]                       0x0800704c   Section        0  gd32e23x_timer.o(.text.timer_interrupt_flag_clear)
-    [Anonymous Symbol]                       0x08007052   Section        0  gd32e23x_timer.o(.text.timer_prescaler_config)
-    [Anonymous Symbol]                       0x08007062   Section        0  gd32e23x_timer.o(.text.timer_primary_output_config)
-    [Anonymous Symbol]                       0x08007078   Section        0  gd32e23x_timer.o(.text.timer_struct_para_init)
-    __arm_cp.1_0                             0x08007088   Number         4  gd32e23x_timer.o(.text.timer_struct_para_init)
-    [Anonymous Symbol]                       0x0800708c   Section        0  signal.o(.text.transfercomplete)
-    __arm_cp.2_0                             0x080071bc   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_1                             0x080071c0   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_2                             0x080071c4   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_3                             0x080071c8   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_4                             0x080071cc   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_5                             0x080071d0   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_6                             0x080071d4   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_7                             0x080071d8   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_8                             0x080071dc   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_9                             0x080071e0   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_10                            0x080071e4   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_11                            0x080071e8   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_12                            0x080071ec   Number         4  signal.o(.text.transfercomplete)
-    __arm_cp.2_13                            0x080071f0   Number         4  signal.o(.text.transfercomplete)
-    [Anonymous Symbol]                       0x080071f4   Section        0  phaseouts.o(.text.twoChannelForward)
-    [Anonymous Symbol]                       0x08007278   Section        0  phaseouts.o(.text.twoChannelReverse)
-    __arm_cp.16_0                            0x080072f0   Number         4  phaseouts.o(.text.twoChannelReverse)
-    __arm_cp.16_1                            0x080072f4   Number         4  phaseouts.o(.text.twoChannelReverse)
-    [Anonymous Symbol]                       0x080072f8   Section        0  gd32e23x_usart.o(.text.usart_baudrate_set)
-    __arm_cp.1_0                             0x08007348   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
-    __arm_cp.1_1                             0x0800734c   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
-    __arm_cp.1_2                             0x08007350   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
-    [Anonymous Symbol]                       0x08007354   Section        0  gd32e23x_usart.o(.text.usart_dma_transmit_config)
-    [Anonymous Symbol]                       0x08007364   Section        0  gd32e23x_usart.o(.text.usart_enable)
-    [Anonymous Symbol]                       0x0800736e   Section        0  gd32e23x_usart.o(.text.usart_halfduplex_enable)
-    [Anonymous Symbol]                       0x08007380   Section        0  gd32e23x_usart.o(.text.usart_receive_config)
-    [Anonymous Symbol]                       0x08007390   Section        0  gd32e23x_usart.o(.text.usart_transmit_config)
-    [Anonymous Symbol]                       0x080073a0   Section        0  main.o(.text.zcfoundroutine)
-    __arm_cp.11_0                            0x080074bc   Number         4  main.o(.text.zcfoundroutine)
-    __arm_cp.11_1                            0x080074c0   Number         4  main.o(.text.zcfoundroutine)
-    __arm_cp.11_2                            0x080074c4   Number         4  main.o(.text.zcfoundroutine)
-    __arm_cp.11_3                            0x080074c8   Number         4  main.o(.text.zcfoundroutine)
-    __arm_cp.11_4                            0x080074cc   Number         4  main.o(.text.zcfoundroutine)
-    __arm_cp.11_5                            0x080074d0   Number         4  main.o(.text.zcfoundroutine)
-    i.__scatterload_copy                     0x080074d4   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080074e2   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080074e4   Section       14  handlers.o(i.__scatterload_zeroinit)
-    crsf_crc8.crsf_crc8tab                   0x080074f2   Data         256  crsf.o(.rodata.crsf_crc8.crsf_crc8tab)
-    [Anonymous Symbol]                       0x080074f2   Section        0  crsf.o(.rodata.crsf_crc8.crsf_crc8tab)
-    [Anonymous Symbol]                       0x080075f2   Section        0  gd32e23x_rcu.o(.rodata.cst8)
-    get_crc8.tbl                             0x0800760a   Data         256  serial_telemetry.o(.rodata.get_crc8.tbl)
-    [Anonymous Symbol]                       0x0800760a   Section        0  serial_telemetry.o(.rodata.get_crc8.tbl)
+    __arm_cp.6_0                             0x0800174c   Number         4  main.o(.text.PeriodElapsedCallback)
+    __arm_cp.6_1                             0x08001750   Number         4  main.o(.text.PeriodElapsedCallback)
+    __arm_cp.6_2                             0x08001754   Number         4  main.o(.text.PeriodElapsedCallback)
+    __arm_cp.6_3                             0x08001758   Number         4  main.o(.text.PeriodElapsedCallback)
+    __arm_cp.6_4                             0x0800175c   Number         4  main.o(.text.PeriodElapsedCallback)
+    [Anonymous Symbol]                       0x08001760   Section        0  gd32e23x_it.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x08001762   Section        0  gd32e23x_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08001768   Section        0  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_0                             0x0800190c   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_1                             0x08001910   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_2                             0x08001914   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_3                             0x08001918   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_4                             0x0800191c   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_5                             0x08001920   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_6                             0x08001924   Number         4  system_gd32e23x.o(.text.SystemInit)
+    __arm_cp.0_7                             0x08001928   Number         4  system_gd32e23x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0800192c   Section        0  peripherals.o(.text.TIM0_Init)
+    __arm_cp.3_0                             0x08001b04   Number         4  peripherals.o(.text.TIM0_Init)
+    __arm_cp.3_1                             0x08001b08   Number         4  peripherals.o(.text.TIM0_Init)
+    __arm_cp.3_2                             0x08001b0c   Number         4  peripherals.o(.text.TIM0_Init)
+    __arm_cp.3_3                             0x08001b10   Number         4  peripherals.o(.text.TIM0_Init)
+    [Anonymous Symbol]                       0x08001b14   Section        0  gd32e23x_it.o(.text.TIMER13_IRQHandler)
+    __arm_cp.8_0                             0x08001b28   Number         4  gd32e23x_it.o(.text.TIMER13_IRQHandler)
+    [Anonymous Symbol]                       0x08001b2c   Section        0  gd32e23x_it.o(.text.TIMER14_IRQHandler)
+    __arm_cp.10_0                            0x08001b34   Number         4  gd32e23x_it.o(.text.TIMER14_IRQHandler)
+    [Anonymous Symbol]                       0x08001b38   Section        0  gd32e23x_it.o(.text.TIMER15_IRQHandler)
+    __arm_cp.9_0                             0x08001b58   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
+    __arm_cp.9_1                             0x08001b5c   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
+    __arm_cp.9_2                             0x08001b60   Number         4  gd32e23x_it.o(.text.TIMER15_IRQHandler)
+    [Anonymous Symbol]                       0x08001b64   Section        0  gd32e23x_it.o(.text.TIMER2_IRQHandler)
+    [Anonymous Symbol]                       0x08001b68   Section        0  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_1                            0x08001c18   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_2                            0x08001c1c   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_3                            0x08001c20   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_4                            0x08001c24   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_5                            0x08001c28   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_6                            0x08001c2c   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_7                            0x08001c30   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_8                            0x08001c34   Number         4  peripherals.o(.text.UN_TIM_Init)
+    __arm_cp.11_9                            0x08001c38   Number         4  peripherals.o(.text.UN_TIM_Init)
+    [Anonymous Symbol]                       0x08001c3c   Section        0  gd32e23x_it.o(.text.USART0_IRQHandler)
+    __arm_cp.11_0                            0x08001c60   Number         4  gd32e23x_it.o(.text.USART0_IRQHandler)
+    __arm_cp.11_1                            0x08001c64   Number         4  gd32e23x_it.o(.text.USART0_IRQHandler)
+    [Anonymous Symbol]                       0x08001c68   Section        0  gd32e23x_adc.o(.text.adc_calibration_enable)
+    [Anonymous Symbol]                       0x08001cac   Section        0  gd32e23x_adc.o(.text.adc_dma_mode_enable)
+    [Anonymous Symbol]                       0x08001cbc   Section        0  gd32e23x_adc.o(.text.adc_enable)
+    [Anonymous Symbol]                       0x08001cd0   Section        0  gd32e23x_adc.o(.text.adc_software_trigger_enable)
+    __arm_cp.17_0                            0x08001cf8   Number         4  gd32e23x_adc.o(.text.adc_software_trigger_enable)
+    [Anonymous Symbol]                       0x08001cfc   Section        0  phaseouts.o(.text.allOff)
+    __arm_cp.11_0                            0x08001d70   Number         4  phaseouts.o(.text.allOff)
+    [Anonymous Symbol]                       0x08001d74   Section        0  phaseouts.o(.text.allpwm)
+    __arm_cp.14_0                            0x08001dfc   Number         4  phaseouts.o(.text.allpwm)
+    __arm_cp.14_1                            0x08001e00   Number         4  phaseouts.o(.text.allpwm)
+    [Anonymous Symbol]                       0x08001e04   Section        0  comparator.o(.text.changeCompInput)
+    __arm_cp.3_0                             0x08001e5c   Number         4  comparator.o(.text.changeCompInput)
+    __arm_cp.3_2                             0x08001e60   Number         4  comparator.o(.text.changeCompInput)
+    __arm_cp.3_3                             0x08001e64   Number         4  comparator.o(.text.changeCompInput)
+    __arm_cp.3_4                             0x08001e68   Number         4  comparator.o(.text.changeCompInput)
+    [Anonymous Symbol]                       0x08001e6c   Section        0  gd32e23x_cmp.o(.text.cmp_enable)
+    [Anonymous Symbol]                       0x08001e78   Section        0  gd32e23x_cmp.o(.text.cmp_mode_init)
+    __arm_cp.1_1                             0x08001e98   Number         4  gd32e23x_cmp.o(.text.cmp_mode_init)
+    [Anonymous Symbol]                       0x08001e9c   Section        0  gd32e23x_cmp.o(.text.cmp_output_init)
+    [Anonymous Symbol]                       0x08001ebc   Section        0  gd32e23x_cmp.o(.text.cmp_output_level_get)
+    __arm_cp.7_0                             0x08001ec8   Number         4  gd32e23x_cmp.o(.text.cmp_output_level_get)
+    [Anonymous Symbol]                       0x08001ecc   Section        0  phaseouts.o(.text.comStep)
+    __arm_cp.12_0                            0x08002194   Number         4  phaseouts.o(.text.comStep)
+    __arm_cp.12_1                            0x08002198   Number         4  phaseouts.o(.text.comStep)
+    [Anonymous Symbol]                       0x0800219c   Section        0  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_0                             0x08002554   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_1                             0x08002558   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_2                             0x0800255c   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_3                             0x08002560   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_4                             0x08002564   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_5                             0x08002568   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_7                             0x0800256c   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_8                             0x08002570   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_10                            0x08002574   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_11                            0x08002578   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_12                            0x0800257c   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_13                            0x08002580   Number         4  dshot.o(.text.computeDshotDMA)
+    __arm_cp.0_15                            0x08002584   Number         4  dshot.o(.text.computeDshotDMA)
+    [Anonymous Symbol]                       0x08002588   Section        0  signal.o(.text.computeServoInput)
+    __arm_cp.1_0                             0x080026ec   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_1                             0x080026f0   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_2                             0x080026f4   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_3                             0x080026f8   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_4                             0x080026fc   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_5                             0x08002700   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_6                             0x08002704   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_7                             0x08002708   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_8                             0x0800270c   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_9                             0x08002710   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_10                            0x08002714   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_11                            0x08002718   Number         4  signal.o(.text.computeServoInput)
+    __arm_cp.1_12                            0x0800271c   Number         4  signal.o(.text.computeServoInput)
+    [Anonymous Symbol]                       0x08002720   Section        0  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_0                            0x080027e8   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_1                            0x080027ec   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_2                            0x080027f0   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_3                            0x080027f4   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_4                            0x080027f8   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_5                            0x080027fc   Number         4  peripherals.o(.text.crsf_UART_Init)
+    __arm_cp.19_6                            0x08002800   Number         4  peripherals.o(.text.crsf_UART_Init)
+    [Anonymous Symbol]                       0x08002804   Section        0  functions.o(.text.delayMicros)
+    [Anonymous Symbol]                       0x08002824   Section        0  functions.o(.text.delayMillis)
+    __arm_cp.3_0                             0x08002868   Number         4  functions.o(.text.delayMillis)
+    __arm_cp.3_1                             0x0800286c   Number         4  functions.o(.text.delayMillis)
+    [Anonymous Symbol]                       0x08002870   Section        0  systick.o(.text.delay_decrement)
+    __arm_cp.2_0                             0x08002880   Number         4  systick.o(.text.delay_decrement)
+    [Anonymous Symbol]                       0x08002884   Section        0  signal.o(.text.detectInput)
+    __arm_cp.5_0                             0x08002a5c   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_1                             0x08002a60   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_2                             0x08002a64   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_3                             0x08002a68   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_4                             0x08002a6c   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_5                             0x08002a70   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_6                             0x08002a74   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_7                             0x08002a78   Number         4  signal.o(.text.detectInput)
+    __arm_cp.5_8                             0x08002a7c   Number         4  signal.o(.text.detectInput)
+    [Anonymous Symbol]                       0x08002a80   Section        0  gd32e23x_dma.o(.text.dma_channel_disable)
+    [Anonymous Symbol]                       0x08002a90   Section        0  gd32e23x_dma.o(.text.dma_channel_enable)
+    [Anonymous Symbol]                       0x08002aa0   Section        0  gd32e23x_dma.o(.text.dma_circulation_disable)
+    [Anonymous Symbol]                       0x08002ab0   Section        0  gd32e23x_dma.o(.text.dma_circulation_enable)
+    [Anonymous Symbol]                       0x08002ac0   Section        0  gd32e23x_dma.o(.text.dma_deinit)
+    [Anonymous Symbol]                       0x08002aec   Section        0  gd32e23x_dma.o(.text.dma_init)
+    __arm_cp.2_0                             0x08002b5c   Number         4  gd32e23x_dma.o(.text.dma_init)
+    [Anonymous Symbol]                       0x08002b60   Section        0  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
+    __arm_cp.24_0                            0x08002b70   Number         4  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
+    [Anonymous Symbol]                       0x08002b74   Section        0  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
+    __arm_cp.23_0                            0x08002bac   Number         4  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
+    [Anonymous Symbol]                       0x08002bb0   Section        0  gd32e23x_dma.o(.text.dma_memory_address_config)
+    __arm_cp.10_0                            0x08002bbc   Number         4  gd32e23x_dma.o(.text.dma_memory_address_config)
+    [Anonymous Symbol]                       0x08002bc0   Section        0  gd32e23x_dma.o(.text.dma_periph_address_config)
+    __arm_cp.9_0                             0x08002bcc   Number         4  gd32e23x_dma.o(.text.dma_periph_address_config)
+    [Anonymous Symbol]                       0x08002bd0   Section        0  gd32e23x_dma.o(.text.dma_struct_para_init)
+    [Anonymous Symbol]                       0x08002be4   Section        0  comparator.o(.text.enableCompInterrupts)
+    [Anonymous Symbol]                       0x08002bf4   Section        0  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_0                            0x08002cf0   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_1                            0x08002cf4   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_2                            0x08002cf8   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_3                            0x08002cfc   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_4                            0x08002d00   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_5                            0x08002d04   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_6                            0x08002d08   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_7                            0x08002d0c   Number         4  peripherals.o(.text.enableCorePeripherals)
+    __arm_cp.18_8                            0x08002d10   Number         4  peripherals.o(.text.enableCorePeripherals)
+    [Anonymous Symbol]                       0x08002d14   Section        0  gd32e23x_exti.o(.text.exti_flag_clear)
+    [Anonymous Symbol]                       0x08002d1c   Section        0  gd32e23x_exti.o(.text.exti_init)
+    __arm_cp.1_0                             0x08002d84   Number         4  gd32e23x_exti.o(.text.exti_init)
+    [Anonymous Symbol]                       0x08002d88   Section        0  gd32e23x_exti.o(.text.exti_interrupt_flag_clear)
+    [Anonymous Symbol]                       0x08002d90   Section        0  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
+    __arm_cp.10_0                            0x08002d9c   Number         4  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
+    [Anonymous Symbol]                       0x08002da0   Section        0  gd32e23x_fmc.o(.text.fmc_flag_clear)
+    [Anonymous Symbol]                       0x08002da8   Section        0  gd32e23x_fmc.o(.text.fmc_lock)
+    __arm_cp.1_0                             0x08002db4   Number         4  gd32e23x_fmc.o(.text.fmc_lock)
+    [Anonymous Symbol]                       0x08002db8   Section        0  gd32e23x_fmc.o(.text.fmc_page_erase)
+    [Anonymous Symbol]                       0x08002f30   Section        0  gd32e23x_fmc.o(.text.fmc_prefetch_enable)
+    [Anonymous Symbol]                       0x08002f3c   Section        0  gd32e23x_fmc.o(.text.fmc_unlock)
+    __arm_cp.0_0                             0x08002f50   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
+    __arm_cp.0_1                             0x08002f54   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
+    __arm_cp.0_2                             0x08002f58   Number         4  gd32e23x_fmc.o(.text.fmc_unlock)
+    [Anonymous Symbol]                       0x08002f5c   Section        0  gd32e23x_fmc.o(.text.fmc_word_program)
+    __arm_cp.9_0                             0x080030cc   Number         4  gd32e23x_fmc.o(.text.fmc_word_program)
+    __arm_cp.9_1                             0x080030d0   Number         4  gd32e23x_fmc.o(.text.fmc_word_program)
+    [Anonymous Symbol]                       0x080030d4   Section        0  gd32e23x_fmc.o(.text.fmc_wscnt_set)
+    __arm_cp.2_0                             0x080030e4   Number         4  gd32e23x_fmc.o(.text.fmc_wscnt_set)
+    [Anonymous Symbol]                       0x080030e8   Section        0  phaseouts.o(.text.fullBrake)
+    __arm_cp.13_0                            0x0800315c   Number         4  phaseouts.o(.text.fullBrake)
+    [Anonymous Symbol]                       0x08003160   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    __arm_cp.7_0                             0x080031e8   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    __arm_cp.7_1                             0x080031ec   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    __arm_cp.7_2                             0x080031f0   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    __arm_cp.7_3                             0x080031f4   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    [Anonymous Symbol]                       0x080031f8   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
+    __arm_cp.6_1                             0x08003200   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
+    [Anonymous Symbol]                       0x08003204   Section        0  gd32e23x_fwdgt.o(.text.fwdgt_enable)
+    __arm_cp.2_0                             0x0800320c   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_enable)
+    __arm_cp.2_1                             0x08003210   Number         4  gd32e23x_fwdgt.o(.text.fwdgt_enable)
+    [Anonymous Symbol]                       0x08003214   Section        0  peripherals.o(.text.generatePwmTimerEvent)
+    __arm_cp.15_0                            0x0800321c   Number         4  peripherals.o(.text.generatePwmTimerEvent)
+    [Anonymous Symbol]                       0x08003220   Section        0  functions.o(.text.getAbsDif)
+    [Anonymous Symbol]                       0x0800322a   Section        0  comparator.o(.text.getCompOutputLevel)
+    [Anonymous Symbol]                       0x08003234   Section        0  io.o(.text.getInputPinState)
+    __arm_cp.2_0                             0x08003240   Number         4  io.o(.text.getInputPinState)
+    [Anonymous Symbol]                       0x08003244   Section        0  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_0                            0x0800335c   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_1                            0x08003360   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_2                            0x08003364   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_3                            0x08003368   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_4                            0x0800336c   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    __arm_cp.11_5                            0x08003370   Number         4  gd32e23x_gpio.o(.text.gpio_af_set)
+    [Anonymous Symbol]                       0x08003374   Section        0  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_0                             0x08003550   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_1                             0x08003554   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_2                             0x08003558   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_3                             0x0800355c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_4                             0x08003560   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_5                             0x08003564   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_6                             0x08003568   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_7                             0x0800356c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_8                             0x08003570   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_9                             0x08003574   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_10                            0x08003578   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    __arm_cp.1_11                            0x0800357c   Number         4  gd32e23x_gpio.o(.text.gpio_mode_set)
+    [Anonymous Symbol]                       0x08003580   Section        0  gd32e23x_gpio.o(.text.gpio_output_options_set)
+    [Anonymous Symbol]                       0x080036b4   Section        0  peripherals.o(.text.initAfterJump)
+    [Anonymous Symbol]                       0x080036c8   Section        0  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_0                             0x080037f4   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_1                             0x080037f8   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_2                             0x080037fc   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_3                             0x08003800   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_4                             0x08003804   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_5                             0x08003808   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_6                             0x0800380c   Number         4  peripherals.o(.text.initCorePeripherals)
+    __arm_cp.0_7                             0x08003810   Number         4  peripherals.o(.text.initCorePeripherals)
+    [Anonymous Symbol]                       0x08003814   Section        0  main.o(.text.interruptRoutine)
+    __arm_cp.7_0                             0x080038dc   Number         4  main.o(.text.interruptRoutine)
+    __arm_cp.7_1                             0x080038e0   Number         4  main.o(.text.interruptRoutine)
+    __arm_cp.7_2                             0x080038e4   Number         4  main.o(.text.interruptRoutine)
+    __arm_cp.7_3                             0x080038e8   Number         4  main.o(.text.interruptRoutine)
+    __arm_cp.7_4                             0x080038ec   Number         4  main.o(.text.interruptRoutine)
+    [Anonymous Symbol]                       0x080038f0   Section        0  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_0                             0x08003c9c   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_1                             0x08003ca0   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_2                             0x08003ca4   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_3                             0x08003ca8   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_4                             0x08003cac   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_5                             0x08003cb0   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_6                             0x08003cb4   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_7                             0x08003cb8   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_8                             0x08003cbc   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_9                             0x08003cc0   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_10                            0x08003cc4   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_11                            0x08003cc8   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_12                            0x08003ccc   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_13                            0x08003cd0   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_14                            0x08003cd4   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_15                            0x08003cd8   Number         4  main.o(.text.loadEEpromSettings)
+    __arm_cp.1_16                            0x08003cdc   Number         4  main.o(.text.loadEEpromSettings)
+    [Anonymous Symbol]                       0x08003ce0   Section        0  main.o(.text.main)
+    __arm_cp.15_36                           0x08003ff4   Number         4  main.o(.text.main)
+    __arm_cp.15_39                           0x0800400c   Number         4  main.o(.text.main)
+    __arm_cp.15_40                           0x08004010   Number         4  main.o(.text.main)
+    __arm_cp.15_45                           0x08004024   Number         4  main.o(.text.main)
+    __arm_cp.15_46                           0x08004028   Number         4  main.o(.text.main)
+    __arm_cp.15_47                           0x0800402c   Number         4  main.o(.text.main)
+    __arm_cp.15_48                           0x08004030   Number         4  main.o(.text.main)
+    __arm_cp.15_49                           0x08004034   Number         4  main.o(.text.main)
+    __arm_cp.15_50                           0x08004038   Number         4  main.o(.text.main)
+    __arm_cp.15_51                           0x0800403c   Number         4  main.o(.text.main)
+    __arm_cp.15_52                           0x08004040   Number         4  main.o(.text.main)
+    __arm_cp.15_55                           0x08004424   Number         4  main.o(.text.main)
+    __arm_cp.15_56                           0x08004428   Number         4  main.o(.text.main)
+    __arm_cp.15_59                           0x08004434   Number         4  main.o(.text.main)
+    __arm_cp.15_60                           0x08004438   Number         4  main.o(.text.main)
+    __arm_cp.15_61                           0x0800443c   Number         4  main.o(.text.main)
+    __arm_cp.15_62                           0x08004440   Number         4  main.o(.text.main)
+    __arm_cp.15_64                           0x08004448   Number         4  main.o(.text.main)
+    __arm_cp.15_68                           0x08004458   Number         4  main.o(.text.main)
+    __arm_cp.15_69                           0x0800445c   Number         4  main.o(.text.main)
+    __arm_cp.15_70                           0x08004460   Number         4  main.o(.text.main)
+    __arm_cp.15_71                           0x08004464   Number         4  main.o(.text.main)
+    __arm_cp.15_75                           0x0800484c   Number         4  main.o(.text.main)
+    __arm_cp.15_76                           0x08004850   Number         4  main.o(.text.main)
+    __arm_cp.15_2                            0x0800495c   Number         4  main.o(.text.main)
+    __arm_cp.15_8                            0x08004960   Number         4  main.o(.text.main)
+    __arm_cp.15_10                           0x08004964   Number         4  main.o(.text.main)
+    __arm_cp.15_11                           0x08004968   Number         4  main.o(.text.main)
+    __arm_cp.15_12                           0x0800496c   Number         4  main.o(.text.main)
+    __arm_cp.15_13                           0x08004970   Number         4  main.o(.text.main)
+    __arm_cp.15_15                           0x08004974   Number         4  main.o(.text.main)
+    __arm_cp.15_17                           0x08004978   Number         4  main.o(.text.main)
+    __arm_cp.15_19                           0x0800497c   Number         4  main.o(.text.main)
+    __arm_cp.15_30                           0x08004980   Number         4  main.o(.text.main)
+    __arm_cp.15_35                           0x08004984   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x08004988   Section        0  serial_telemetry.o(.text.makeTelemPackage)
+    __arm_cp.3_0                             0x080049f8   Number         4  serial_telemetry.o(.text.makeTelemPackage)
+    __arm_cp.3_1                             0x080049fc   Number         4  serial_telemetry.o(.text.makeTelemPackage)
+    [Anonymous Symbol]                       0x08004a00   Section        0  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_0                             0x08004bac   Number         4  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_1                             0x08004bb0   Number         4  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_2                             0x08004bb4   Number         4  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_3                             0x08004bb8   Number         4  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_4                             0x08004bbc   Number         4  dshot.o(.text.make_dshot_package)
+    __arm_cp.1_5                             0x08004bc0   Number         4  dshot.o(.text.make_dshot_package)
+    [Anonymous Symbol]                       0x08004bc4   Section        0  functions.o(.text.map)
+    [Anonymous Symbol]                       0x08004c20   Section        0  comparator.o(.text.maskPhaseInterrupts)
+    __arm_cp.1_0                             0x08004c30   Number         4  comparator.o(.text.maskPhaseInterrupts)
+    [Anonymous Symbol]                       0x08004c34   Section        0  gd32e23x_misc.o(.text.nvic_irq_enable)
+    __arm_cp.0_0                             0x08004c80   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
+    __arm_cp.0_1                             0x08004c84   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
+    __arm_cp.0_2                             0x08004c88   Number         4  gd32e23x_misc.o(.text.nvic_irq_enable)
+    [Anonymous Symbol]                       0x08004c8c   Section        0  gd32e23x_misc.o(.text.nvic_vector_table_set)
+    __arm_cp.3_0                             0x08004c9c   Number         4  gd32e23x_misc.o(.text.nvic_vector_table_set)
+    __arm_cp.3_1                             0x08004ca0   Number         4  gd32e23x_misc.o(.text.nvic_vector_table_set)
+    [Anonymous Symbol]                       0x08004ca4   Section        0  sounds.o(.text.playBeaconTune3)
+    [Anonymous Symbol]                       0x08004cfc   Section        0  sounds.o(.text.playBlueJayTune)
+    __arm_cp.5_2                             0x08004dbc   Number         4  sounds.o(.text.playBlueJayTune)
+    __arm_cp.5_3                             0x08004dc0   Number         4  sounds.o(.text.playBlueJayTune)
+    __arm_cp.5_4                             0x08004dc4   Number         4  sounds.o(.text.playBlueJayTune)
+    __arm_cp.5_7                             0x08004dc8   Number         4  sounds.o(.text.playBlueJayTune)
+    [Anonymous Symbol]                       0x08004dcc   Section        0  sounds.o(.text.playBrushedStartupTune)
+    [Anonymous Symbol]                       0x08004e44   Section        0  sounds.o(.text.playChangedTone)
+    [Anonymous Symbol]                       0x08004e8c   Section        0  sounds.o(.text.playDefaultTone)
+    [Anonymous Symbol]                       0x08004ed4   Section        0  sounds.o(.text.playInputTune)
+    [Anonymous Symbol]                       0x08004f2c   Section        0  sounds.o(.text.playInputTune2)
+    [Anonymous Symbol]                       0x08004f88   Section        0  sounds.o(.text.playStartupTune)
+    __arm_cp.6_0                             0x08004ff8   Number         4  sounds.o(.text.playStartupTune)
+    __arm_cp.6_1                             0x08004ffc   Number         4  sounds.o(.text.playStartupTune)
+    __arm_cp.6_2                             0x08005000   Number         4  sounds.o(.text.playStartupTune)
+    __arm_cp.6_3                             0x08005004   Number         4  sounds.o(.text.playStartupTune)
+    __arm_cp.6_4                             0x08005008   Number         4  sounds.o(.text.playStartupTune)
+    __arm_cp.6_5                             0x0800500c   Number         4  sounds.o(.text.playStartupTune)
+    [Anonymous Symbol]                       0x08005010   Section        0  main.o(.text.processDshot)
+    __arm_cp.12_0                            0x08005040   Number         4  main.o(.text.processDshot)
+    __arm_cp.12_1                            0x08005044   Number         4  main.o(.text.processDshot)
+    [Anonymous Symbol]                       0x08005048   Section        0  phaseouts.o(.text.proportionalBrake)
+    __arm_cp.1_0                             0x080050b0   Number         4  phaseouts.o(.text.proportionalBrake)
+    [Anonymous Symbol]                       0x080050b4   Section        0  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_0                            0x08005228   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_1                            0x0800522c   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_2                            0x08005230   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_4                            0x08005244   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_5                            0x08005248   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    __arm_cp.38_6                            0x0800524c   Number         4  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    [Anonymous Symbol]                       0x08005250   Section        0  gd32e23x_rcu.o(.text.rcu_periph_clock_disable)
+    [Anonymous Symbol]                       0x08005264   Section        0  gd32e23x_rcu.o(.text.rcu_periph_clock_enable)
+    [Anonymous Symbol]                       0x08005278   Section        0  gd32e23x_rcu.o(.text.rcu_periph_reset_disable)
+    [Anonymous Symbol]                       0x0800528c   Section        0  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
+    __arm_cp.5_0                             0x080052a0   Number         4  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
+    [Anonymous Symbol]                       0x080052a4   Section        0  eeprom.o(.text.read_flash_bin)
+    [Anonymous Symbol]                       0x080052f4   Section        0  peripherals.o(.text.receiveCRSF)
+    __arm_cp.20_0                            0x0800530c   Number         4  peripherals.o(.text.receiveCRSF)
+    __arm_cp.20_1                            0x08005310   Number         4  peripherals.o(.text.receiveCRSF)
+    [Anonymous Symbol]                       0x08005314   Section        0  io.o(.text.receiveDshotDma)
+    __arm_cp.0_0                             0x08005380   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_1                             0x08005384   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_2                             0x08005388   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_3                             0x0800538c   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_4                             0x08005390   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_5                             0x08005394   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_6                             0x08005398   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_7                             0x0800539c   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_8                             0x080053a0   Number         4  io.o(.text.receiveDshotDma)
+    __arm_cp.0_9                             0x080053a4   Number         4  io.o(.text.receiveDshotDma)
+    [Anonymous Symbol]                       0x080053a8   Section        0  peripherals.o(.text.resetInputCaptureTimer)
+    __arm_cp.16_0                            0x080053b4   Number         4  peripherals.o(.text.resetInputCaptureTimer)
+    [Anonymous Symbol]                       0x080053b8   Section        0  main.o(.text.runBrushedLoop)
+    __arm_cp.14_1                            0x080056dc   Number         4  main.o(.text.runBrushedLoop)
+    __arm_cp.14_3                            0x080056e0   Number         4  main.o(.text.runBrushedLoop)
+    __arm_cp.14_4                            0x080056e4   Number         4  main.o(.text.runBrushedLoop)
+    __arm_cp.14_5                            0x080056e8   Number         4  main.o(.text.runBrushedLoop)
+    __arm_cp.14_6                            0x080056ec   Number         4  main.o(.text.runBrushedLoop)
+    [Anonymous Symbol]                       0x080056f0   Section        0  main.o(.text.saveEEpromSettings)
+    __arm_cp.2_0                             0x08005748   Number         4  main.o(.text.saveEEpromSettings)
+    __arm_cp.2_1                             0x0800574c   Number         4  main.o(.text.saveEEpromSettings)
+    __arm_cp.2_2                             0x08005750   Number         4  main.o(.text.saveEEpromSettings)
+    __arm_cp.2_3                             0x08005754   Number         4  main.o(.text.saveEEpromSettings)
+    [Anonymous Symbol]                       0x08005758   Section        0  eeprom.o(.text.save_flash_nolib)
+    [Anonymous Symbol]                       0x080058fc   Section        0  io.o(.text.sendDshotDma)
+    __arm_cp.1_0                             0x08005970   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_1                             0x08005974   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_2                             0x08005978   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_3                             0x0800597c   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_4                             0x08005980   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_5                             0x08005984   Number         4  io.o(.text.sendDshotDma)
+    __arm_cp.1_6                             0x08005988   Number         4  io.o(.text.sendDshotDma)
+    [Anonymous Symbol]                       0x0800598c   Section        0  serial_telemetry.o(.text.send_telem_DMA)
+    __arm_cp.1_0                             0x080059cc   Number         4  serial_telemetry.o(.text.send_telem_DMA)
+    __arm_cp.1_1                             0x080059d0   Number         4  serial_telemetry.o(.text.send_telem_DMA)
+    __arm_cp.1_2                             0x080059d4   Number         4  serial_telemetry.o(.text.send_telem_DMA)
+    [Anonymous Symbol]                       0x080059d8   Section        0  crsf.o(.text.setChannels)
+    __arm_cp.1_0                             0x08005c1c   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_1                             0x08005c20   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_2                             0x08005c24   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_3                             0x08005c28   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_4                             0x08005c2c   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_5                             0x08005c30   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_6                             0x08005c34   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_7                             0x08005c38   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_8                             0x08005c3c   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_9                             0x08005c40   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_10                            0x08005c44   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_11                            0x08005c48   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_12                            0x08005c4c   Number         4  crsf.o(.text.setChannels)
+    __arm_cp.1_13                            0x08005c50   Number         4  crsf.o(.text.setChannels)
+    [Anonymous Symbol]                       0x08005c54   Section        0  main.o(.text.setInput)
+    __arm_cp.9_10                            0x08006050   Number         4  main.o(.text.setInput)
+    __arm_cp.9_1                             0x08006364   Number         4  main.o(.text.setInput)
+    __arm_cp.9_2                             0x08006368   Number         4  main.o(.text.setInput)
+    __arm_cp.9_3                             0x0800636c   Number         4  main.o(.text.setInput)
+    __arm_cp.9_4                             0x08006370   Number         4  main.o(.text.setInput)
+    __arm_cp.9_5                             0x08006374   Number         4  main.o(.text.setInput)
+    __arm_cp.9_6                             0x08006378   Number         4  main.o(.text.setInput)
+    __arm_cp.9_7                             0x0800637c   Number         4  main.o(.text.setInput)
+    __arm_cp.9_8                             0x08006380   Number         4  main.o(.text.setInput)
+    [Anonymous Symbol]                       0x08006384   Section        0  io.o(.text.setInputPullUp)
+    [Anonymous Symbol]                       0x08006390   Section        0  peripherals.o(.text.setPWMCompare1)
+    __arm_cp.12_0                            0x08006398   Number         4  peripherals.o(.text.setPWMCompare1)
+    [Anonymous Symbol]                       0x0800639c   Section        0  peripherals.o(.text.setPWMCompare2)
+    __arm_cp.13_0                            0x080063a4   Number         4  peripherals.o(.text.setPWMCompare2)
+    [Anonymous Symbol]                       0x080063a8   Section        0  peripherals.o(.text.setPWMCompare3)
+    __arm_cp.14_0                            0x080063b0   Number         4  peripherals.o(.text.setPWMCompare3)
+    [Anonymous Symbol]                       0x080063b4   Section        0  sounds.o(.text.setVolume)
+    __arm_cp.1_0                             0x080063c4   Number         4  sounds.o(.text.setVolume)
+    [Anonymous Symbol]                       0x080063c8   Section        0  main.o(.text.startMotor)
+    __arm_cp.8_0                             0x0800646c   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_1                             0x08006470   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_2                             0x08006474   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_3                             0x08006478   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_4                             0x0800647c   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_5                             0x08006480   Number         4  main.o(.text.startMotor)
+    __arm_cp.8_6                             0x08006484   Number         4  main.o(.text.startMotor)
+    [Anonymous Symbol]                       0x08006488   Section        0  serial_telemetry.o(.text.telem_UART_Init)
+    __arm_cp.0_0                             0x08006544   Number         4  serial_telemetry.o(.text.telem_UART_Init)
+    __arm_cp.0_1                             0x08006548   Number         4  serial_telemetry.o(.text.telem_UART_Init)
+    __arm_cp.0_2                             0x0800654c   Number         4  serial_telemetry.o(.text.telem_UART_Init)
+    __arm_cp.0_3                             0x08006550   Number         4  serial_telemetry.o(.text.telem_UART_Init)
+    __arm_cp.0_4                             0x08006554   Number         4  serial_telemetry.o(.text.telem_UART_Init)
+    [Anonymous Symbol]                       0x08006558   Section        0  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_10                           0x08006904   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_11                           0x08006908   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_2                            0x080069a4   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_3                            0x080069a8   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_4                            0x080069ac   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_5                            0x080069b0   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_6                            0x080069b4   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_7                            0x080069b8   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_8                            0x080069bc   Number         4  main.o(.text.tenKhzRoutine)
+    __arm_cp.10_9                            0x080069c0   Number         4  main.o(.text.tenKhzRoutine)
+    [Anonymous Symbol]                       0x080069c4   Section        0  gd32e23x_timer.o(.text.timer_auto_reload_shadow_disable)
+    [Anonymous Symbol]                       0x080069ce   Section        0  gd32e23x_timer.o(.text.timer_auto_reload_shadow_enable)
+    [Anonymous Symbol]                       0x080069d8   Section        0  gd32e23x_timer.o(.text.timer_break_config)
+    [Anonymous Symbol]                       0x080069f6   Section        0  gd32e23x_timer.o(.text.timer_break_struct_para_init)
+    [Anonymous Symbol]                       0x08006a08   Section        0  gd32e23x_timer.o(.text.timer_channel_complementary_output_state_config)
+    [Anonymous Symbol]                       0x08006a3e   Section        0  gd32e23x_timer.o(.text.timer_channel_input_struct_para_init)
+    [Anonymous Symbol]                       0x08006a4c   Section        0  gd32e23x_timer.o(.text.timer_channel_output_config)
+    __arm_cp.42_0                            0x08006c5c   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
+    __arm_cp.42_3                            0x08006c60   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
+    __arm_cp.42_4                            0x08006c64   Number         4  gd32e23x_timer.o(.text.timer_channel_output_config)
+    [Anonymous Symbol]                       0x08006c68   Section        0  gd32e23x_timer.o(.text.timer_channel_output_mode_config)
+    [Anonymous Symbol]                       0x08006cc4   Section        0  gd32e23x_timer.o(.text.timer_channel_output_shadow_config)
+    [Anonymous Symbol]                       0x08006d20   Section        0  gd32e23x_timer.o(.text.timer_channel_output_state_config)
+    [Anonymous Symbol]                       0x08006d7a   Section        0  gd32e23x_timer.o(.text.timer_channel_output_struct_para_init)
+    [Anonymous Symbol]                       0x08006d8c   Section        0  gd32e23x_timer.o(.text.timer_deinit)
+    __arm_cp.0_0                             0x08006df0   Number         4  gd32e23x_timer.o(.text.timer_deinit)
+    __arm_cp.0_1                             0x08006df4   Number         4  gd32e23x_timer.o(.text.timer_deinit)
+    __arm_cp.0_2                             0x08006df8   Number         4  gd32e23x_timer.o(.text.timer_deinit)
+    __arm_cp.0_8                             0x08006dfc   Number         4  gd32e23x_timer.o(.text.timer_deinit)
+    [Anonymous Symbol]                       0x08006e00   Section        0  gd32e23x_timer.o(.text.timer_enable)
+    [Anonymous Symbol]                       0x08006e0a   Section        0  gd32e23x_timer.o(.text.timer_event_software_generate)
+    [Anonymous Symbol]                       0x08006e12   Section        0  gd32e23x_timer.o(.text.timer_flag_clear)
+    [Anonymous Symbol]                       0x08006e18   Section        0  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_0                             0x08006ea8   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_1                             0x08006eac   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_2                             0x08006eb0   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_3                             0x08006eb4   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_4                             0x08006eb8   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_5                             0x08006ebc   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_6                             0x08006ec0   Number         4  gd32e23x_timer.o(.text.timer_init)
+    __arm_cp.2_7                             0x08006ec4   Number         4  gd32e23x_timer.o(.text.timer_init)
+    [Anonymous Symbol]                       0x08006ec8   Section        0  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
+    __arm_cp.56_0                            0x08007020   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
+    __arm_cp.56_1                            0x08007024   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
+    __arm_cp.56_2                            0x08007028   Number         4  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
+    [Anonymous Symbol]                       0x0800702c   Section        0  gd32e23x_timer.o(.text.timer_interrupt_disable)
+    [Anonymous Symbol]                       0x08007034   Section        0  gd32e23x_timer.o(.text.timer_interrupt_flag_clear)
+    [Anonymous Symbol]                       0x0800703a   Section        0  gd32e23x_timer.o(.text.timer_prescaler_config)
+    [Anonymous Symbol]                       0x0800704a   Section        0  gd32e23x_timer.o(.text.timer_primary_output_config)
+    [Anonymous Symbol]                       0x08007060   Section        0  gd32e23x_timer.o(.text.timer_struct_para_init)
+    __arm_cp.1_0                             0x08007070   Number         4  gd32e23x_timer.o(.text.timer_struct_para_init)
+    [Anonymous Symbol]                       0x08007074   Section        0  signal.o(.text.transfercomplete)
+    __arm_cp.2_0                             0x080071a4   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_1                             0x080071a8   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_2                             0x080071ac   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_3                             0x080071b0   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_4                             0x080071b4   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_5                             0x080071b8   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_6                             0x080071bc   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_7                             0x080071c0   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_8                             0x080071c4   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_9                             0x080071c8   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_10                            0x080071cc   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_11                            0x080071d0   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_12                            0x080071d4   Number         4  signal.o(.text.transfercomplete)
+    __arm_cp.2_13                            0x080071d8   Number         4  signal.o(.text.transfercomplete)
+    [Anonymous Symbol]                       0x080071dc   Section        0  phaseouts.o(.text.twoChannelForward)
+    [Anonymous Symbol]                       0x08007260   Section        0  phaseouts.o(.text.twoChannelReverse)
+    __arm_cp.16_0                            0x080072d8   Number         4  phaseouts.o(.text.twoChannelReverse)
+    __arm_cp.16_1                            0x080072dc   Number         4  phaseouts.o(.text.twoChannelReverse)
+    [Anonymous Symbol]                       0x080072e0   Section        0  gd32e23x_usart.o(.text.usart_baudrate_set)
+    __arm_cp.1_0                             0x08007330   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
+    __arm_cp.1_1                             0x08007334   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
+    __arm_cp.1_2                             0x08007338   Number         4  gd32e23x_usart.o(.text.usart_baudrate_set)
+    [Anonymous Symbol]                       0x0800733c   Section        0  gd32e23x_usart.o(.text.usart_dma_transmit_config)
+    [Anonymous Symbol]                       0x0800734c   Section        0  gd32e23x_usart.o(.text.usart_enable)
+    [Anonymous Symbol]                       0x08007356   Section        0  gd32e23x_usart.o(.text.usart_halfduplex_enable)
+    [Anonymous Symbol]                       0x08007368   Section        0  gd32e23x_usart.o(.text.usart_receive_config)
+    [Anonymous Symbol]                       0x08007378   Section        0  gd32e23x_usart.o(.text.usart_transmit_config)
+    [Anonymous Symbol]                       0x08007388   Section        0  main.o(.text.zcfoundroutine)
+    __arm_cp.11_0                            0x080074a4   Number         4  main.o(.text.zcfoundroutine)
+    __arm_cp.11_1                            0x080074a8   Number         4  main.o(.text.zcfoundroutine)
+    __arm_cp.11_2                            0x080074ac   Number         4  main.o(.text.zcfoundroutine)
+    __arm_cp.11_3                            0x080074b0   Number         4  main.o(.text.zcfoundroutine)
+    __arm_cp.11_4                            0x080074b4   Number         4  main.o(.text.zcfoundroutine)
+    __arm_cp.11_5                            0x080074b8   Number         4  main.o(.text.zcfoundroutine)
+    i.__scatterload_copy                     0x080074bc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080074ca   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080074cc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    crsf_crc8.crsf_crc8tab                   0x080074da   Data         256  crsf.o(.rodata.crsf_crc8.crsf_crc8tab)
+    [Anonymous Symbol]                       0x080074da   Section        0  crsf.o(.rodata.crsf_crc8.crsf_crc8tab)
+    [Anonymous Symbol]                       0x080075da   Section        0  gd32e23x_rcu.o(.rodata.cst8)
+    get_crc8.tbl                             0x080075f2   Data         256  serial_telemetry.o(.rodata.get_crc8.tbl)
+    [Anonymous Symbol]                       0x080075f2   Section        0  serial_telemetry.o(.rodata.get_crc8.tbl)
     __tagsym$$used.0                         0x08007be0   Number         0  firmwareversion.o(.rodata.test)
     [Anonymous Symbol]                       0x20000000   Section        0  main.o(.data..L_MergedGlobals)
     [Anonymous Symbol]                       0x20000060   Section        0  signal.o(.data..L_MergedGlobals)
@@ -2994,154 +2995,154 @@ Image Symbol Table
     MX_IWDG_Init                             0x0800165b   Thumb Code    22  peripherals.o(.text.MX_IWDG_Init)
     NMI_Handler                              0x08001671   Thumb Code     2  gd32e23x_it.o(.text.NMI_Handler)
     PendSV_Handler                           0x08001673   Thumb Code     2  gd32e23x_it.o(.text.PendSV_Handler)
-    PeriodElapsedCallback                    0x08001675   Thumb Code   224  main.o(.text.PeriodElapsedCallback)
-    SVC_Handler                              0x08001769   Thumb Code     2  gd32e23x_it.o(.text.SVC_Handler)
-    SysTick_Handler                          0x0800176b   Thumb Code     4  gd32e23x_it.o(.text.SysTick_Handler)
-    SystemInit                               0x08001771   Thumb Code   420  system_gd32e23x.o(.text.SystemInit)
-    TIM0_Init                                0x08001935   Thumb Code   472  peripherals.o(.text.TIM0_Init)
-    TIMER13_IRQHandler                       0x08001b1d   Thumb Code    20  gd32e23x_it.o(.text.TIMER13_IRQHandler)
-    TIMER14_IRQHandler                       0x08001b35   Thumb Code     8  gd32e23x_it.o(.text.TIMER14_IRQHandler)
-    TIMER15_IRQHandler                       0x08001b41   Thumb Code    32  gd32e23x_it.o(.text.TIMER15_IRQHandler)
-    TIMER2_IRQHandler                        0x08001b6d   Thumb Code     2  gd32e23x_it.o(.text.TIMER2_IRQHandler)
-    UN_TIM_Init                              0x08001b71   Thumb Code   176  peripherals.o(.text.UN_TIM_Init)
-    USART0_IRQHandler                        0x08001c45   Thumb Code    36  gd32e23x_it.o(.text.USART0_IRQHandler)
-    adc_calibration_enable                   0x08001c71   Thumb Code    68  gd32e23x_adc.o(.text.adc_calibration_enable)
-    adc_dma_mode_enable                      0x08001cb5   Thumb Code    16  gd32e23x_adc.o(.text.adc_dma_mode_enable)
-    adc_enable                               0x08001cc5   Thumb Code    20  gd32e23x_adc.o(.text.adc_enable)
-    adc_software_trigger_enable              0x08001cd9   Thumb Code    40  gd32e23x_adc.o(.text.adc_software_trigger_enable)
-    allOff                                   0x08001d05   Thumb Code   116  phaseouts.o(.text.allOff)
-    allpwm                                   0x08001d7d   Thumb Code   136  phaseouts.o(.text.allpwm)
-    changeCompInput                          0x08001e0d   Thumb Code    88  comparator.o(.text.changeCompInput)
-    cmp_enable                               0x08001e75   Thumb Code    12  gd32e23x_cmp.o(.text.cmp_enable)
-    cmp_mode_init                            0x08001e81   Thumb Code    32  gd32e23x_cmp.o(.text.cmp_mode_init)
-    cmp_output_init                          0x08001ea5   Thumb Code    32  gd32e23x_cmp.o(.text.cmp_output_init)
-    cmp_output_level_get                     0x08001ec5   Thumb Code    12  gd32e23x_cmp.o(.text.cmp_output_level_get)
-    comStep                                  0x08001ed5   Thumb Code   712  phaseouts.o(.text.comStep)
-    computeDshotDMA                          0x080021a5   Thumb Code   952  dshot.o(.text.computeDshotDMA)
-    computeServoInput                        0x08002591   Thumb Code   356  signal.o(.text.computeServoInput)
-    crsf_UART_Init                           0x08002729   Thumb Code   200  peripherals.o(.text.crsf_UART_Init)
-    delayMicros                              0x0800280d   Thumb Code    32  functions.o(.text.delayMicros)
-    delayMillis                              0x0800282d   Thumb Code    68  functions.o(.text.delayMillis)
-    delay_decrement                          0x08002879   Thumb Code    16  systick.o(.text.delay_decrement)
-    detectInput                              0x0800288d   Thumb Code   472  signal.o(.text.detectInput)
-    dma_channel_disable                      0x08002a89   Thumb Code    16  gd32e23x_dma.o(.text.dma_channel_disable)
-    dma_channel_enable                       0x08002a99   Thumb Code    16  gd32e23x_dma.o(.text.dma_channel_enable)
-    dma_circulation_disable                  0x08002aa9   Thumb Code    16  gd32e23x_dma.o(.text.dma_circulation_disable)
-    dma_circulation_enable                   0x08002ab9   Thumb Code    16  gd32e23x_dma.o(.text.dma_circulation_enable)
-    dma_deinit                               0x08002ac9   Thumb Code    44  gd32e23x_dma.o(.text.dma_deinit)
-    dma_init                                 0x08002af5   Thumb Code   112  gd32e23x_dma.o(.text.dma_init)
-    dma_interrupt_flag_clear                 0x08002b69   Thumb Code    16  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
-    dma_interrupt_flag_get                   0x08002b7d   Thumb Code    56  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
-    dma_memory_address_config                0x08002bb9   Thumb Code    12  gd32e23x_dma.o(.text.dma_memory_address_config)
-    dma_periph_address_config                0x08002bc9   Thumb Code    12  gd32e23x_dma.o(.text.dma_periph_address_config)
-    dma_struct_para_init                     0x08002bd9   Thumb Code    20  gd32e23x_dma.o(.text.dma_struct_para_init)
-    enableCompInterrupts                     0x08002bed   Thumb Code    16  comparator.o(.text.enableCompInterrupts)
-    enableCorePeripherals                    0x08002bfd   Thumb Code   252  peripherals.o(.text.enableCorePeripherals)
-    exti_flag_clear                          0x08002d1d   Thumb Code     8  gd32e23x_exti.o(.text.exti_flag_clear)
-    exti_init                                0x08002d25   Thumb Code   104  gd32e23x_exti.o(.text.exti_init)
-    exti_interrupt_flag_clear                0x08002d91   Thumb Code     8  gd32e23x_exti.o(.text.exti_interrupt_flag_clear)
-    exti_interrupt_flag_get                  0x08002d99   Thumb Code    12  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
-    fmc_flag_clear                           0x08002da9   Thumb Code     8  gd32e23x_fmc.o(.text.fmc_flag_clear)
-    fmc_lock                                 0x08002db1   Thumb Code    12  gd32e23x_fmc.o(.text.fmc_lock)
-    fmc_page_erase                           0x08002dc1   Thumb Code   376  gd32e23x_fmc.o(.text.fmc_page_erase)
-    fmc_prefetch_enable                      0x08002f39   Thumb Code    12  gd32e23x_fmc.o(.text.fmc_prefetch_enable)
-    fmc_unlock                               0x08002f45   Thumb Code    20  gd32e23x_fmc.o(.text.fmc_unlock)
-    fmc_word_program                         0x08002f65   Thumb Code   368  gd32e23x_fmc.o(.text.fmc_word_program)
-    fmc_wscnt_set                            0x080030dd   Thumb Code    16  gd32e23x_fmc.o(.text.fmc_wscnt_set)
-    fullBrake                                0x080030f1   Thumb Code   116  phaseouts.o(.text.fullBrake)
-    fwdgt_config                             0x08003169   Thumb Code   136  gd32e23x_fwdgt.o(.text.fwdgt_config)
-    fwdgt_counter_reload                     0x08003201   Thumb Code     8  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
-    fwdgt_enable                             0x0800320d   Thumb Code     8  gd32e23x_fwdgt.o(.text.fwdgt_enable)
-    generatePwmTimerEvent                    0x0800321d   Thumb Code     8  peripherals.o(.text.generatePwmTimerEvent)
-    getAbsDif                                0x08003229   Thumb Code    10  functions.o(.text.getAbsDif)
-    getCompOutputLevel                       0x08003233   Thumb Code    10  comparator.o(.text.getCompOutputLevel)
-    getInputPinState                         0x0800323d   Thumb Code    12  io.o(.text.getInputPinState)
-    gpio_af_set                              0x0800324d   Thumb Code   280  gd32e23x_gpio.o(.text.gpio_af_set)
-    gpio_mode_set                            0x0800337d   Thumb Code   476  gd32e23x_gpio.o(.text.gpio_mode_set)
-    gpio_output_options_set                  0x08003589   Thumb Code   308  gd32e23x_gpio.o(.text.gpio_output_options_set)
-    initAfterJump                            0x080036bd   Thumb Code    20  peripherals.o(.text.initAfterJump)
-    initCorePeripherals                      0x080036d1   Thumb Code   300  peripherals.o(.text.initCorePeripherals)
-    interruptRoutine                         0x0800381d   Thumb Code   208  main.o(.text.interruptRoutine)
-    loadEEpromSettings                       0x08003901   Thumb Code   940  main.o(.text.loadEEpromSettings)
-    main                                     0x08003cf1   Thumb Code  3252  main.o(.text.main)
-    makeTelemPackage                         0x080049d1   Thumb Code   112  serial_telemetry.o(.text.makeTelemPackage)
-    make_dshot_package                       0x08004a49   Thumb Code   428  dshot.o(.text.make_dshot_package)
-    map                                      0x08004c0d   Thumb Code    70  functions.o(.text.map)
-    maskPhaseInterrupts                      0x08004c55   Thumb Code    16  comparator.o(.text.maskPhaseInterrupts)
-    nvic_irq_enable                          0x08004c69   Thumb Code    76  gd32e23x_misc.o(.text.nvic_irq_enable)
-    nvic_vector_table_set                    0x08004cc1   Thumb Code    16  gd32e23x_misc.o(.text.nvic_vector_table_set)
-    playBeaconTune3                          0x08004cd9   Thumb Code    88  sounds.o(.text.playBeaconTune3)
-    playBlueJayTune                          0x08004d31   Thumb Code   192  sounds.o(.text.playBlueJayTune)
-    playBrushedStartupTune                   0x08004e01   Thumb Code   120  sounds.o(.text.playBrushedStartupTune)
-    playChangedTone                          0x08004e79   Thumb Code    72  sounds.o(.text.playChangedTone)
-    playDefaultTone                          0x08004ec1   Thumb Code    72  sounds.o(.text.playDefaultTone)
-    playInputTune                            0x08004f09   Thumb Code    88  sounds.o(.text.playInputTune)
-    playInputTune2                           0x08004f61   Thumb Code    92  sounds.o(.text.playInputTune2)
-    playStartupTune                          0x08004fbd   Thumb Code   112  sounds.o(.text.playStartupTune)
-    processDshot                             0x08005045   Thumb Code    48  main.o(.text.processDshot)
-    proportionalBrake                        0x0800507d   Thumb Code   104  phaseouts.o(.text.proportionalBrake)
-    rcu_clock_freq_get                       0x080050e9   Thumb Code   372  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
-    rcu_periph_clock_disable                 0x08005285   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_clock_disable)
-    rcu_periph_clock_enable                  0x08005299   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_clock_enable)
-    rcu_periph_reset_disable                 0x080052ad   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_reset_disable)
-    rcu_periph_reset_enable                  0x080052c1   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
-    read_flash_bin                           0x080052d9   Thumb Code    80  eeprom.o(.text.read_flash_bin)
-    receiveCRSF                              0x08005329   Thumb Code    24  peripherals.o(.text.receiveCRSF)
-    receiveDshotDma                          0x08005349   Thumb Code   108  io.o(.text.receiveDshotDma)
-    resetInputCaptureTimer                   0x080053dd   Thumb Code    12  peripherals.o(.text.resetInputCaptureTimer)
-    runBrushedLoop                           0x080053ed   Thumb Code   800  main.o(.text.runBrushedLoop)
-    saveEEpromSettings                       0x08005721   Thumb Code    88  main.o(.text.saveEEpromSettings)
-    save_flash_nolib                         0x08005789   Thumb Code   420  eeprom.o(.text.save_flash_nolib)
-    sendDshotDma                             0x0800592d   Thumb Code   116  io.o(.text.sendDshotDma)
-    send_telem_DMA                           0x080059bd   Thumb Code    64  serial_telemetry.o(.text.send_telem_DMA)
-    setChannels                              0x08005a09   Thumb Code   556  crsf.o(.text.setChannels)
-    setInput                                 0x08005c6d   Thumb Code  1804  main.o(.text.setInput)
-    setInputPullUp                           0x0800639d   Thumb Code    12  io.o(.text.setInputPullUp)
-    setPWMCompare1                           0x080063a9   Thumb Code     8  peripherals.o(.text.setPWMCompare1)
-    setPWMCompare2                           0x080063b5   Thumb Code     8  peripherals.o(.text.setPWMCompare2)
-    setPWMCompare3                           0x080063c1   Thumb Code     8  peripherals.o(.text.setPWMCompare3)
-    setVolume                                0x080063cd   Thumb Code    16  sounds.o(.text.setVolume)
-    startMotor                               0x080063e1   Thumb Code   164  main.o(.text.startMotor)
-    telem_UART_Init                          0x080064a1   Thumb Code   188  serial_telemetry.o(.text.telem_UART_Init)
-    tenKhzRoutine                            0x08006571   Thumb Code  1100  main.o(.text.tenKhzRoutine)
-    timer_auto_reload_shadow_disable         0x080069dd   Thumb Code    10  gd32e23x_timer.o(.text.timer_auto_reload_shadow_disable)
-    timer_auto_reload_shadow_enable          0x080069e7   Thumb Code    10  gd32e23x_timer.o(.text.timer_auto_reload_shadow_enable)
-    timer_break_config                       0x080069f1   Thumb Code    30  gd32e23x_timer.o(.text.timer_break_config)
-    timer_break_struct_para_init             0x08006a0f   Thumb Code    18  gd32e23x_timer.o(.text.timer_break_struct_para_init)
-    timer_channel_complementary_output_state_config 0x08006a21   Thumb Code    54  gd32e23x_timer.o(.text.timer_channel_complementary_output_state_config)
-    timer_channel_input_struct_para_init     0x08006a57   Thumb Code    14  gd32e23x_timer.o(.text.timer_channel_input_struct_para_init)
-    timer_channel_output_config              0x08006a65   Thumb Code   528  gd32e23x_timer.o(.text.timer_channel_output_config)
-    timer_channel_output_mode_config         0x08006c81   Thumb Code    92  gd32e23x_timer.o(.text.timer_channel_output_mode_config)
-    timer_channel_output_shadow_config       0x08006cdd   Thumb Code    92  gd32e23x_timer.o(.text.timer_channel_output_shadow_config)
-    timer_channel_output_state_config        0x08006d39   Thumb Code    90  gd32e23x_timer.o(.text.timer_channel_output_state_config)
-    timer_channel_output_struct_para_init    0x08006d93   Thumb Code    16  gd32e23x_timer.o(.text.timer_channel_output_struct_para_init)
-    timer_deinit                             0x08006da5   Thumb Code   100  gd32e23x_timer.o(.text.timer_deinit)
-    timer_enable                             0x08006e19   Thumb Code    10  gd32e23x_timer.o(.text.timer_enable)
-    timer_event_software_generate            0x08006e23   Thumb Code     8  gd32e23x_timer.o(.text.timer_event_software_generate)
-    timer_flag_clear                         0x08006e2b   Thumb Code     6  gd32e23x_timer.o(.text.timer_flag_clear)
-    timer_init                               0x08006e31   Thumb Code   144  gd32e23x_timer.o(.text.timer_init)
-    timer_input_pwm_capture_config           0x08006ee1   Thumb Code   344  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
-    timer_interrupt_disable                  0x08007045   Thumb Code     8  gd32e23x_timer.o(.text.timer_interrupt_disable)
-    timer_interrupt_flag_clear               0x0800704d   Thumb Code     6  gd32e23x_timer.o(.text.timer_interrupt_flag_clear)
-    timer_prescaler_config                   0x08007053   Thumb Code    16  gd32e23x_timer.o(.text.timer_prescaler_config)
-    timer_primary_output_config              0x08007063   Thumb Code    22  gd32e23x_timer.o(.text.timer_primary_output_config)
-    timer_struct_para_init                   0x08007079   Thumb Code    16  gd32e23x_timer.o(.text.timer_struct_para_init)
-    transfercomplete                         0x0800708d   Thumb Code   304  signal.o(.text.transfercomplete)
-    twoChannelForward                        0x080071f5   Thumb Code   132  phaseouts.o(.text.twoChannelForward)
-    twoChannelReverse                        0x08007279   Thumb Code   120  phaseouts.o(.text.twoChannelReverse)
-    usart_baudrate_set                       0x080072f9   Thumb Code    80  gd32e23x_usart.o(.text.usart_baudrate_set)
-    usart_dma_transmit_config                0x08007355   Thumb Code    16  gd32e23x_usart.o(.text.usart_dma_transmit_config)
-    usart_enable                             0x08007365   Thumb Code    10  gd32e23x_usart.o(.text.usart_enable)
-    usart_halfduplex_enable                  0x0800736f   Thumb Code    18  gd32e23x_usart.o(.text.usart_halfduplex_enable)
-    usart_receive_config                     0x08007381   Thumb Code    16  gd32e23x_usart.o(.text.usart_receive_config)
-    usart_transmit_config                    0x08007391   Thumb Code    16  gd32e23x_usart.o(.text.usart_transmit_config)
-    zcfoundroutine                           0x080073a1   Thumb Code   284  main.o(.text.zcfoundroutine)
-    __scatterload_copy                       0x080074d5   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080074e3   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080074e5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    gcr_encode_table                         0x080075fa   Data          16  dshot.o(.rodata.gcr_encode_table)
-    Region$$Table$$Base                      0x0800770c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800772c   Number         0  anon$$obj.o(Region$$Table)
+    PeriodElapsedCallback                    0x08001675   Thumb Code   216  main.o(.text.PeriodElapsedCallback)
+    SVC_Handler                              0x08001761   Thumb Code     2  gd32e23x_it.o(.text.SVC_Handler)
+    SysTick_Handler                          0x08001763   Thumb Code     4  gd32e23x_it.o(.text.SysTick_Handler)
+    SystemInit                               0x08001769   Thumb Code   420  system_gd32e23x.o(.text.SystemInit)
+    TIM0_Init                                0x0800192d   Thumb Code   472  peripherals.o(.text.TIM0_Init)
+    TIMER13_IRQHandler                       0x08001b15   Thumb Code    20  gd32e23x_it.o(.text.TIMER13_IRQHandler)
+    TIMER14_IRQHandler                       0x08001b2d   Thumb Code     8  gd32e23x_it.o(.text.TIMER14_IRQHandler)
+    TIMER15_IRQHandler                       0x08001b39   Thumb Code    32  gd32e23x_it.o(.text.TIMER15_IRQHandler)
+    TIMER2_IRQHandler                        0x08001b65   Thumb Code     2  gd32e23x_it.o(.text.TIMER2_IRQHandler)
+    UN_TIM_Init                              0x08001b69   Thumb Code   176  peripherals.o(.text.UN_TIM_Init)
+    USART0_IRQHandler                        0x08001c3d   Thumb Code    36  gd32e23x_it.o(.text.USART0_IRQHandler)
+    adc_calibration_enable                   0x08001c69   Thumb Code    68  gd32e23x_adc.o(.text.adc_calibration_enable)
+    adc_dma_mode_enable                      0x08001cad   Thumb Code    16  gd32e23x_adc.o(.text.adc_dma_mode_enable)
+    adc_enable                               0x08001cbd   Thumb Code    20  gd32e23x_adc.o(.text.adc_enable)
+    adc_software_trigger_enable              0x08001cd1   Thumb Code    40  gd32e23x_adc.o(.text.adc_software_trigger_enable)
+    allOff                                   0x08001cfd   Thumb Code   116  phaseouts.o(.text.allOff)
+    allpwm                                   0x08001d75   Thumb Code   136  phaseouts.o(.text.allpwm)
+    changeCompInput                          0x08001e05   Thumb Code    88  comparator.o(.text.changeCompInput)
+    cmp_enable                               0x08001e6d   Thumb Code    12  gd32e23x_cmp.o(.text.cmp_enable)
+    cmp_mode_init                            0x08001e79   Thumb Code    32  gd32e23x_cmp.o(.text.cmp_mode_init)
+    cmp_output_init                          0x08001e9d   Thumb Code    32  gd32e23x_cmp.o(.text.cmp_output_init)
+    cmp_output_level_get                     0x08001ebd   Thumb Code    12  gd32e23x_cmp.o(.text.cmp_output_level_get)
+    comStep                                  0x08001ecd   Thumb Code   712  phaseouts.o(.text.comStep)
+    computeDshotDMA                          0x0800219d   Thumb Code   952  dshot.o(.text.computeDshotDMA)
+    computeServoInput                        0x08002589   Thumb Code   356  signal.o(.text.computeServoInput)
+    crsf_UART_Init                           0x08002721   Thumb Code   200  peripherals.o(.text.crsf_UART_Init)
+    delayMicros                              0x08002805   Thumb Code    32  functions.o(.text.delayMicros)
+    delayMillis                              0x08002825   Thumb Code    68  functions.o(.text.delayMillis)
+    delay_decrement                          0x08002871   Thumb Code    16  systick.o(.text.delay_decrement)
+    detectInput                              0x08002885   Thumb Code   472  signal.o(.text.detectInput)
+    dma_channel_disable                      0x08002a81   Thumb Code    16  gd32e23x_dma.o(.text.dma_channel_disable)
+    dma_channel_enable                       0x08002a91   Thumb Code    16  gd32e23x_dma.o(.text.dma_channel_enable)
+    dma_circulation_disable                  0x08002aa1   Thumb Code    16  gd32e23x_dma.o(.text.dma_circulation_disable)
+    dma_circulation_enable                   0x08002ab1   Thumb Code    16  gd32e23x_dma.o(.text.dma_circulation_enable)
+    dma_deinit                               0x08002ac1   Thumb Code    44  gd32e23x_dma.o(.text.dma_deinit)
+    dma_init                                 0x08002aed   Thumb Code   112  gd32e23x_dma.o(.text.dma_init)
+    dma_interrupt_flag_clear                 0x08002b61   Thumb Code    16  gd32e23x_dma.o(.text.dma_interrupt_flag_clear)
+    dma_interrupt_flag_get                   0x08002b75   Thumb Code    56  gd32e23x_dma.o(.text.dma_interrupt_flag_get)
+    dma_memory_address_config                0x08002bb1   Thumb Code    12  gd32e23x_dma.o(.text.dma_memory_address_config)
+    dma_periph_address_config                0x08002bc1   Thumb Code    12  gd32e23x_dma.o(.text.dma_periph_address_config)
+    dma_struct_para_init                     0x08002bd1   Thumb Code    20  gd32e23x_dma.o(.text.dma_struct_para_init)
+    enableCompInterrupts                     0x08002be5   Thumb Code    16  comparator.o(.text.enableCompInterrupts)
+    enableCorePeripherals                    0x08002bf5   Thumb Code   252  peripherals.o(.text.enableCorePeripherals)
+    exti_flag_clear                          0x08002d15   Thumb Code     8  gd32e23x_exti.o(.text.exti_flag_clear)
+    exti_init                                0x08002d1d   Thumb Code   104  gd32e23x_exti.o(.text.exti_init)
+    exti_interrupt_flag_clear                0x08002d89   Thumb Code     8  gd32e23x_exti.o(.text.exti_interrupt_flag_clear)
+    exti_interrupt_flag_get                  0x08002d91   Thumb Code    12  gd32e23x_exti.o(.text.exti_interrupt_flag_get)
+    fmc_flag_clear                           0x08002da1   Thumb Code     8  gd32e23x_fmc.o(.text.fmc_flag_clear)
+    fmc_lock                                 0x08002da9   Thumb Code    12  gd32e23x_fmc.o(.text.fmc_lock)
+    fmc_page_erase                           0x08002db9   Thumb Code   376  gd32e23x_fmc.o(.text.fmc_page_erase)
+    fmc_prefetch_enable                      0x08002f31   Thumb Code    12  gd32e23x_fmc.o(.text.fmc_prefetch_enable)
+    fmc_unlock                               0x08002f3d   Thumb Code    20  gd32e23x_fmc.o(.text.fmc_unlock)
+    fmc_word_program                         0x08002f5d   Thumb Code   368  gd32e23x_fmc.o(.text.fmc_word_program)
+    fmc_wscnt_set                            0x080030d5   Thumb Code    16  gd32e23x_fmc.o(.text.fmc_wscnt_set)
+    fullBrake                                0x080030e9   Thumb Code   116  phaseouts.o(.text.fullBrake)
+    fwdgt_config                             0x08003161   Thumb Code   136  gd32e23x_fwdgt.o(.text.fwdgt_config)
+    fwdgt_counter_reload                     0x080031f9   Thumb Code     8  gd32e23x_fwdgt.o(.text.fwdgt_counter_reload)
+    fwdgt_enable                             0x08003205   Thumb Code     8  gd32e23x_fwdgt.o(.text.fwdgt_enable)
+    generatePwmTimerEvent                    0x08003215   Thumb Code     8  peripherals.o(.text.generatePwmTimerEvent)
+    getAbsDif                                0x08003221   Thumb Code    10  functions.o(.text.getAbsDif)
+    getCompOutputLevel                       0x0800322b   Thumb Code    10  comparator.o(.text.getCompOutputLevel)
+    getInputPinState                         0x08003235   Thumb Code    12  io.o(.text.getInputPinState)
+    gpio_af_set                              0x08003245   Thumb Code   280  gd32e23x_gpio.o(.text.gpio_af_set)
+    gpio_mode_set                            0x08003375   Thumb Code   476  gd32e23x_gpio.o(.text.gpio_mode_set)
+    gpio_output_options_set                  0x08003581   Thumb Code   308  gd32e23x_gpio.o(.text.gpio_output_options_set)
+    initAfterJump                            0x080036b5   Thumb Code    20  peripherals.o(.text.initAfterJump)
+    initCorePeripherals                      0x080036c9   Thumb Code   300  peripherals.o(.text.initCorePeripherals)
+    interruptRoutine                         0x08003815   Thumb Code   200  main.o(.text.interruptRoutine)
+    loadEEpromSettings                       0x080038f1   Thumb Code   940  main.o(.text.loadEEpromSettings)
+    main                                     0x08003ce1   Thumb Code  3196  main.o(.text.main)
+    makeTelemPackage                         0x08004989   Thumb Code   112  serial_telemetry.o(.text.makeTelemPackage)
+    make_dshot_package                       0x08004a01   Thumb Code   428  dshot.o(.text.make_dshot_package)
+    map                                      0x08004bc5   Thumb Code    92  functions.o(.text.map)
+    maskPhaseInterrupts                      0x08004c21   Thumb Code    16  comparator.o(.text.maskPhaseInterrupts)
+    nvic_irq_enable                          0x08004c35   Thumb Code    76  gd32e23x_misc.o(.text.nvic_irq_enable)
+    nvic_vector_table_set                    0x08004c8d   Thumb Code    16  gd32e23x_misc.o(.text.nvic_vector_table_set)
+    playBeaconTune3                          0x08004ca5   Thumb Code    88  sounds.o(.text.playBeaconTune3)
+    playBlueJayTune                          0x08004cfd   Thumb Code   192  sounds.o(.text.playBlueJayTune)
+    playBrushedStartupTune                   0x08004dcd   Thumb Code   120  sounds.o(.text.playBrushedStartupTune)
+    playChangedTone                          0x08004e45   Thumb Code    72  sounds.o(.text.playChangedTone)
+    playDefaultTone                          0x08004e8d   Thumb Code    72  sounds.o(.text.playDefaultTone)
+    playInputTune                            0x08004ed5   Thumb Code    88  sounds.o(.text.playInputTune)
+    playInputTune2                           0x08004f2d   Thumb Code    92  sounds.o(.text.playInputTune2)
+    playStartupTune                          0x08004f89   Thumb Code   112  sounds.o(.text.playStartupTune)
+    processDshot                             0x08005011   Thumb Code    48  main.o(.text.processDshot)
+    proportionalBrake                        0x08005049   Thumb Code   104  phaseouts.o(.text.proportionalBrake)
+    rcu_clock_freq_get                       0x080050b5   Thumb Code   372  gd32e23x_rcu.o(.text.rcu_clock_freq_get)
+    rcu_periph_clock_disable                 0x08005251   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_clock_disable)
+    rcu_periph_clock_enable                  0x08005265   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_clock_enable)
+    rcu_periph_reset_disable                 0x08005279   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_reset_disable)
+    rcu_periph_reset_enable                  0x0800528d   Thumb Code    20  gd32e23x_rcu.o(.text.rcu_periph_reset_enable)
+    read_flash_bin                           0x080052a5   Thumb Code    80  eeprom.o(.text.read_flash_bin)
+    receiveCRSF                              0x080052f5   Thumb Code    24  peripherals.o(.text.receiveCRSF)
+    receiveDshotDma                          0x08005315   Thumb Code   108  io.o(.text.receiveDshotDma)
+    resetInputCaptureTimer                   0x080053a9   Thumb Code    12  peripherals.o(.text.resetInputCaptureTimer)
+    runBrushedLoop                           0x080053b9   Thumb Code   804  main.o(.text.runBrushedLoop)
+    saveEEpromSettings                       0x080056f1   Thumb Code    88  main.o(.text.saveEEpromSettings)
+    save_flash_nolib                         0x08005759   Thumb Code   420  eeprom.o(.text.save_flash_nolib)
+    sendDshotDma                             0x080058fd   Thumb Code   116  io.o(.text.sendDshotDma)
+    send_telem_DMA                           0x0800598d   Thumb Code    64  serial_telemetry.o(.text.send_telem_DMA)
+    setChannels                              0x080059d9   Thumb Code   580  crsf.o(.text.setChannels)
+    setInput                                 0x08005c55   Thumb Code  1808  main.o(.text.setInput)
+    setInputPullUp                           0x08006385   Thumb Code    12  io.o(.text.setInputPullUp)
+    setPWMCompare1                           0x08006391   Thumb Code     8  peripherals.o(.text.setPWMCompare1)
+    setPWMCompare2                           0x0800639d   Thumb Code     8  peripherals.o(.text.setPWMCompare2)
+    setPWMCompare3                           0x080063a9   Thumb Code     8  peripherals.o(.text.setPWMCompare3)
+    setVolume                                0x080063b5   Thumb Code    16  sounds.o(.text.setVolume)
+    startMotor                               0x080063c9   Thumb Code   164  main.o(.text.startMotor)
+    telem_UART_Init                          0x08006489   Thumb Code   188  serial_telemetry.o(.text.telem_UART_Init)
+    tenKhzRoutine                            0x08006559   Thumb Code  1100  main.o(.text.tenKhzRoutine)
+    timer_auto_reload_shadow_disable         0x080069c5   Thumb Code    10  gd32e23x_timer.o(.text.timer_auto_reload_shadow_disable)
+    timer_auto_reload_shadow_enable          0x080069cf   Thumb Code    10  gd32e23x_timer.o(.text.timer_auto_reload_shadow_enable)
+    timer_break_config                       0x080069d9   Thumb Code    30  gd32e23x_timer.o(.text.timer_break_config)
+    timer_break_struct_para_init             0x080069f7   Thumb Code    18  gd32e23x_timer.o(.text.timer_break_struct_para_init)
+    timer_channel_complementary_output_state_config 0x08006a09   Thumb Code    54  gd32e23x_timer.o(.text.timer_channel_complementary_output_state_config)
+    timer_channel_input_struct_para_init     0x08006a3f   Thumb Code    14  gd32e23x_timer.o(.text.timer_channel_input_struct_para_init)
+    timer_channel_output_config              0x08006a4d   Thumb Code   528  gd32e23x_timer.o(.text.timer_channel_output_config)
+    timer_channel_output_mode_config         0x08006c69   Thumb Code    92  gd32e23x_timer.o(.text.timer_channel_output_mode_config)
+    timer_channel_output_shadow_config       0x08006cc5   Thumb Code    92  gd32e23x_timer.o(.text.timer_channel_output_shadow_config)
+    timer_channel_output_state_config        0x08006d21   Thumb Code    90  gd32e23x_timer.o(.text.timer_channel_output_state_config)
+    timer_channel_output_struct_para_init    0x08006d7b   Thumb Code    16  gd32e23x_timer.o(.text.timer_channel_output_struct_para_init)
+    timer_deinit                             0x08006d8d   Thumb Code   100  gd32e23x_timer.o(.text.timer_deinit)
+    timer_enable                             0x08006e01   Thumb Code    10  gd32e23x_timer.o(.text.timer_enable)
+    timer_event_software_generate            0x08006e0b   Thumb Code     8  gd32e23x_timer.o(.text.timer_event_software_generate)
+    timer_flag_clear                         0x08006e13   Thumb Code     6  gd32e23x_timer.o(.text.timer_flag_clear)
+    timer_init                               0x08006e19   Thumb Code   144  gd32e23x_timer.o(.text.timer_init)
+    timer_input_pwm_capture_config           0x08006ec9   Thumb Code   344  gd32e23x_timer.o(.text.timer_input_pwm_capture_config)
+    timer_interrupt_disable                  0x0800702d   Thumb Code     8  gd32e23x_timer.o(.text.timer_interrupt_disable)
+    timer_interrupt_flag_clear               0x08007035   Thumb Code     6  gd32e23x_timer.o(.text.timer_interrupt_flag_clear)
+    timer_prescaler_config                   0x0800703b   Thumb Code    16  gd32e23x_timer.o(.text.timer_prescaler_config)
+    timer_primary_output_config              0x0800704b   Thumb Code    22  gd32e23x_timer.o(.text.timer_primary_output_config)
+    timer_struct_para_init                   0x08007061   Thumb Code    16  gd32e23x_timer.o(.text.timer_struct_para_init)
+    transfercomplete                         0x08007075   Thumb Code   304  signal.o(.text.transfercomplete)
+    twoChannelForward                        0x080071dd   Thumb Code   132  phaseouts.o(.text.twoChannelForward)
+    twoChannelReverse                        0x08007261   Thumb Code   120  phaseouts.o(.text.twoChannelReverse)
+    usart_baudrate_set                       0x080072e1   Thumb Code    80  gd32e23x_usart.o(.text.usart_baudrate_set)
+    usart_dma_transmit_config                0x0800733d   Thumb Code    16  gd32e23x_usart.o(.text.usart_dma_transmit_config)
+    usart_enable                             0x0800734d   Thumb Code    10  gd32e23x_usart.o(.text.usart_enable)
+    usart_halfduplex_enable                  0x08007357   Thumb Code    18  gd32e23x_usart.o(.text.usart_halfduplex_enable)
+    usart_receive_config                     0x08007369   Thumb Code    16  gd32e23x_usart.o(.text.usart_receive_config)
+    usart_transmit_config                    0x08007379   Thumb Code    16  gd32e23x_usart.o(.text.usart_transmit_config)
+    zcfoundroutine                           0x08007389   Thumb Code   284  main.o(.text.zcfoundroutine)
+    __scatterload_copy                       0x080074bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080074cb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080074cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    gcr_encode_table                         0x080075e2   Data          16  dshot.o(.rodata.gcr_encode_table)
+    Region$$Table$$Base                      0x080076f4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08007714   Number         0  anon$$obj.o(Region$$Table)
     test                                     0x08007be0   Data          30  firmwareversion.o(.rodata.test)
     green_level                              0x20000000   Data           1  main.o(.data..L_MergedGlobals)
     eeprom_layout_version                    0x20000001   Data           1  main.o(.data..L_MergedGlobals)
@@ -3306,36 +3307,36 @@ Image Symbol Table
     duty_cycle_setpoint                      0x200004a4   Data           2  main.o(.bss..L_MergedGlobals.2)
     adjusted_input                           0x200004a6   Data           2  main.o(.bss..L_MergedGlobals.2)
     smoothedcurrent                          0x200004a8   Data           2  main.o(.bss..L_MergedGlobals.2)
-    advance                                  0x200004aa   Data           2  main.o(.bss..L_MergedGlobals.2)
-    zero_input_count                         0x200004ac   Data           2  main.o(.bss..L_MergedGlobals.2)
-    input                                    0x200004ae   Data           2  main.o(.bss..L_MergedGlobals.2)
-    newinput                                 0x200004b0   Data           2  main.o(.bss..L_MergedGlobals.2)
-    duty_cycle                               0x200004b2   Data           2  main.o(.bss..L_MergedGlobals.2)
-    waitTime                                 0x200004b4   Data           2  main.o(.bss..L_MergedGlobals.2)
-    signaltimeout                            0x200004b6   Data           2  main.o(.bss..L_MergedGlobals.2)
-    speed_control_min_input                  0x200004b8   Data           2  main.o(.bss..L_MergedGlobals.2)
-    speed_control_max_input                  0x200004ba   Data           2  main.o(.bss..L_MergedGlobals.2)
-    ADC_raw_current                          0x200004bc   Data           2  main.o(.bss..L_MergedGlobals.2)
-    thiszctime                               0x200004be   Data           2  main.o(.bss..L_MergedGlobals.2)
-    prop_brake_duty_cycle                    0x200004c0   Data           2  main.o(.bss..L_MergedGlobals.2)
-    phase_A_position                         0x200004c2   Data           2  main.o(.bss..L_MergedGlobals.2)
-    phase_B_position                         0x200004c4   Data           2  main.o(.bss..L_MergedGlobals.2)
-    phase_C_position                         0x200004c6   Data           2  main.o(.bss..L_MergedGlobals.2)
-    armed_timeout_count                      0x200004c8   Data           2  main.o(.bss..L_MergedGlobals.2)
-    battery_voltage                          0x200004ca   Data           2  main.o(.bss..L_MergedGlobals.2)
-    telem_ms_count                           0x200004cc   Data           2  main.o(.bss..L_MergedGlobals.2)
-    adjusted_duty_cycle                      0x200004ce   Data           2  main.o(.bss..L_MergedGlobals.2)
-    e_rpm                                    0x200004d0   Data           2  main.o(.bss..L_MergedGlobals.2)
-    ADC_raw_temp                             0x200004d2   Data           2  main.o(.bss..L_MergedGlobals.2)
-    converted_degrees                        0x200004d4   Data           2  main.o(.bss..L_MergedGlobals.2)
-    ADC_raw_volts                            0x200004d6   Data           2  main.o(.bss..L_MergedGlobals.2)
-    k_erpm                                   0x200004d8   Data           2  main.o(.bss..L_MergedGlobals.2)
-    input_override                           0x200004dc   Data           4  main.o(.bss..L_MergedGlobals.3)
-    stall_protection_adjust                  0x200004e0   Data           4  main.o(.bss..L_MergedGlobals.3)
-    consumed_current                         0x200004e4   Data           4  main.o(.bss..L_MergedGlobals.3)
-    smoothed_raw_current                     0x200004e8   Data           4  main.o(.bss..L_MergedGlobals.3)
-    average_interval                         0x200004ec   Data           4  main.o(.bss..L_MergedGlobals.3)
-    total                                    0x200004f0   Data           4  main.o(.bss..L_MergedGlobals.3)
+    zero_input_count                         0x200004aa   Data           2  main.o(.bss..L_MergedGlobals.2)
+    input                                    0x200004ac   Data           2  main.o(.bss..L_MergedGlobals.2)
+    newinput                                 0x200004ae   Data           2  main.o(.bss..L_MergedGlobals.2)
+    duty_cycle                               0x200004b0   Data           2  main.o(.bss..L_MergedGlobals.2)
+    waitTime                                 0x200004b2   Data           2  main.o(.bss..L_MergedGlobals.2)
+    signaltimeout                            0x200004b4   Data           2  main.o(.bss..L_MergedGlobals.2)
+    speed_control_min_input                  0x200004b6   Data           2  main.o(.bss..L_MergedGlobals.2)
+    speed_control_max_input                  0x200004b8   Data           2  main.o(.bss..L_MergedGlobals.2)
+    ADC_raw_current                          0x200004ba   Data           2  main.o(.bss..L_MergedGlobals.2)
+    thiszctime                               0x200004bc   Data           2  main.o(.bss..L_MergedGlobals.2)
+    prop_brake_duty_cycle                    0x200004be   Data           2  main.o(.bss..L_MergedGlobals.2)
+    phase_A_position                         0x200004c0   Data           2  main.o(.bss..L_MergedGlobals.2)
+    phase_B_position                         0x200004c2   Data           2  main.o(.bss..L_MergedGlobals.2)
+    phase_C_position                         0x200004c4   Data           2  main.o(.bss..L_MergedGlobals.2)
+    armed_timeout_count                      0x200004c6   Data           2  main.o(.bss..L_MergedGlobals.2)
+    battery_voltage                          0x200004c8   Data           2  main.o(.bss..L_MergedGlobals.2)
+    telem_ms_count                           0x200004ca   Data           2  main.o(.bss..L_MergedGlobals.2)
+    adjusted_duty_cycle                      0x200004cc   Data           2  main.o(.bss..L_MergedGlobals.2)
+    e_rpm                                    0x200004ce   Data           2  main.o(.bss..L_MergedGlobals.2)
+    ADC_raw_temp                             0x200004d0   Data           2  main.o(.bss..L_MergedGlobals.2)
+    converted_degrees                        0x200004d2   Data           2  main.o(.bss..L_MergedGlobals.2)
+    ADC_raw_volts                            0x200004d4   Data           2  main.o(.bss..L_MergedGlobals.2)
+    k_erpm                                   0x200004d6   Data           2  main.o(.bss..L_MergedGlobals.2)
+    input_override                           0x200004d8   Data           4  main.o(.bss..L_MergedGlobals.2)
+    stall_protection_adjust                  0x200004dc   Data           4  main.o(.bss..L_MergedGlobals.3)
+    consumed_current                         0x200004e0   Data           4  main.o(.bss..L_MergedGlobals.3)
+    smoothed_raw_current                     0x200004e4   Data           4  main.o(.bss..L_MergedGlobals.3)
+    average_interval                         0x200004e8   Data           4  main.o(.bss..L_MergedGlobals.3)
+    total                                    0x200004ec   Data           4  main.o(.bss..L_MergedGlobals.3)
+    advance                                  0x200004f0   Data           4  main.o(.bss..L_MergedGlobals.3)
     zero_crosses                             0x200004f4   Data           4  main.o(.bss..L_MergedGlobals.3)
     e_com_time                               0x200004f8   Data           4  main.o(.bss..L_MergedGlobals.3)
     last_average_interval                    0x200004fc   Data           4  main.o(.bss..L_MergedGlobals.3)
@@ -3361,9 +3362,9 @@ Memory Map of the image
 
   Image Entry point : 0x080010cd
 
-  Load Region LR_IROM1 (Base: 0x08001000, Size: 0x00006af0, Max: 0x0000ffff, ABSOLUTE, COMPRESSED[0x00006a18])
+  Load Region LR_IROM1 (Base: 0x08001000, Size: 0x00006ad8, Max: 0x0000ffff, ABSOLUTE, COMPRESSED[0x00006a00])
 
-    Execution Region ER_IROM1 (Exec base: 0x08001000, Load base: 0x08001000, Size: 0x0000672c, Max: 0x0000ffff, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08001000, Load base: 0x08001000, Size: 0x00006714, Max: 0x0000ffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3403,164 +3404,163 @@ Memory Map of the image
     0x0800165a   0x0800165a   0x00000016   Code   RO         1222    .text.MX_IWDG_Init  peripherals.o
     0x08001670   0x08001670   0x00000002   Code   RO         1152    .text.NMI_Handler   gd32e23x_it.o
     0x08001672   0x08001672   0x00000002   Code   RO         1158    .text.PendSV_Handler  gd32e23x_it.o
-    0x08001674   0x08001674   0x000000f4   Code   RO           32    .text.PeriodElapsedCallback  main.o
-    0x08001768   0x08001768   0x00000002   Code   RO         1156    .text.SVC_Handler   gd32e23x_it.o
-    0x0800176a   0x0800176a   0x00000004   Code   RO         1160    .text.SysTick_Handler  gd32e23x_it.o
-    0x0800176e   0x0800176e   0x00000002   PAD
-    0x08001770   0x08001770   0x000001c4   Code   RO         1294    .text.SystemInit    system_gd32e23x.o
-    0x08001934   0x08001934   0x000001e8   Code   RO         1210    .text.TIM0_Init     peripherals.o
-    0x08001b1c   0x08001b1c   0x00000018   Code   RO         1168    .text.TIMER13_IRQHandler  gd32e23x_it.o
-    0x08001b34   0x08001b34   0x0000000c   Code   RO         1172    .text.TIMER14_IRQHandler  gd32e23x_it.o
-    0x08001b40   0x08001b40   0x0000002c   Code   RO         1170    .text.TIMER15_IRQHandler  gd32e23x_it.o
-    0x08001b6c   0x08001b6c   0x00000002   Code   RO         1176    .text.TIMER2_IRQHandler  gd32e23x_it.o
-    0x08001b6e   0x08001b6e   0x00000002   PAD
-    0x08001b70   0x08001b70   0x000000d4   Code   RO         1226    .text.UN_TIM_Init   peripherals.o
-    0x08001c44   0x08001c44   0x0000002c   Code   RO         1174    .text.USART0_IRQHandler  gd32e23x_it.o
-    0x08001c70   0x08001c70   0x00000044   Code   RO          153    .text.adc_calibration_enable  gd32e23x_adc.o
-    0x08001cb4   0x08001cb4   0x00000010   Code   RO          155    .text.adc_dma_mode_enable  gd32e23x_adc.o
-    0x08001cc4   0x08001cc4   0x00000014   Code   RO          149    .text.adc_enable    gd32e23x_adc.o
-    0x08001cd8   0x08001cd8   0x0000002c   Code   RO          181    .text.adc_software_trigger_enable  gd32e23x_adc.o
-    0x08001d04   0x08001d04   0x00000078   Code   RO         1269    .text.allOff        phaseouts.o
-    0x08001d7c   0x08001d7c   0x00000090   Code   RO         1275    .text.allpwm        phaseouts.o
-    0x08001e0c   0x08001e0c   0x00000068   Code   RO         1144    .text.changeCompInput  comparator.o
-    0x08001e74   0x08001e74   0x0000000c   Code   RO          222    .text.cmp_enable    gd32e23x_cmp.o
-    0x08001e80   0x08001e80   0x00000024   Code   RO          218    .text.cmp_mode_init  gd32e23x_cmp.o
-    0x08001ea4   0x08001ea4   0x00000020   Code   RO          220    .text.cmp_output_init  gd32e23x_cmp.o
-    0x08001ec4   0x08001ec4   0x00000010   Code   RO          230    .text.cmp_output_level_get  gd32e23x_cmp.o
-    0x08001ed4   0x08001ed4   0x000002d0   Code   RO         1271    .text.comStep       phaseouts.o
-    0x080021a4   0x080021a4   0x000003ec   Code   RO            2    .text.computeDshotDMA  dshot.o
-    0x08002590   0x08002590   0x00000198   Code   RO           93    .text.computeServoInput  signal.o
-    0x08002728   0x08002728   0x000000e4   Code   RO         1242    .text.crsf_UART_Init  peripherals.o
-    0x0800280c   0x0800280c   0x00000020   Code   RO           15    .text.delayMicros   functions.o
-    0x0800282c   0x0800282c   0x0000004c   Code   RO           17    .text.delayMillis   functions.o
-    0x08002878   0x08002878   0x00000014   Code   RO         1304    .text.delay_decrement  systick.o
-    0x0800288c   0x0800288c   0x000001fc   Code   RO          101    .text.detectInput   signal.o
-    0x08002a88   0x08002a88   0x00000010   Code   RO          281    .text.dma_channel_disable  gd32e23x_dma.o
-    0x08002a98   0x08002a98   0x00000010   Code   RO          291    .text.dma_channel_enable  gd32e23x_dma.o
-    0x08002aa8   0x08002aa8   0x00000010   Code   RO          285    .text.dma_circulation_disable  gd32e23x_dma.o
-    0x08002ab8   0x08002ab8   0x00000010   Code   RO          283    .text.dma_circulation_enable  gd32e23x_dma.o
-    0x08002ac8   0x08002ac8   0x0000002c   Code   RO          275    .text.dma_deinit    gd32e23x_dma.o
-    0x08002af4   0x08002af4   0x00000074   Code   RO          279    .text.dma_init      gd32e23x_dma.o
-    0x08002b68   0x08002b68   0x00000014   Code   RO          323    .text.dma_interrupt_flag_clear  gd32e23x_dma.o
-    0x08002b7c   0x08002b7c   0x0000003c   Code   RO          321    .text.dma_interrupt_flag_get  gd32e23x_dma.o
-    0x08002bb8   0x08002bb8   0x00000010   Code   RO          295    .text.dma_memory_address_config  gd32e23x_dma.o
-    0x08002bc8   0x08002bc8   0x00000010   Code   RO          293    .text.dma_periph_address_config  gd32e23x_dma.o
-    0x08002bd8   0x08002bd8   0x00000014   Code   RO          277    .text.dma_struct_para_init  gd32e23x_dma.o
-    0x08002bec   0x08002bec   0x00000010   Code   RO         1142    .text.enableCompInterrupts  comparator.o
-    0x08002bfc   0x08002bfc   0x00000120   Code   RO         1240    .text.enableCorePeripherals  peripherals.o
-    0x08002d1c   0x08002d1c   0x00000008   Code   RO          348    .text.exti_flag_clear  gd32e23x_exti.o
-    0x08002d24   0x08002d24   0x0000006c   Code   RO          332    .text.exti_init     gd32e23x_exti.o
-    0x08002d90   0x08002d90   0x00000008   Code   RO          352    .text.exti_interrupt_flag_clear  gd32e23x_exti.o
-    0x08002d98   0x08002d98   0x00000010   Code   RO          350    .text.exti_interrupt_flag_get  gd32e23x_exti.o
-    0x08002da8   0x08002da8   0x00000008   Code   RO          407    .text.fmc_flag_clear  gd32e23x_fmc.o
-    0x08002db0   0x08002db0   0x00000010   Code   RO          357    .text.fmc_lock      gd32e23x_fmc.o
-    0x08002dc0   0x08002dc0   0x00000178   Code   RO          365    .text.fmc_page_erase  gd32e23x_fmc.o
-    0x08002f38   0x08002f38   0x0000000c   Code   RO          361    .text.fmc_prefetch_enable  gd32e23x_fmc.o
-    0x08002f44   0x08002f44   0x00000020   Code   RO          355    .text.fmc_unlock    gd32e23x_fmc.o
-    0x08002f64   0x08002f64   0x00000178   Code   RO          373    .text.fmc_word_program  gd32e23x_fmc.o
-    0x080030dc   0x080030dc   0x00000014   Code   RO          359    .text.fmc_wscnt_set  gd32e23x_fmc.o
-    0x080030f0   0x080030f0   0x00000078   Code   RO         1273    .text.fullBrake     phaseouts.o
-    0x08003168   0x08003168   0x00000098   Code   RO          430    .text.fwdgt_config  gd32e23x_fwdgt.o
-    0x08003200   0x08003200   0x0000000c   Code   RO          428    .text.fwdgt_counter_reload  gd32e23x_fwdgt.o
-    0x0800320c   0x0800320c   0x00000010   Code   RO          420    .text.fwdgt_enable  gd32e23x_fwdgt.o
-    0x0800321c   0x0800321c   0x0000000c   Code   RO         1234    .text.generatePwmTimerEvent  peripherals.o
-    0x08003228   0x08003228   0x0000000a   Code   RO           13    .text.getAbsDif     functions.o
-    0x08003232   0x08003232   0x0000000a   Code   RO         1138    .text.getCompOutputLevel  comparator.o
-    0x0800323c   0x0800323c   0x00000010   Code   RO         1186    .text.getInputPinState  io.o
-    0x0800324c   0x0800324c   0x00000130   Code   RO          457    .text.gpio_af_set   gd32e23x_gpio.o
-    0x0800337c   0x0800337c   0x0000020c   Code   RO          437    .text.gpio_mode_set  gd32e23x_gpio.o
-    0x08003588   0x08003588   0x00000134   Code   RO          439    .text.gpio_output_options_set  gd32e23x_gpio.o
-    0x080036bc   0x080036bc   0x00000014   Code   RO         1238    .text.initAfterJump  peripherals.o
-    0x080036d0   0x080036d0   0x0000014c   Code   RO         1204    .text.initCorePeripherals  peripherals.o
-    0x0800381c   0x0800381c   0x000000e4   Code   RO           34    .text.interruptRoutine  main.o
-    0x08003900   0x08003900   0x000003f0   Code   RO           22    .text.loadEEpromSettings  main.o
-    0x08003cf0   0x08003cf0   0x00000ce0   Code   RO           50    .text.main          main.o
-    0x080049d0   0x080049d0   0x00000078   Code   RO         1288    .text.makeTelemPackage  serial_telemetry.o
-    0x08004a48   0x08004a48   0x000001c4   Code   RO            4    .text.make_dshot_package  dshot.o
-    0x08004c0c   0x08004c0c   0x00000046   Code   RO           11    .text.map           functions.o
-    0x08004c52   0x08004c52   0x00000002   PAD
-    0x08004c54   0x08004c54   0x00000014   Code   RO         1140    .text.maskPhaseInterrupts  comparator.o
-    0x08004c68   0x08004c68   0x00000058   Code   RO          537    .text.nvic_irq_enable  gd32e23x_misc.o
-    0x08004cc0   0x08004cc0   0x00000018   Code   RO          543    .text.nvic_vector_table_set  gd32e23x_misc.o
-    0x08004cd8   0x08004cd8   0x00000058   Code   RO          133    .text.playBeaconTune3  sounds.o
-    0x08004d30   0x08004d30   0x000000d0   Code   RO          117    .text.playBlueJayTune  sounds.o
-    0x08004e00   0x08004e00   0x00000078   Code   RO          121    .text.playBrushedStartupTune  sounds.o
-    0x08004e78   0x08004e78   0x00000048   Code   RO          131    .text.playChangedTone  sounds.o
-    0x08004ec0   0x08004ec0   0x00000048   Code   RO          129    .text.playDefaultTone  sounds.o
-    0x08004f08   0x08004f08   0x00000058   Code   RO          127    .text.playInputTune  sounds.o
-    0x08004f60   0x08004f60   0x0000005c   Code   RO          125    .text.playInputTune2  sounds.o
-    0x08004fbc   0x08004fbc   0x00000088   Code   RO          119    .text.playStartupTune  sounds.o
-    0x08005044   0x08005044   0x00000038   Code   RO           44    .text.processDshot  main.o
-    0x0800507c   0x0800507c   0x0000006c   Code   RO         1249    .text.proportionalBrake  phaseouts.o
-    0x080050e8   0x080050e8   0x0000019c   Code   RO          655    .text.rcu_clock_freq_get  gd32e23x_rcu.o
-    0x08005284   0x08005284   0x00000014   Code   RO          583    .text.rcu_periph_clock_disable  gd32e23x_rcu.o
-    0x08005298   0x08005298   0x00000014   Code   RO          581    .text.rcu_periph_clock_enable  gd32e23x_rcu.o
-    0x080052ac   0x080052ac   0x00000014   Code   RO          591    .text.rcu_periph_reset_disable  gd32e23x_rcu.o
-    0x080052c0   0x080052c0   0x00000018   Code   RO          589    .text.rcu_periph_reset_enable  gd32e23x_rcu.o
-    0x080052d8   0x080052d8   0x00000050   Code   RO         1149    .text.read_flash_bin  eeprom.o
-    0x08005328   0x08005328   0x00000020   Code   RO         1244    .text.receiveCRSF   peripherals.o
-    0x08005348   0x08005348   0x00000094   Code   RO         1182    .text.receiveDshotDma  io.o
-    0x080053dc   0x080053dc   0x00000010   Code   RO         1236    .text.resetInputCaptureTimer  peripherals.o
-    0x080053ec   0x080053ec   0x00000334   Code   RO           48    .text.runBrushedLoop  main.o
-    0x08005720   0x08005720   0x00000068   Code   RO           24    .text.saveEEpromSettings  main.o
-    0x08005788   0x08005788   0x000001a4   Code   RO         1147    .text.save_flash_nolib  eeprom.o
-    0x0800592c   0x0800592c   0x00000090   Code   RO         1184    .text.sendDshotDma  io.o
-    0x080059bc   0x080059bc   0x0000004c   Code   RO         1284    .text.send_telem_DMA  serial_telemetry.o
-    0x08005a08   0x08005a08   0x00000264   Code   RO          141    .text.setChannels   crsf.o
-    0x08005c6c   0x08005c6c   0x00000730   Code   RO           38    .text.setInput      main.o
-    0x0800639c   0x0800639c   0x0000000c   Code   RO         1192    .text.setInputPullUp  io.o
-    0x080063a8   0x080063a8   0x0000000c   Code   RO         1228    .text.setPWMCompare1  peripherals.o
-    0x080063b4   0x080063b4   0x0000000c   Code   RO         1230    .text.setPWMCompare2  peripherals.o
-    0x080063c0   0x080063c0   0x0000000c   Code   RO         1232    .text.setPWMCompare3  peripherals.o
-    0x080063cc   0x080063cc   0x00000014   Code   RO          109    .text.setVolume     sounds.o
-    0x080063e0   0x080063e0   0x000000c0   Code   RO           36    .text.startMotor    main.o
-    0x080064a0   0x080064a0   0x000000d0   Code   RO         1282    .text.telem_UART_Init  serial_telemetry.o
-    0x08006570   0x08006570   0x0000046c   Code   RO           40    .text.tenKhzRoutine  main.o
-    0x080069dc   0x080069dc   0x0000000a   Code   RO          844    .text.timer_auto_reload_shadow_disable  gd32e23x_timer.o
-    0x080069e6   0x080069e6   0x0000000a   Code   RO          842    .text.timer_auto_reload_shadow_enable  gd32e23x_timer.o
-    0x080069f0   0x080069f0   0x0000001e   Code   RO          898    .text.timer_break_config  gd32e23x_timer.o
-    0x08006a0e   0x08006a0e   0x00000012   Code   RO          896    .text.timer_break_struct_para_init  gd32e23x_timer.o
-    0x08006a20   0x08006a20   0x00000036   Code   RO          934    .text.timer_channel_complementary_output_state_config  gd32e23x_timer.o
-    0x08006a56   0x08006a56   0x0000000e   Code   RO          936    .text.timer_channel_input_struct_para_init  gd32e23x_timer.o
-    0x08006a64   0x08006a64   0x0000021c   Code   RO          916    .text.timer_channel_output_config  gd32e23x_timer.o
-    0x08006c80   0x08006c80   0x0000005c   Code   RO          918    .text.timer_channel_output_mode_config  gd32e23x_timer.o
-    0x08006cdc   0x08006cdc   0x0000005c   Code   RO          922    .text.timer_channel_output_shadow_config  gd32e23x_timer.o
-    0x08006d38   0x08006d38   0x0000005a   Code   RO          932    .text.timer_channel_output_state_config  gd32e23x_timer.o
-    0x08006d92   0x08006d92   0x00000010   Code   RO          914    .text.timer_channel_output_struct_para_init  gd32e23x_timer.o
-    0x08006da2   0x08006da2   0x00000002   PAD
-    0x08006da4   0x08006da4   0x00000074   Code   RO          832    .text.timer_deinit  gd32e23x_timer.o
-    0x08006e18   0x08006e18   0x0000000a   Code   RO          838    .text.timer_enable  gd32e23x_timer.o
-    0x08006e22   0x08006e22   0x00000008   Code   RO          894    .text.timer_event_software_generate  gd32e23x_timer.o
-    0x08006e2a   0x08006e2a   0x00000006   Code   RO          884    .text.timer_flag_clear  gd32e23x_timer.o
-    0x08006e30   0x08006e30   0x000000b0   Code   RO          836    .text.timer_init    gd32e23x_timer.o
-    0x08006ee0   0x08006ee0   0x00000164   Code   RO          944    .text.timer_input_pwm_capture_config  gd32e23x_timer.o
-    0x08007044   0x08007044   0x00000008   Code   RO          876    .text.timer_interrupt_disable  gd32e23x_timer.o
-    0x0800704c   0x0800704c   0x00000006   Code   RO          880    .text.timer_interrupt_flag_clear  gd32e23x_timer.o
-    0x08007052   0x08007052   0x00000010   Code   RO          856    .text.timer_prescaler_config  gd32e23x_timer.o
-    0x08007062   0x08007062   0x00000016   Code   RO          908    .text.timer_primary_output_config  gd32e23x_timer.o
-    0x08007078   0x08007078   0x00000014   Code   RO          834    .text.timer_struct_para_init  gd32e23x_timer.o
-    0x0800708c   0x0800708c   0x00000168   Code   RO           95    .text.transfercomplete  signal.o
-    0x080071f4   0x080071f4   0x00000084   Code   RO         1277    .text.twoChannelForward  phaseouts.o
-    0x08007278   0x08007278   0x00000080   Code   RO         1279    .text.twoChannelReverse  phaseouts.o
-    0x080072f8   0x080072f8   0x0000005c   Code   RO          981    .text.usart_baudrate_set  gd32e23x_usart.o
-    0x08007354   0x08007354   0x00000010   Code   RO         1095    .text.usart_dma_transmit_config  gd32e23x_usart.o
-    0x08007364   0x08007364   0x0000000a   Code   RO          989    .text.usart_enable  gd32e23x_usart.o
-    0x0800736e   0x0800736e   0x00000012   Code   RO         1041    .text.usart_halfduplex_enable  gd32e23x_usart.o
-    0x08007380   0x08007380   0x00000010   Code   RO          995    .text.usart_receive_config  gd32e23x_usart.o
-    0x08007390   0x08007390   0x00000010   Code   RO          993    .text.usart_transmit_config  gd32e23x_usart.o
-    0x080073a0   0x080073a0   0x00000134   Code   RO           42    .text.zcfoundroutine  main.o
-    0x080074d4   0x080074d4   0x0000000e   Code   RO         1340    i.__scatterload_copy  mc_p.l(handlers.o)
-    0x080074e2   0x080074e2   0x00000002   Code   RO         1341    i.__scatterload_null  mc_p.l(handlers.o)
-    0x080074e4   0x080074e4   0x0000000e   Code   RO         1342    i.__scatterload_zeroinit  mc_p.l(handlers.o)
-    0x080074f2   0x080074f2   0x00000100   Data   RO          144    .rodata.crsf_crc8.crsf_crc8tab  crsf.o
-    0x080075f2   0x080075f2   0x00000008   Data   RO          657    .rodata.cst8        gd32e23x_rcu.o
-    0x080075fa   0x080075fa   0x00000010   Data   RO            6    .rodata.gcr_encode_table  dshot.o
-    0x0800760a   0x0800760a   0x00000100   Data   RO         1292    .rodata.get_crc8.tbl  serial_telemetry.o
-    0x0800770a   0x0800770a   0x00000002   PAD
-    0x0800770c   0x0800770c   0x00000020   Data   RO         1339    Region$$Table       anon$$obj.o
+    0x08001674   0x08001674   0x000000ec   Code   RO           32    .text.PeriodElapsedCallback  main.o
+    0x08001760   0x08001760   0x00000002   Code   RO         1156    .text.SVC_Handler   gd32e23x_it.o
+    0x08001762   0x08001762   0x00000004   Code   RO         1160    .text.SysTick_Handler  gd32e23x_it.o
+    0x08001766   0x08001766   0x00000002   PAD
+    0x08001768   0x08001768   0x000001c4   Code   RO         1294    .text.SystemInit    system_gd32e23x.o
+    0x0800192c   0x0800192c   0x000001e8   Code   RO         1210    .text.TIM0_Init     peripherals.o
+    0x08001b14   0x08001b14   0x00000018   Code   RO         1168    .text.TIMER13_IRQHandler  gd32e23x_it.o
+    0x08001b2c   0x08001b2c   0x0000000c   Code   RO         1172    .text.TIMER14_IRQHandler  gd32e23x_it.o
+    0x08001b38   0x08001b38   0x0000002c   Code   RO         1170    .text.TIMER15_IRQHandler  gd32e23x_it.o
+    0x08001b64   0x08001b64   0x00000002   Code   RO         1176    .text.TIMER2_IRQHandler  gd32e23x_it.o
+    0x08001b66   0x08001b66   0x00000002   PAD
+    0x08001b68   0x08001b68   0x000000d4   Code   RO         1226    .text.UN_TIM_Init   peripherals.o
+    0x08001c3c   0x08001c3c   0x0000002c   Code   RO         1174    .text.USART0_IRQHandler  gd32e23x_it.o
+    0x08001c68   0x08001c68   0x00000044   Code   RO          153    .text.adc_calibration_enable  gd32e23x_adc.o
+    0x08001cac   0x08001cac   0x00000010   Code   RO          155    .text.adc_dma_mode_enable  gd32e23x_adc.o
+    0x08001cbc   0x08001cbc   0x00000014   Code   RO          149    .text.adc_enable    gd32e23x_adc.o
+    0x08001cd0   0x08001cd0   0x0000002c   Code   RO          181    .text.adc_software_trigger_enable  gd32e23x_adc.o
+    0x08001cfc   0x08001cfc   0x00000078   Code   RO         1269    .text.allOff        phaseouts.o
+    0x08001d74   0x08001d74   0x00000090   Code   RO         1275    .text.allpwm        phaseouts.o
+    0x08001e04   0x08001e04   0x00000068   Code   RO         1144    .text.changeCompInput  comparator.o
+    0x08001e6c   0x08001e6c   0x0000000c   Code   RO          222    .text.cmp_enable    gd32e23x_cmp.o
+    0x08001e78   0x08001e78   0x00000024   Code   RO          218    .text.cmp_mode_init  gd32e23x_cmp.o
+    0x08001e9c   0x08001e9c   0x00000020   Code   RO          220    .text.cmp_output_init  gd32e23x_cmp.o
+    0x08001ebc   0x08001ebc   0x00000010   Code   RO          230    .text.cmp_output_level_get  gd32e23x_cmp.o
+    0x08001ecc   0x08001ecc   0x000002d0   Code   RO         1271    .text.comStep       phaseouts.o
+    0x0800219c   0x0800219c   0x000003ec   Code   RO            2    .text.computeDshotDMA  dshot.o
+    0x08002588   0x08002588   0x00000198   Code   RO           93    .text.computeServoInput  signal.o
+    0x08002720   0x08002720   0x000000e4   Code   RO         1242    .text.crsf_UART_Init  peripherals.o
+    0x08002804   0x08002804   0x00000020   Code   RO           15    .text.delayMicros   functions.o
+    0x08002824   0x08002824   0x0000004c   Code   RO           17    .text.delayMillis   functions.o
+    0x08002870   0x08002870   0x00000014   Code   RO         1304    .text.delay_decrement  systick.o
+    0x08002884   0x08002884   0x000001fc   Code   RO          101    .text.detectInput   signal.o
+    0x08002a80   0x08002a80   0x00000010   Code   RO          281    .text.dma_channel_disable  gd32e23x_dma.o
+    0x08002a90   0x08002a90   0x00000010   Code   RO          291    .text.dma_channel_enable  gd32e23x_dma.o
+    0x08002aa0   0x08002aa0   0x00000010   Code   RO          285    .text.dma_circulation_disable  gd32e23x_dma.o
+    0x08002ab0   0x08002ab0   0x00000010   Code   RO          283    .text.dma_circulation_enable  gd32e23x_dma.o
+    0x08002ac0   0x08002ac0   0x0000002c   Code   RO          275    .text.dma_deinit    gd32e23x_dma.o
+    0x08002aec   0x08002aec   0x00000074   Code   RO          279    .text.dma_init      gd32e23x_dma.o
+    0x08002b60   0x08002b60   0x00000014   Code   RO          323    .text.dma_interrupt_flag_clear  gd32e23x_dma.o
+    0x08002b74   0x08002b74   0x0000003c   Code   RO          321    .text.dma_interrupt_flag_get  gd32e23x_dma.o
+    0x08002bb0   0x08002bb0   0x00000010   Code   RO          295    .text.dma_memory_address_config  gd32e23x_dma.o
+    0x08002bc0   0x08002bc0   0x00000010   Code   RO          293    .text.dma_periph_address_config  gd32e23x_dma.o
+    0x08002bd0   0x08002bd0   0x00000014   Code   RO          277    .text.dma_struct_para_init  gd32e23x_dma.o
+    0x08002be4   0x08002be4   0x00000010   Code   RO         1142    .text.enableCompInterrupts  comparator.o
+    0x08002bf4   0x08002bf4   0x00000120   Code   RO         1240    .text.enableCorePeripherals  peripherals.o
+    0x08002d14   0x08002d14   0x00000008   Code   RO          348    .text.exti_flag_clear  gd32e23x_exti.o
+    0x08002d1c   0x08002d1c   0x0000006c   Code   RO          332    .text.exti_init     gd32e23x_exti.o
+    0x08002d88   0x08002d88   0x00000008   Code   RO          352    .text.exti_interrupt_flag_clear  gd32e23x_exti.o
+    0x08002d90   0x08002d90   0x00000010   Code   RO          350    .text.exti_interrupt_flag_get  gd32e23x_exti.o
+    0x08002da0   0x08002da0   0x00000008   Code   RO          407    .text.fmc_flag_clear  gd32e23x_fmc.o
+    0x08002da8   0x08002da8   0x00000010   Code   RO          357    .text.fmc_lock      gd32e23x_fmc.o
+    0x08002db8   0x08002db8   0x00000178   Code   RO          365    .text.fmc_page_erase  gd32e23x_fmc.o
+    0x08002f30   0x08002f30   0x0000000c   Code   RO          361    .text.fmc_prefetch_enable  gd32e23x_fmc.o
+    0x08002f3c   0x08002f3c   0x00000020   Code   RO          355    .text.fmc_unlock    gd32e23x_fmc.o
+    0x08002f5c   0x08002f5c   0x00000178   Code   RO          373    .text.fmc_word_program  gd32e23x_fmc.o
+    0x080030d4   0x080030d4   0x00000014   Code   RO          359    .text.fmc_wscnt_set  gd32e23x_fmc.o
+    0x080030e8   0x080030e8   0x00000078   Code   RO         1273    .text.fullBrake     phaseouts.o
+    0x08003160   0x08003160   0x00000098   Code   RO          430    .text.fwdgt_config  gd32e23x_fwdgt.o
+    0x080031f8   0x080031f8   0x0000000c   Code   RO          428    .text.fwdgt_counter_reload  gd32e23x_fwdgt.o
+    0x08003204   0x08003204   0x00000010   Code   RO          420    .text.fwdgt_enable  gd32e23x_fwdgt.o
+    0x08003214   0x08003214   0x0000000c   Code   RO         1234    .text.generatePwmTimerEvent  peripherals.o
+    0x08003220   0x08003220   0x0000000a   Code   RO           13    .text.getAbsDif     functions.o
+    0x0800322a   0x0800322a   0x0000000a   Code   RO         1138    .text.getCompOutputLevel  comparator.o
+    0x08003234   0x08003234   0x00000010   Code   RO         1186    .text.getInputPinState  io.o
+    0x08003244   0x08003244   0x00000130   Code   RO          457    .text.gpio_af_set   gd32e23x_gpio.o
+    0x08003374   0x08003374   0x0000020c   Code   RO          437    .text.gpio_mode_set  gd32e23x_gpio.o
+    0x08003580   0x08003580   0x00000134   Code   RO          439    .text.gpio_output_options_set  gd32e23x_gpio.o
+    0x080036b4   0x080036b4   0x00000014   Code   RO         1238    .text.initAfterJump  peripherals.o
+    0x080036c8   0x080036c8   0x0000014c   Code   RO         1204    .text.initCorePeripherals  peripherals.o
+    0x08003814   0x08003814   0x000000dc   Code   RO           34    .text.interruptRoutine  main.o
+    0x080038f0   0x080038f0   0x000003f0   Code   RO           22    .text.loadEEpromSettings  main.o
+    0x08003ce0   0x08003ce0   0x00000ca8   Code   RO           50    .text.main          main.o
+    0x08004988   0x08004988   0x00000078   Code   RO         1288    .text.makeTelemPackage  serial_telemetry.o
+    0x08004a00   0x08004a00   0x000001c4   Code   RO            4    .text.make_dshot_package  dshot.o
+    0x08004bc4   0x08004bc4   0x0000005c   Code   RO           11    .text.map           functions.o
+    0x08004c20   0x08004c20   0x00000014   Code   RO         1140    .text.maskPhaseInterrupts  comparator.o
+    0x08004c34   0x08004c34   0x00000058   Code   RO          537    .text.nvic_irq_enable  gd32e23x_misc.o
+    0x08004c8c   0x08004c8c   0x00000018   Code   RO          543    .text.nvic_vector_table_set  gd32e23x_misc.o
+    0x08004ca4   0x08004ca4   0x00000058   Code   RO          133    .text.playBeaconTune3  sounds.o
+    0x08004cfc   0x08004cfc   0x000000d0   Code   RO          117    .text.playBlueJayTune  sounds.o
+    0x08004dcc   0x08004dcc   0x00000078   Code   RO          121    .text.playBrushedStartupTune  sounds.o
+    0x08004e44   0x08004e44   0x00000048   Code   RO          131    .text.playChangedTone  sounds.o
+    0x08004e8c   0x08004e8c   0x00000048   Code   RO          129    .text.playDefaultTone  sounds.o
+    0x08004ed4   0x08004ed4   0x00000058   Code   RO          127    .text.playInputTune  sounds.o
+    0x08004f2c   0x08004f2c   0x0000005c   Code   RO          125    .text.playInputTune2  sounds.o
+    0x08004f88   0x08004f88   0x00000088   Code   RO          119    .text.playStartupTune  sounds.o
+    0x08005010   0x08005010   0x00000038   Code   RO           44    .text.processDshot  main.o
+    0x08005048   0x08005048   0x0000006c   Code   RO         1249    .text.proportionalBrake  phaseouts.o
+    0x080050b4   0x080050b4   0x0000019c   Code   RO          655    .text.rcu_clock_freq_get  gd32e23x_rcu.o
+    0x08005250   0x08005250   0x00000014   Code   RO          583    .text.rcu_periph_clock_disable  gd32e23x_rcu.o
+    0x08005264   0x08005264   0x00000014   Code   RO          581    .text.rcu_periph_clock_enable  gd32e23x_rcu.o
+    0x08005278   0x08005278   0x00000014   Code   RO          591    .text.rcu_periph_reset_disable  gd32e23x_rcu.o
+    0x0800528c   0x0800528c   0x00000018   Code   RO          589    .text.rcu_periph_reset_enable  gd32e23x_rcu.o
+    0x080052a4   0x080052a4   0x00000050   Code   RO         1149    .text.read_flash_bin  eeprom.o
+    0x080052f4   0x080052f4   0x00000020   Code   RO         1244    .text.receiveCRSF   peripherals.o
+    0x08005314   0x08005314   0x00000094   Code   RO         1182    .text.receiveDshotDma  io.o
+    0x080053a8   0x080053a8   0x00000010   Code   RO         1236    .text.resetInputCaptureTimer  peripherals.o
+    0x080053b8   0x080053b8   0x00000338   Code   RO           48    .text.runBrushedLoop  main.o
+    0x080056f0   0x080056f0   0x00000068   Code   RO           24    .text.saveEEpromSettings  main.o
+    0x08005758   0x08005758   0x000001a4   Code   RO         1147    .text.save_flash_nolib  eeprom.o
+    0x080058fc   0x080058fc   0x00000090   Code   RO         1184    .text.sendDshotDma  io.o
+    0x0800598c   0x0800598c   0x0000004c   Code   RO         1284    .text.send_telem_DMA  serial_telemetry.o
+    0x080059d8   0x080059d8   0x0000027c   Code   RO          141    .text.setChannels   crsf.o
+    0x08005c54   0x08005c54   0x00000730   Code   RO           38    .text.setInput      main.o
+    0x08006384   0x08006384   0x0000000c   Code   RO         1192    .text.setInputPullUp  io.o
+    0x08006390   0x08006390   0x0000000c   Code   RO         1228    .text.setPWMCompare1  peripherals.o
+    0x0800639c   0x0800639c   0x0000000c   Code   RO         1230    .text.setPWMCompare2  peripherals.o
+    0x080063a8   0x080063a8   0x0000000c   Code   RO         1232    .text.setPWMCompare3  peripherals.o
+    0x080063b4   0x080063b4   0x00000014   Code   RO          109    .text.setVolume     sounds.o
+    0x080063c8   0x080063c8   0x000000c0   Code   RO           36    .text.startMotor    main.o
+    0x08006488   0x08006488   0x000000d0   Code   RO         1282    .text.telem_UART_Init  serial_telemetry.o
+    0x08006558   0x08006558   0x0000046c   Code   RO           40    .text.tenKhzRoutine  main.o
+    0x080069c4   0x080069c4   0x0000000a   Code   RO          844    .text.timer_auto_reload_shadow_disable  gd32e23x_timer.o
+    0x080069ce   0x080069ce   0x0000000a   Code   RO          842    .text.timer_auto_reload_shadow_enable  gd32e23x_timer.o
+    0x080069d8   0x080069d8   0x0000001e   Code   RO          898    .text.timer_break_config  gd32e23x_timer.o
+    0x080069f6   0x080069f6   0x00000012   Code   RO          896    .text.timer_break_struct_para_init  gd32e23x_timer.o
+    0x08006a08   0x08006a08   0x00000036   Code   RO          934    .text.timer_channel_complementary_output_state_config  gd32e23x_timer.o
+    0x08006a3e   0x08006a3e   0x0000000e   Code   RO          936    .text.timer_channel_input_struct_para_init  gd32e23x_timer.o
+    0x08006a4c   0x08006a4c   0x0000021c   Code   RO          916    .text.timer_channel_output_config  gd32e23x_timer.o
+    0x08006c68   0x08006c68   0x0000005c   Code   RO          918    .text.timer_channel_output_mode_config  gd32e23x_timer.o
+    0x08006cc4   0x08006cc4   0x0000005c   Code   RO          922    .text.timer_channel_output_shadow_config  gd32e23x_timer.o
+    0x08006d20   0x08006d20   0x0000005a   Code   RO          932    .text.timer_channel_output_state_config  gd32e23x_timer.o
+    0x08006d7a   0x08006d7a   0x00000010   Code   RO          914    .text.timer_channel_output_struct_para_init  gd32e23x_timer.o
+    0x08006d8a   0x08006d8a   0x00000002   PAD
+    0x08006d8c   0x08006d8c   0x00000074   Code   RO          832    .text.timer_deinit  gd32e23x_timer.o
+    0x08006e00   0x08006e00   0x0000000a   Code   RO          838    .text.timer_enable  gd32e23x_timer.o
+    0x08006e0a   0x08006e0a   0x00000008   Code   RO          894    .text.timer_event_software_generate  gd32e23x_timer.o
+    0x08006e12   0x08006e12   0x00000006   Code   RO          884    .text.timer_flag_clear  gd32e23x_timer.o
+    0x08006e18   0x08006e18   0x000000b0   Code   RO          836    .text.timer_init    gd32e23x_timer.o
+    0x08006ec8   0x08006ec8   0x00000164   Code   RO          944    .text.timer_input_pwm_capture_config  gd32e23x_timer.o
+    0x0800702c   0x0800702c   0x00000008   Code   RO          876    .text.timer_interrupt_disable  gd32e23x_timer.o
+    0x08007034   0x08007034   0x00000006   Code   RO          880    .text.timer_interrupt_flag_clear  gd32e23x_timer.o
+    0x0800703a   0x0800703a   0x00000010   Code   RO          856    .text.timer_prescaler_config  gd32e23x_timer.o
+    0x0800704a   0x0800704a   0x00000016   Code   RO          908    .text.timer_primary_output_config  gd32e23x_timer.o
+    0x08007060   0x08007060   0x00000014   Code   RO          834    .text.timer_struct_para_init  gd32e23x_timer.o
+    0x08007074   0x08007074   0x00000168   Code   RO           95    .text.transfercomplete  signal.o
+    0x080071dc   0x080071dc   0x00000084   Code   RO         1277    .text.twoChannelForward  phaseouts.o
+    0x08007260   0x08007260   0x00000080   Code   RO         1279    .text.twoChannelReverse  phaseouts.o
+    0x080072e0   0x080072e0   0x0000005c   Code   RO          981    .text.usart_baudrate_set  gd32e23x_usart.o
+    0x0800733c   0x0800733c   0x00000010   Code   RO         1095    .text.usart_dma_transmit_config  gd32e23x_usart.o
+    0x0800734c   0x0800734c   0x0000000a   Code   RO          989    .text.usart_enable  gd32e23x_usart.o
+    0x08007356   0x08007356   0x00000012   Code   RO         1041    .text.usart_halfduplex_enable  gd32e23x_usart.o
+    0x08007368   0x08007368   0x00000010   Code   RO          995    .text.usart_receive_config  gd32e23x_usart.o
+    0x08007378   0x08007378   0x00000010   Code   RO          993    .text.usart_transmit_config  gd32e23x_usart.o
+    0x08007388   0x08007388   0x00000134   Code   RO           42    .text.zcfoundroutine  main.o
+    0x080074bc   0x080074bc   0x0000000e   Code   RO         1340    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x080074ca   0x080074ca   0x00000002   Code   RO         1341    i.__scatterload_null  mc_p.l(handlers.o)
+    0x080074cc   0x080074cc   0x0000000e   Code   RO         1342    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x080074da   0x080074da   0x00000100   Data   RO          144    .rodata.crsf_crc8.crsf_crc8tab  crsf.o
+    0x080075da   0x080075da   0x00000008   Data   RO          657    .rodata.cst8        gd32e23x_rcu.o
+    0x080075e2   0x080075e2   0x00000010   Data   RO            6    .rodata.gcr_encode_table  dshot.o
+    0x080075f2   0x080075f2   0x00000100   Data   RO         1292    .rodata.get_crc8.tbl  serial_telemetry.o
+    0x080076f2   0x080076f2   0x00000002   PAD
+    0x080076f4   0x080076f4   0x00000020   Data   RO         1339    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08007730, Size: 0x00000c90, Max: 0x00004000, ABSOLUTE, COMPRESSED[0x000002e8])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08007718, Size: 0x00000c90, Max: 0x00004000, ABSOLUTE, COMPRESSED[0x000002e8])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3580,8 +3580,7 @@ Memory Map of the image
     0x20000440        -       0x00000002   Zero   RW         1202    .bss..L_MergedGlobals  io.o
     0x20000442   COMPRESSED   0x00000002   PAD
     0x20000444        -       0x0000001c   Zero   RW          105    .bss..L_MergedGlobals.1  signal.o
-    0x20000460        -       0x0000007a   Zero   RW           88    .bss..L_MergedGlobals.2  main.o
-    0x200004da   COMPRESSED   0x00000002   PAD
+    0x20000460        -       0x0000007c   Zero   RW           88    .bss..L_MergedGlobals.2  main.o
     0x200004dc        -       0x00000030   Zero   RW           89    .bss..L_MergedGlobals.3  main.o
     0x2000050c        -       0x00000006   Zero   RW         1136    .bss.ADCDataDMA     adc.o
     0x20000512        -       0x0000000a   Zero   RW         1291    .bss.aTxBuffer      serial_telemetry.o
@@ -3621,11 +3620,11 @@ Image component sizes
 
        292         28          0          0          6          0   adc.o
        150         20          0          0          0          0   comparator.o
-       612         56        256          0        136          0   crsf.o
+       636         56        256          0        136          0   crsf.o
       1456         76         16          0        240          0   dshot.o
        500          0          0          0          0          0   eeprom.o
          0          0         30          0          0          0   firmwareversion.o
-       188          8          0          0          0          0   functions.o
+       210          8          0          0          0          0   functions.o
        148          4          0          0          0          0   gd32e23x_adc.o
         96          8          0          0          0          0   gd32e23x_cmp.o
        356         20          0          0          0          0   gd32e23x_dma.o
@@ -3639,7 +3638,7 @@ Image component sizes
       1710         76          0          0          0          0   gd32e23x_timer.o
        168         12          0          0          0          0   gd32e23x_usart.o
        320         72          0          1        258          0   io.o
-      9228        512          0        936        528          0   main.o
+      9160        520          0        936        530          0   main.o
       1686        176          0          0          0          0   peripherals.o
       1472         36          0          0          0          0   phaseouts.o
        404         40        256          1         10          0   serial_telemetry.o
@@ -3650,9 +3649,9 @@ Image component sizes
         20          4          0          0          4          0   systick.o
 
     ----------------------------------------------------------------------
-     24778       1636        806        956       2260          0   Object Totals
+     24754       1644        806        956       2260          0   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        10          0          4          8         21          0   (incl. Padding)
+         8          0          4          8         19          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3703,15 +3702,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     25638       1652        806        956       2260          0   Grand Totals
-     25638       1652        806        744       2260          0   ELF Image Totals (compressed)
-     25638       1652        806        744          0          0   ROM Totals
+     25614       1660        806        956       2260          0   Grand Totals
+     25614       1660        806        744       2260          0   ELF Image Totals (compressed)
+     25614       1660        806        744          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                26444 (  25.82kB)
+    Total RO  Size (Code + RO Data)                26420 (  25.80kB)
     Total RW  Size (RW Data + ZI Data)              3216 (   3.14kB)
-    Total ROM Size (Code + RO Data + RW Data)      27188 (  26.55kB)
+    Total ROM Size (Code + RO Data + RW Data)      27164 (  26.53kB)
 
 ==============================================================================
 

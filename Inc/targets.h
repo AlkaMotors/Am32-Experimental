@@ -226,7 +226,7 @@
 #define DEAD_TIME               50
 #define HARDWARE_GROUP_AT_C
 #define HARDWARE_GROUP_AT_045
-#define USE_SERIAL_TELEMETRY
+//#define USE_SERIAL_TELEMETRY
 //#define VOLTAGE_BASED_RAMP
 #define MILLIVOLT_PER_AMP  12
 #define INPUT_PIN_CRSF
@@ -249,6 +249,20 @@
 #define HARDWARE_GROUP_AT_045
 #define FIXED_DUTY_MODE
 #define FIXED_DUTY_MODE_POWER 100
+#endif
+
+#ifdef TBS_12S_F421
+#define FIRMWARE_NAME "TBS 12S"
+#define FILE_NAME "TBS_12S_F421"
+#define DEAD_TIME 120
+#define HARDWARE_GROUP_AT_C
+#define HARDWARE_GROUP_AT_045
+#define USE_SERIAL_TELEMETRY
+#define ADC_CHANNEL_VOLTAGE ADC_CHANNEL_6
+#define ADC_CHANNEL_CURRENT ADC_CHANNEL_3
+#define TARGET_VOLTAGE_DIVIDER 210
+#define MILLIVOLT_PER_AMP 5
+#define LOOP_FREQUENCY_HZ 20000
 #endif
 /****************************************Generic********************************************/
 

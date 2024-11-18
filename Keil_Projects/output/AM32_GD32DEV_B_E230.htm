@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\AM32_GD32DEV_B_E230.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\AM32_GD32DEV_B_E230.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Wed Mar 20 10:07:58 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Tue Jun 11 22:18:59 2024
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -295,7 +295,7 @@ Global Symbols
 <P><STRONG><a name="[4]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, gd32e23x_it.o(.text.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(RESET)
 </UL>
-<P><STRONG><a name="[49]"></a>PeriodElapsedCallback</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, main.o(.text.PeriodElapsedCallback))
+<P><STRONG><a name="[49]"></a>PeriodElapsedCallback</STRONG> (Thumb, 216 bytes, Stack size 0 bytes, main.o(.text.PeriodElapsedCallback))
 <BR><BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enableCompInterrupts
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;changeCompInput
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;comStep
@@ -728,7 +728,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34]"></a>interruptRoutine</STRONG> (Thumb, 208 bytes, Stack size 0 bytes, main.o(.text.interruptRoutine))
+<P><STRONG><a name="[34]"></a>interruptRoutine</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, main.o(.text.interruptRoutine))
 <BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;maskPhaseInterrupts
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getCompOutputLevel
 </UL>
@@ -743,7 +743,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[22]"></a>main</STRONG> (Thumb, 3252 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[22]"></a>main</STRONG> (Thumb, 3196 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetInputCaptureTimer
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generatePwmTimerEvent
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;allpwm
@@ -800,7 +800,7 @@ Global Symbols
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processDshot
 </UL>
 
-<P><STRONG><a name="[6e]"></a>map</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, functions.o(.text.map))
+<P><STRONG><a name="[6e]"></a>map</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, functions.o(.text.map))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setChannels
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;computeServoInput
 <LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -955,7 +955,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a6]"></a>runBrushedLoop</STRONG> (Thumb, 800 bytes, Stack size 0 bytes, main.o(.text.runBrushedLoop))
+<P><STRONG><a name="[a6]"></a>runBrushedLoop</STRONG> (Thumb, 804 bytes, Stack size 0 bytes, main.o(.text.runBrushedLoop))
 <BR><BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;twoChannelReverse
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;twoChannelForward
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPWMCompare3
@@ -1005,15 +1005,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[68]"></a>setChannels</STRONG> (Thumb, 556 bytes, Stack size 0 bytes, crsf.o(.text.setChannels))
+<P><STRONG><a name="[68]"></a>setChannels</STRONG> (Thumb, 580 bytes, Stack size 0 bytes, crsf.o(.text.setChannels))
 <BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;map
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[9a]"></a>setInput</STRONG> (Thumb, 1804 bytes, Stack size 0 bytes, main.o(.text.setInput))
-<BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proportionalBrake
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<P><STRONG><a name="[9a]"></a>setInput</STRONG> (Thumb, 1808 bytes, Stack size 0 bytes, main.o(.text.setInput))
+<BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proportionalBrake
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fullBrake
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;playInputTune2
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;playBeaconTune3

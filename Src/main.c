@@ -180,7 +180,8 @@
                  - Fix double startup chime
                  - Change current averaging method for more precision
                  - Fix startup ramp speed adjustment
-*2.05		 - Fix ramp tied to input frequency								 
+*2.05		 - Fix ramp tied to input frequency			
+
                  
 */
 #include "main.h"
@@ -208,7 +209,7 @@
 #endif
 
 #define VERSION_MAJOR 3
-#define VERSION_MINOR 01
+#define VERSION_MINOR 03
 
 void zcfoundroutine(void);
 
@@ -418,11 +419,11 @@ char low_kv_filter_level = 20;
 
 uint16_t tim1_arr = TIM1_AUTORELOAD; // current auto reset value
 uint16_t TIMER1_MAX_ARR = TIM1_AUTORELOAD; // maximum auto reset register value
-uint16_t duty_cycle_maximum = TIM1_AUTORELOAD; // restricted by temperature or low rpm throttle protect
+uint16_t duty_cycle_maximum = 2000; // restricted by temperature or low rpm throttle protect
 uint16_t low_rpm_level = 20; // thousand erpm used to set range for throttle resrictions
 uint16_t high_rpm_level = 70; //
 uint16_t throttle_max_at_low_rpm = 400;
-uint16_t throttle_max_at_high_rpm = TIM1_AUTORELOAD;
+uint16_t throttle_max_at_high_rpm = 2000;
 
 uint16_t commutation_intervals[6] = { 0 };
 uint32_t average_interval = 0;
@@ -463,7 +464,7 @@ uint8_t bemf_timeout_happened = 0;
 uint8_t changeover_step = 5;
 uint8_t filter_level = 5;
 uint8_t running = 0;
-uint16_t advance = 0;
+uint32_t advance = 0;
 uint8_t advancedivisor = 6;
 char rising = 1;
 
@@ -626,7 +627,7 @@ void loadEEpromSettings()
     } else {
         stuck_rotor_protection = 0;
     }
-    if (eepromBuffer[23] < 31) {
+    if (eepromBuffer[23] < 33) {
         advance_level = eepromBuffer[23];
     } else {
         advance_level = 16; // * 7.5 increments
@@ -643,8 +644,8 @@ void loadEEpromSettings()
             TIMER1_MAX_ARR = map(eepromBuffer[24], 7, 16, TIM1_AUTORELOAD * 3, TIM1_AUTORELOAD / 2 * 3);
         }
         SET_AUTO_RELOAD_PWM(TIMER1_MAX_ARR);
-        throttle_max_at_high_rpm = TIMER1_MAX_ARR;
-        duty_cycle_maximum = TIMER1_MAX_ARR;
+ //       throttle_max_at_high_rpm = TIMER1_MAX_ARR;
+ //       duty_cycle_maximum = TIMER1_MAX_ARR;
     } else {
         tim1_arr = TIM1_AUTORELOAD;
         SET_AUTO_RELOAD_PWM(tim1_arr);
@@ -953,11 +954,11 @@ void commutate()
     }
     __enable_irq();
     changeCompInput();
-    if (stall_protection || RC_CAR_REVERSE) {
+  //  if (stall_protection || RC_CAR_REVERSE) {
         if (average_interval > 2000) {
             old_routine = 1;
         }
-    }
+  //  }
     bemfcounter = 0;
     zcfound = 0;
     commutation_intervals[step - 1] = thiszctime; // just used to calulate average
@@ -969,8 +970,8 @@ void PeriodElapsedCallback()
     DISABLE_COM_TIMER_INT(); // disable interrupt
     commutate();
     commutation_interval = ((3 * commutation_interval) + thiszctime) >> 2;
-    advance = (commutation_interval >> 6) * advance_level; // 60 divde 64 0.9375 degree increments
-    waitTime = (commutation_interval >> 1) - advance;
+    advance = (commutation_interval * advance_level) >> 6; // 60 divde 64 0.9375 degree increments
+    waitTime = (commutation_interval >> 1) - advance ;
     if (!old_routine) {
         enableCompInterrupts(); // enable comp interrupt
     }
@@ -996,7 +997,7 @@ void interruptRoutine()
             return;
         }
     }
-  thiszctime = INTERVAL_TIMER_COUNT;
+  
     if (rising) {
         for (int i = 0; i < filter_level; i++) {
 #ifdef MCU_F031
@@ -1021,13 +1022,14 @@ void interruptRoutine()
 
     maskPhaseInterrupts();
     __disable_irq();
+		thiszctime = INTERVAL_TIMER_COUNT;
     if (INTERVAL_TIMER_COUNT > thiszctime) {
         SET_INTERVAL_TIMER_COUNT(INTERVAL_TIMER_COUNT - thiszctime);
     } else {
         SET_INTERVAL_TIMER_COUNT(0);
     }
     waitTime = waitTime >> fast_accel;
-    SET_AND_ENABLE_COM_INT(waitTime); // enable COM_TIMER interrupt
+    SET_AND_ENABLE_COM_INT(waitTime+1); // enable COM_TIMER interrupt
     __enable_irq();
 }
 
@@ -1235,9 +1237,9 @@ if(!brushed_mode){
             }
 
             if (use_sin_start) {
-                duty_cycle_setpoint = map(input, 137, 2047, minimum_duty_cycle, TIMER1_MAX_ARR);
+                duty_cycle_setpoint = map(input, 137, 2047, minimum_duty_cycle, 2000);
             } else {
-                duty_cycle_setpoint = map(input, 47, 2047, minimum_duty_cycle, TIMER1_MAX_ARR);
+                duty_cycle_setpoint = map(input, 47, 2047, minimum_duty_cycle, 2000);
             }
 
             if (!RC_CAR_REVERSE) {
@@ -1282,8 +1284,8 @@ if(!brushed_mode){
                 }
                 if (RC_CAR_REVERSE && prop_brake_active) {
 #ifndef PWM_ENABLE_BRIDGE
-                    duty_cycle_setpoint = getAbsDif(1000, newinput) + 1000;
-                    if (duty_cycle_setpoint >= 1999) {
+                    prop_brake_duty_cycle = (getAbsDif(1000, newinput) + 1000);
+                    if (prop_brake_duty_cycle >= 1999) {
                         fullBrake();
                     } else {
                         proportionalBrake();
@@ -1299,7 +1301,7 @@ if(!brushed_mode){
                     if (brake_on_stop) {
                         if (!use_sin_start) {
 #ifndef PWM_ENABLE_BRIDGE
-                            prop_brake_duty_cycle = (TIMER1_MAX_ARR - 19) + drag_brake_strength * 2;
+                            prop_brake_duty_cycle = (1980) + drag_brake_strength * 2;
                             proportionalBrake();
                             prop_brake_active = 1;
 #else
@@ -1537,18 +1539,16 @@ if(ROTC_divider_cnt > ROTC_divider){
         if ((armed && running) && input > 47) {
             if (VARIABLE_PWM) {
             }
-             adjusted_duty_cycle = ((duty_cycle * tim1_arr) / TIMER1_MAX_ARR)+1;
+             adjusted_duty_cycle = ((duty_cycle * tim1_arr) / 2000)+1;
 
         } else {
 
             if (prop_brake_active) {
-                adjusted_duty_cycle = TIMER1_MAX_ARR - ((prop_brake_duty_cycle * tim1_arr) / TIMER1_MAX_ARR) + 1;
+                adjusted_duty_cycle = TIMER1_MAX_ARR - ((prop_brake_duty_cycle * tim1_arr) / 2000) + 1;
             } else {
-                adjusted_duty_cycle = ((duty_cycle * tim1_arr) / TIMER1_MAX_ARR)* armed;
+                adjusted_duty_cycle = ((duty_cycle * tim1_arr) / 2000)* armed;
             }
-						
-        }
-
+	       }
         last_duty_cycle = duty_cycle;
         SET_AUTO_RELOAD_PWM(tim1_arr);
         SET_DUTY_CYCLE_ALL(adjusted_duty_cycle);
@@ -1640,25 +1640,31 @@ void zcfoundroutine()
 #ifdef MCU_GDE23
     TIMER_CAR(COM_TIMER) = waitTime;
 #endif
-#ifdef STMICRO
-		COM_TIMER->ARR = waitTime;
+#ifdef MCU_F051
+    COM_TIMER->ARR = waitTime;
+#endif
+		#ifdef MCU_G071
+    COM_TIMER->ARR = waitTime;
+#endif
+#ifdef ARTERY
+		COM_TIMER->pr = waitTime;
 #endif
     commutate();
     bemfcounter = 0;
     bad_count = 0;
 
     zero_crosses++;
-    if (stall_protection || RC_CAR_REVERSE) {
-        if (zero_crosses >= 20 && commutation_interval <= 2000) {
+  //  if (stall_protection || RC_CAR_REVERSE) {
+        if (zero_crosses >= 20 && average_interval <= 1700) {
             old_routine = 0;
             enableCompInterrupts(); // enable interrupt
         }
-    } else {
-        if (zero_crosses > 30) {
-            old_routine = 0;
-            enableCompInterrupts(); // enable interrupt
-        }
-    }
+//    } else {
+//        if (zero_crosses > 30) {
+//            old_routine = 0;
+//            enableCompInterrupts(); // enable interrupt
+//        }
+//    }
 }
 //#ifdef BRUSHED_MODE
 void runBrushedLoop()
@@ -1672,8 +1678,9 @@ void runBrushedLoop()
 
 		
 		if(armed && bi_direction){
-		  brushed_duty_cycle = map(adjusted_input, 0, 2000, 0, max_duty);
-      brushed_second_input_duty_cycle = map(crsf_second_input, 0, 2000, 0, max_duty);
+		  brushed_duty_cycle = map(adjusted_input, 48, 2047, 0, max_duty);
+      brushed_second_input_duty_cycle = map(crsf_second_input, 48, 2047, 0, max_duty);
+			mid_point = max_duty - ((brushed_duty_cycle + brushed_second_input_duty_cycle)/2);
 			setPWMCompare2(mid_point);
 			setPWMCompare1(brushed_duty_cycle);
       setPWMCompare3(brushed_second_input_duty_cycle);
@@ -1692,7 +1699,7 @@ void runBrushedLoop()
      brushed_second_input_duty_cycle = map(crsf_second_input, 48, 2047, 0, max_duty);
 				
     if (degrees_celsius > TEMPERATURE_LIMIT) {
-        duty_cycle_maximum = map(degrees_celsius, TEMPERATURE_LIMIT, TEMPERATURE_LIMIT + 20, TIMER1_MAX_ARR / 2, 1);
+        duty_cycle_maximum = map(degrees_celsius, TEMPERATURE_LIMIT, TEMPERATURE_LIMIT + 20, max_duty/2, 1);
     } else {
         duty_cycle_maximum = max_duty;
     }
@@ -1817,9 +1824,9 @@ int main(void)
         forward = 1;
     }
     tim1_arr = TIMER1_MAX_ARR;
-    startup_max_duty_cycle = startup_max_duty_cycle * TIMER1_MAX_ARR / 2000 + dead_time_override; // adjust for pwm frequency
-    throttle_max_at_low_rpm = throttle_max_at_low_rpm * TIMER1_MAX_ARR / 2000; // adjust to new pwm frequency
-    throttle_max_at_high_rpm = TIMER1_MAX_ARR; // adjust to new pwm frequency
+//    startup_max_duty_cycle = startup_max_duty_cycle * TIMER1_MAX_ARR / 2000 + dead_time_override; // adjust for pwm frequency
+//    throttle_max_at_low_rpm = throttle_max_at_low_rpm * TIMER1_MAX_ARR / 2000; // adjust to new pwm frequency
+//    throttle_max_at_high_rpm = TIMER1_MAX_ARR; // adjust to new pwm frequency
     if (!comp_pwm) {
         use_sin_start = 0; // sine start requires complementary pwm.
     }
@@ -2038,23 +2045,38 @@ if(!brushed_mode){
 //#endif
 			}
         average_interval = e_com_time / 3;
-        if (desync_check && zero_crosses > 10) {
-            if ((getAbsDif(last_average_interval, average_interval) > average_interval >> 1) && (average_interval < 2000)) { // throttle resitricted before zc 20.
-                zero_crosses = 0;
-                desync_happened++;
-                if ((!bi_direction && (input > 47)) || commutation_interval > 1000) {
-                    running = 0;
-                }
-                old_routine = 1;
-                if (zero_crosses > 100) {
-                    average_interval = 5000;
-                }
-                last_duty_cycle = min_startup_duty / 2;
-            }
-            desync_check = 0;
-            //	}
-            last_average_interval = average_interval;
-        }
+//        if (desync_check && zero_crosses > 10) {
+//            if ((getAbsDif(last_average_interval, average_interval) > average_interval >> 1) && (average_interval < 2000)) { // throttle resitricted before zc 20.
+//                zero_crosses = 0;
+//                desync_happened++;
+//                if ((!bi_direction && (input > 47)) || commutation_interval > 1000) {
+//                    running = 0;
+//                }
+//                old_routine = 1;
+//                if (zero_crosses > 100) {
+//                    average_interval = 5000;
+//                }
+//                last_duty_cycle = min_startup_duty / 2;
+//            }
+//            desync_check = 0;
+//            //	}
+//            last_average_interval = average_interval;
+//        }
+			
+if(desync_check){
+		if(zero_crosses > 20){
+		if((getAbsDif(last_average_interval,average_interval) > average_interval>>1) && (average_interval < 2000)){ //throttle resitricted before zc 20.
+		zero_crosses = 0;
+		desync_happened ++;
+        running = 0;
+        old_routine = 1;
+        average_interval = 10000;
+		last_duty_cycle = min_startup_duty/2;
+		}
+		desync_check = 0;
+	}
+	last_average_interval = average_interval;
+	}
 
 #ifndef MCU_F031
         if (dshot_telemetry && (commutation_interval > DSHOT_PRIORITY_THRESHOLD)) {
@@ -2166,14 +2188,14 @@ if(serial_mode == 0) {// kiss telem
             if (zero_crosses < 100 && commutation_interval > 500) {
 #ifdef MCU_G071
 							  
-                TIM1->CCR5 = 200; // comparator blanking
+                TIM1->CCR5 = 100; // comparator blanking
                 filter_level = 8;
 #else
                 filter_level = 12;
 #endif
             } else {
 #ifdef MCU_G071
-                TIM1->CCR5 = 50;
+                TIM1->CCR5 = 5;
 #endif
                 filter_level = map(average_interval, 100, 500, 3, 12);
 
@@ -2182,30 +2204,26 @@ if(serial_mode == 0) {// kiss telem
                 filter_level = 2;
             }
 
-            if (motor_kv < 500) {
+//#ifdef MCU_G071
 
-                filter_level = filter_level * 2;
-            }
-#ifdef MCU_G071
-
-						if(average_interval > 1000){
-							if(old_routine){
-							set_hysteris = 0;
-							MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_NONE);
-							}else{
-						if(!set_hysteris){
-                MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_LOW);
-								set_hysteris = 1;	
-						}
-						}
-						}else{
-							if(set_hysteris){
-							MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_NONE);
-							set_hysteris = 0;
-							}
-						}
-					
-#endif
+//						if(average_interval > 1000){
+//							if(old_routine){
+//							set_hysteris = 0;
+//							MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_NONE);
+//							}else{
+//						if(!set_hysteris){
+//                MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_LOW);
+//								set_hysteris = 1;	
+//						}
+//						}
+//						}else{
+//							if(set_hysteris){
+//							MODIFY_REG(COMP2->CSR, COMP_CSR_HYST, LL_COMP_HYSTERESIS_NONE);
+//							set_hysteris = 0;
+//							}
+//						}
+//					
+//#endif
             /**************** old routine*********************/
 #ifdef CUSTOM_RAMP
              if (old_routine && running){
