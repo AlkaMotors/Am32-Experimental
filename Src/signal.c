@@ -171,6 +171,7 @@ void transfercomplete()
             if (adjusted_input < 0) {
                 adjusted_input = 0;
             }
+						if(stick_calibration){
             if (adjusted_input == 0 && calibration_required == 0) { // note this in input..not newinput so it will be adjusted be main loop
                 zero_input_count++;
             } else {
@@ -190,6 +191,11 @@ void transfercomplete()
                     last_input = adjusted_input;
                 }
             }
+					}else{
+						if ( adjusted_input == 0){
+							zero_input_count++;
+						}
+					}
         }
     }
 }

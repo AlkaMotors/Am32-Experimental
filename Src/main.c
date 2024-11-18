@@ -209,7 +209,7 @@
 #endif
 
 #define VERSION_MAJOR 3
-#define VERSION_MINOR 03
+#define VERSION_MINOR 04
 
 void zcfoundroutine(void);
 
@@ -228,7 +228,11 @@ void zcfoundroutine(void);
 //=============================  Defaults =============================
 //===========================================================================
 
-
+uint16_t smoothedADCtemp;
+uint8_t stick_calibration;
+uint8_t ranOnce;
+uint8_t active_brake_enabled = 1;
+uint8_t active_brake_power = 100;
 uint8_t brushed_mode = 0;
 uint8_t drive_by_rpm = 0;
 uint16_t absolute_voltage_cutoff = 1200; // 12 v
@@ -826,6 +830,13 @@ void loadEEpromSettings()
 				}
 				
 				crsf_second_input_channel = eepromBuffer[70];
+				active_brake_enabled = eepromBuffer[71];
+				active_brake_power = eepromBuffer[72];
+				
+				if(eepromBuffer[73] == 1){
+					stick_calibration = eepromBuffer[73];
+				}
+				
 			
 				
         if (motor_kv < 300) {
@@ -836,9 +847,9 @@ void loadEEpromSettings()
     }
     reverse_speed_threshold = map(motor_kv, 300, 3000, 1000, 500);
     //   reverse_speed_threshold = 200;
-    if (!comp_pwm) {
-        bi_direction = 0;
-    }
+//    if (!comp_pwm) {
+//        bi_direction = 0;
+//    }
 }
 
 void saveEEpromSettings()
@@ -954,14 +965,19 @@ void commutate()
     }
     __enable_irq();
     changeCompInput();
-  //  if (stall_protection || RC_CAR_REVERSE) {
-        if (average_interval > 2000) {
-            old_routine = 1;
-        }
-  //  }
+//	if (average_interval > 1700) {
+//      old_routine = 1;
+//   }
     bemfcounter = 0;
     zcfound = 0;
-    commutation_intervals[step - 1] = thiszctime; // just used to calulate average
+   commutation_intervals[step - 1] = commutation_interval; // just used to calulate average
+#ifdef USE_PULSE_OUT
+		if(rising){
+			GPIOB->scr = GPIO_PINS_8;
+		}else{
+			GPIOB->clr = GPIO_PINS_8;
+		}
+#endif
 }
 
 void PeriodElapsedCallback()
@@ -1225,19 +1241,20 @@ if(!brushed_mode){
     }
 //#endif
 //#ifndef BRUSHED_MODE
-    if (!stepper_sine) {
-        if (input >= 47 + (80 * use_sin_start) && armed) {
+    if (!stepper_sine && armed ) {
+        if (input >= 47 + (80 * use_sin_start)) {
             if (running == 0) {
                 allOff();
                 if (!old_routine) {
                     startMotor();
                 }
                 running = 1;
+								ranOnce = 1;
                 last_duty_cycle = min_startup_duty;
             }
 
             if (use_sin_start) {
-                duty_cycle_setpoint = map(input, 137, 2047, minimum_duty_cycle, 2000);
+                duty_cycle_setpoint = map(input, 137, 2047, minimum_duty_cycle+40, 2000);
             } else {
                 duty_cycle_setpoint = map(input, 47, 2047, minimum_duty_cycle, 2000);
             }
@@ -1301,9 +1318,13 @@ if(!brushed_mode){
                     if (brake_on_stop) {
                         if (!use_sin_start) {
 #ifndef PWM_ENABLE_BRIDGE
+													 if(active_brake_enabled && degrees_celsius < 75 && ranOnce){
+														 setDutyCycleAll(active_brake_power);
+													 }else{
                             prop_brake_duty_cycle = (1980) + drag_brake_strength * 2;
                             proportionalBrake();
                             prop_brake_active = 1;
+													 }
 #else
                             // todo add proportional braking for pwm/enable style bridge.
 #endif
@@ -1539,7 +1560,7 @@ if(ROTC_divider_cnt > ROTC_divider){
         if ((armed && running) && input > 47) {
             if (VARIABLE_PWM) {
             }
-             adjusted_duty_cycle = ((duty_cycle * tim1_arr) / 2000)+1;
+            adjusted_duty_cycle = ((duty_cycle * tim1_arr) / 2000) + 1;
 
         } else {
 
@@ -1548,10 +1569,16 @@ if(ROTC_divider_cnt > ROTC_divider){
             } else {
                 adjusted_duty_cycle = ((duty_cycle * tim1_arr) / 2000)* armed;
             }
-	       }
+						
+        }
+
         last_duty_cycle = duty_cycle;
         SET_AUTO_RELOAD_PWM(tim1_arr);
+				if(brake_on_stop && active_brake_enabled && !running && (degrees_celsius < 75)){
+					SET_DUTY_CYCLE_ALL(active_brake_power);
+				}else{
         SET_DUTY_CYCLE_ALL(adjusted_duty_cycle);
+				}
     }
 //#endif // ndef brushed_mode
 	}	
@@ -1633,17 +1660,14 @@ void zcfoundroutine()
     advance = commutation_interval / advancedivisor;
     waitTime = commutation_interval / 2 - advance;
     while ((INTERVAL_TIMER_COUNT) < (waitTime)) {
-        if (zero_crosses < 10) {
+        if (zero_crosses < 5) {
             break;
         }
     }
 #ifdef MCU_GDE23
     TIMER_CAR(COM_TIMER) = waitTime;
 #endif
-#ifdef MCU_F051
-    COM_TIMER->ARR = waitTime;
-#endif
-		#ifdef MCU_G071
+#ifdef STMICRO
     COM_TIMER->ARR = waitTime;
 #endif
 #ifdef ARTERY
@@ -1654,17 +1678,17 @@ void zcfoundroutine()
     bad_count = 0;
 
     zero_crosses++;
-  //  if (stall_protection || RC_CAR_REVERSE) {
-        if (zero_crosses >= 20 && average_interval <= 1700) {
+    if (stall_protection || RC_CAR_REVERSE) {
+        if (zero_crosses >= 20 && commutation_interval <= 2000) {
             old_routine = 0;
             enableCompInterrupts(); // enable interrupt
         }
-//    } else {
-//        if (zero_crosses > 30) {
-//            old_routine = 0;
-//            enableCompInterrupts(); // enable interrupt
-//        }
-//    }
+    } else {
+        if (zero_crosses >  30) {
+            old_routine = 0;
+            enableCompInterrupts(); // enable interrupt
+        }
+    }
 }
 //#ifdef BRUSHED_MODE
 void runBrushedLoop()
@@ -1937,7 +1961,7 @@ setInputPullDown();
 
 MX_IWDG_Init();
     while (1) {
-#ifdef FIXED_DUTY_MODE
+#if defined(FIXED_DUTY_MODE) || defined(FIXED_SPEED_MODE)
 setInput();
 #endif
 //#ifdef MCU_F031
@@ -1946,7 +1970,13 @@ setInput();
             input_ready = 0;
         }
 //#endif
-
+if(zero_crosses < 5){
+	  min_bemf_counts_up = TARGET_MIN_BEMF_COUNTS * 2;
+		min_bemf_counts_down = TARGET_MIN_BEMF_COUNTS * 2;
+}else{
+	 min_bemf_counts_up = TARGET_MIN_BEMF_COUNTS;
+	min_bemf_counts_down = TARGET_MIN_BEMF_COUNTS;
+}
         RELOAD_WATCHDOG_COUNTER();
         e_com_time = ((commutation_intervals[0] + commutation_intervals[1] + commutation_intervals[2] + commutation_intervals[3] + commutation_intervals[4] + commutation_intervals[5]) + 4) >> 1; // COMMUTATION INTERVAL IS 0.5US INCREMENTS
         if (VARIABLE_PWM) {
@@ -2113,6 +2143,7 @@ if(serial_mode == 0) {// kiss telem
             TIM1->CCR4 = ADC_CCR;
 
             LL_ADC_REG_StartConversion(ADC1);
+						smoothedADCtemp = ((3* smoothedADCtemp + ADC_raw_temp ))/ 4;
             converted_degrees = __LL_ADC_CALC_TEMPERATURE(3300, ADC_raw_temp, LL_ADC_RESOLUTION_12B);
 #endif
 #ifdef MCU_GDE23
@@ -2174,28 +2205,36 @@ if(serial_mode == 0) {// kiss telem
             e_rpm = running * (600000 / e_com_time); // in tens of rpm
             k_erpm = e_rpm / 10; // ecom time is time for one electrical revolution in microseconds
 
-            if (low_rpm_throttle_limit) { // some hardware doesn't need this, its on by default to keep hardware / motors protected but can slow down the response in the very low end a little.
-                duty_cycle_maximum = map(k_erpm, low_rpm_level, high_rpm_level, throttle_max_at_low_rpm, throttle_max_at_high_rpm); // for more performance lower the high_rpm_level, set to a consvervative number in source.
-            }
+            if (low_rpm_throttle_limit) { // some hardware doesn't need this, its on
+                                          // by default to keep hardware / motors
+                                          // protected but can slow down the response
+                                          // in the very low end a little.
+                duty_cycle_maximum = map(k_erpm, low_rpm_level, high_rpm_level, throttle_max_at_low_rpm,
+                    throttle_max_at_high_rpm); // for more performance lower the
+                                               // high_rpm_level, set to a
+                                               // consvervative number in source.
+            }else{
+							duty_cycle_maximum = 2000;
+						}
 
             if (degrees_celsius > TEMPERATURE_LIMIT) {
                 duty_cycle_maximum = map(degrees_celsius, TEMPERATURE_LIMIT - 10, TEMPERATURE_LIMIT + 10, throttle_max_at_high_rpm / 2, 1);
             }
 						
 						if (automatic_timing){
-							advance_level = map(input, 47, 2047, 2, 32);
+							advance_level = map(input, 47, 2047, 10, 22);
 						}
             if (zero_crosses < 100 && commutation_interval > 500) {
 #ifdef MCU_G071
 							  
-                TIM1->CCR5 = 100; // comparator blanking
+                TIM1->CCR5 = 10; // comparator blanking
                 filter_level = 8;
 #else
                 filter_level = 12;
 #endif
             } else {
 #ifdef MCU_G071
-                TIM1->CCR5 = 5;
+                TIM1->CCR5 = 10;
 #endif
                 filter_level = map(average_interval, 100, 500, 3, 12);
 

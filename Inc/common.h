@@ -2,6 +2,7 @@
 #include "main.h"
 #include "targets.h"
 
+extern uint8_t stick_calibration;
 extern char serial_mode;
 extern uint8_t eepromBuffer[256];
 extern uint16_t TIMER1_MAX_ARR;

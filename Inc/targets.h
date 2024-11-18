@@ -117,6 +117,20 @@
 
 /*********************************************************************AT32F421 targets*********************************************/
 
+#ifdef SKYSTARS_AM60_THRUSTER_F421
+#define FIRMWARE_NAME "F421 ROV   "
+#define FILE_NAME "SKYSTARS_AM60_THRUSTER_F421"
+#define DEAD_TIME 70
+#define HARDWARE_GROUP_AT_B
+#define HARDWARE_GROUP_AT_045
+#define USE_SERIAL_TELEMETRY
+#define RAMP_SPEED_LOW_RPM 5
+#define RAMP_SPEED_HIGH_RPM 5
+#define TARGET_MIN_BEMF_COUNTS 6
+#endif
+
+
+
 #ifdef SWAP_PB0_PA7_F421
 #define FIRMWARE_NAME "SWAP PB0 PA7"
 #define FILE_NAME "SWAP_PB0_PA7"
@@ -442,6 +456,25 @@
 
 /*****************************************************AT32F415 targets ************************************************/
 
+#ifdef EXUAV_F051
+#define FILE_NAME "EXUAV_F051"
+#define FIRMWARE_NAME "EXUAV F0"
+#define DEAD_TIME 45
+#define HARDWARE_GROUP_F0_B
+#define MILLIVOLT_PER_AMP 18
+#define CURRENT_OFFSET 0
+#define TARGET_VOLTAGE_DIVIDER 110
+#define USE_SERIAL_TELEMETRY
+#define USE_RGB_LED
+#define RED_PIN LL_GPIO_PIN_8
+#define RED_PORT GPIOB
+#define GREEN_PIN LL_GPIO_PIN_5
+#define GREEN_PORT GPIOB
+#define BLUE_PIN LL_GPIO_PIN_3
+#define BLUE_PORT GPIOB
+#endif
+
+
 #ifdef PB450_F051
 #define FILE_NAME "PB450_F051"
 #define FIRMWARE_NAME "PB450_F051  "
@@ -765,6 +798,21 @@
 #define HARDWARE_GROUP_G0_A
 #define USE_SERIAL_TELEMETRY
 #define SIXTY_FOUR_KB_MEMORY
+#define TARGET_MIN_BEMF_COUNTS 4
+#endif
+
+
+#ifdef TEC_ESC1_G071
+#define FILE_NAME "TEC_ESC1_G071"
+#define FIRMWARE_NAME "TEC ESC1 G0"
+#define DEAD_TIME 60
+#define MILLIVOLT_PER_AMP 67
+#define CURRENT_OFFSET 0
+#define HARDWARE_GROUP_G0_A
+#define USE_SERIAL_TELEMETRY
+#define SIXTY_FOUR_KB_MEMORY
+
+#define TARGET_MIN_BEMF_COUNTS 4
 #endif
 
 #ifdef UKMOOK_G071
@@ -941,6 +989,18 @@
 #define MILLIVOLT_PER_AMP 20
 #define CURRENT_OFFSET 0
 #define HARDWARE_GROUP_G0_D
+#define SIXTY_FOUR_KB_MEMORY
+#endif
+
+#ifdef FLYCOLOR_HV3_G071
+#define FILE_NAME "FLYCOLOR_HV3_G071"
+#define FIRMWARE_NAME "Flycolor HV3"
+#define DEAD_TIME 80
+#define MILLIVOLT_PER_AMP 33
+#define CURRENT_OFFSET 0
+#define TARGET_VOLTAGE_DIVIDER 210
+#define HARDWARE_GROUP_G0_N
+#define USE_SERIAL_TELEMETRY
 #define SIXTY_FOUR_KB_MEMORY
 #endif
 
@@ -2101,34 +2161,34 @@
 #endif
 
 #ifdef HARDWARE_GROUP_AT_045
-#define PHASE_A_COMP 0x400000E1 // pa0     // works for polling mode
-#define PHASE_B_COMP 0x400000C1 // pa4
-#define PHASE_C_COMP 0x400000D1 // pa5
+#define PHASE_A_COMP 0x000000E5 // pa0     // works for polling mode
+#define PHASE_B_COMP 0x000000C5 // pa4
+#define PHASE_C_COMP 0x000000D5 // pa5
 #endif
 #ifdef HARDWARE_GROUP_AT_504
-#define PHASE_A_COMP 0x400000D1 // pa5            // works for polling mode
-#define PHASE_B_COMP 0x400000E1 // pa0
-#define PHASE_C_COMP 0x400000C1 // pa4
+#define PHASE_A_COMP 0x400000D5 // pa5            // works for polling mode
+#define PHASE_B_COMP 0x400000E5 // pa0
+#define PHASE_C_COMP 0x400000C5 // pa4
 #endif
 #ifdef HARDWARE_GROUP_AT_450
-#define PHASE_A_COMP 0x400000C1 // pa4            // works for polling mode
-#define PHASE_B_COMP 0x400000D1 // pa5
-#define PHASE_C_COMP 0x400000E1 // pa0
+#define PHASE_A_COMP 0x400000C5 // pa4            // works for polling mode
+#define PHASE_B_COMP 0x400000D5 // pa5
+#define PHASE_C_COMP 0x400000E5 // pa0
 #endif
 #ifdef HARDWARE_GROUP_AT_054
-#define PHASE_A_COMP 0x400000E1 // pa0            // works for polling mode
-#define PHASE_B_COMP 0x400000D1 // pa5
-#define PHASE_C_COMP 0x400000C1 // pa4
+#define PHASE_A_COMP 0x400000E5 // pa0            // works for polling mode
+#define PHASE_B_COMP 0x400000D5 // pa5
+#define PHASE_C_COMP 0x400000C5 // pa4
 #endif
 #ifdef HARDWARE_GROUP_AT_405
-#define PHASE_A_COMP 0x400000C1 // pa4            // works for polling mode
-#define PHASE_B_COMP 0x400000E1 // pa0
-#define PHASE_C_COMP 0x400000D1 // pa5
+#define PHASE_A_COMP 0x400000C5 // pa4            // works for polling mode
+#define PHASE_B_COMP 0x400000E5 // pa0
+#define PHASE_C_COMP 0x400000D5 // pa5
 #endif
 #ifdef HARDWARE_GROUP_AT_540
-#define PHASE_A_COMP 0x400000D1 // pa5           // works for polling mode
-#define PHASE_B_COMP 0x400000C1 // pa4
-#define PHASE_C_COMP 0x400000E1 // pa0
+#define PHASE_A_COMP 0x400000D5 // pa5           // works for polling mode
+#define PHASE_B_COMP 0x400000C5 // pa4
+#define PHASE_C_COMP 0x400000E5 // pa0
 #endif
 
 #ifdef HARDWARE_GROUP_AT_245
@@ -2198,7 +2258,9 @@
 #define APPLICATION_ADDRESS 0x08001000
 #define MAIN_COMP COMP2
 #define EXTI_LINE LL_EXTI_LINE_18
+#ifndef TARGET_MIN_BEMF_COUNTS
 #define TARGET_MIN_BEMF_COUNTS 3
+#endif
 #define COMPARATOR_IRQ ADC1_COMP_IRQn
 #define USE_ADC
 #ifndef CURRENT_ADC_CHANNEL
@@ -2282,7 +2344,9 @@
 #define TIM1_AUTORELOAD 5000
 #define APPLICATION_ADDRESS 0x08001000
 #define EXTI_LINE EXINT_LINE_21
+#ifndef TARGET_MIN_BEMF_COUNTS 
 #define TARGET_MIN_BEMF_COUNTS 3
+#endif
 #define COMPARATOR_IRQ ADC1_CMP_IRQn
 #define USE_ADC
 #ifndef ADC_CHANNEL_CURRENT
