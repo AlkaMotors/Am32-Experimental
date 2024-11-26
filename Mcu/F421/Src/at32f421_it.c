@@ -18,7 +18,8 @@ extern void sendDshotDma();
 extern void receiveDshotDma();
 extern void signalEdgeRoutine();
 extern void processDshot();
-
+extern uint16_t commutation_interval;
+extern uint32_t average_interval;
 extern char send_telemetry;
 extern char telemetry_done;
 extern char servoPwm;
@@ -216,9 +217,10 @@ void DMA1_Channel5_4_IRQHandler(void)
 void ADC1_CMP_IRQHandler(void)
 {
     if ((EXINT->intsts & EXTI_LINE) != (uint32_t)RESET) {
-        //	EXTI->PND = EXTI_LINE;
         EXINT->intsts = EXTI_LINE;
-        interruptRoutine();
+    	if((INTERVAL_TIMER->cval) > ((average_interval >> 1)-(average_interval>>2))){
+       interruptRoutine();
+    }
     }
 }
 

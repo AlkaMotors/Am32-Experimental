@@ -275,8 +275,11 @@
 #define ADC_CHANNEL_VOLTAGE ADC_CHANNEL_6
 #define ADC_CHANNEL_CURRENT ADC_CHANNEL_3
 #define TARGET_VOLTAGE_DIVIDER 210
-#define MILLIVOLT_PER_AMP 5
+#define MILLIVOLT_PER_AMP 25
+#define RAMP_SPEED_LOW_RPM 1
+#define RAMP_SPEED_HIGH_RPM 1
 #define LOOP_FREQUENCY_HZ 20000
+#define TARGET_MIN_BEMF_COUNTS 4
 #endif
 /****************************************Generic********************************************/
 

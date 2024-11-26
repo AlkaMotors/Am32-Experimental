@@ -648,8 +648,8 @@ void loadEEpromSettings()
             TIMER1_MAX_ARR = map(eepromBuffer[24], 7, 16, TIM1_AUTORELOAD * 3, TIM1_AUTORELOAD / 2 * 3);
         }
         SET_AUTO_RELOAD_PWM(TIMER1_MAX_ARR);
- //       throttle_max_at_high_rpm = TIMER1_MAX_ARR;
- //       duty_cycle_maximum = TIMER1_MAX_ARR;
+     //   throttle_max_at_high_rpm = TIMER1_MAX_ARR;
+     //   duty_cycle_maximum = TIMER1_MAX_ARR;
     } else {
         tim1_arr = TIM1_AUTORELOAD;
         SET_AUTO_RELOAD_PWM(tim1_arr);
@@ -809,10 +809,11 @@ void loadEEpromSettings()
 				}
 				
 				ROTC_divider = eepromBuffer[62];
-				
+				if(eepromBuffer[63] < 101){
 				minimum_duty_cycle = (eepromBuffer[63] * 20);
-				min_startup_duty = (startup_boost + minimum_duty_cycle);
 				
+				min_startup_duty = (startup_boost + minimum_duty_cycle);
+                }
         throttle_max_at_low_rpm = throttle_max_at_low_rpm + dead_time_override;
         startup_max_duty_cycle = minimum_duty_cycle + startup_max_duty_cycle + dead_time_override;
 				if(eepromBuffer[64] == 85){
@@ -1319,7 +1320,7 @@ if(!brushed_mode){
                         if (!use_sin_start) {
 #ifndef PWM_ENABLE_BRIDGE
 													 if(active_brake_enabled && degrees_celsius < 75 && ranOnce){
-														 setDutyCycleAll(active_brake_power);
+														 SET_DUTY_CYCLE_ALL(active_brake_power);
 													 }else{
                             prop_brake_duty_cycle = (1980) + drag_brake_strength * 2;
                             proportionalBrake();
@@ -1684,7 +1685,8 @@ void zcfoundroutine()
             enableCompInterrupts(); // enable interrupt
         }
     } else {
-        if (zero_crosses >  30) {
+        if (zero_crosses >  40
+					) {
             old_routine = 0;
             enableCompInterrupts(); // enable interrupt
         }
@@ -1848,9 +1850,9 @@ int main(void)
         forward = 1;
     }
     tim1_arr = TIMER1_MAX_ARR;
-//    startup_max_duty_cycle = startup_max_duty_cycle * TIMER1_MAX_ARR / 2000 + dead_time_override; // adjust for pwm frequency
-//    throttle_max_at_low_rpm = throttle_max_at_low_rpm * TIMER1_MAX_ARR / 2000; // adjust to new pwm frequency
-//    throttle_max_at_high_rpm = TIMER1_MAX_ARR; // adjust to new pwm frequency
+ //   startup_max_duty_cycle = startup_max_duty_cycle * TIMER1_MAX_ARR / 2000 + dead_time_override; // adjust for pwm frequency
+ //   throttle_max_at_low_rpm = throttle_max_at_low_rpm * TIMER1_MAX_ARR / 2000; // adjust to new pwm frequency
+ //   throttle_max_at_high_rpm = TIMER1_MAX_ARR; // adjust to new pwm frequency
     if (!comp_pwm) {
         use_sin_start = 0; // sine start requires complementary pwm.
     }
@@ -2143,8 +2145,8 @@ if(serial_mode == 0) {// kiss telem
             TIM1->CCR4 = ADC_CCR;
 
             LL_ADC_REG_StartConversion(ADC1);
-						smoothedADCtemp = ((3* smoothedADCtemp + ADC_raw_temp ))/ 4;
-            converted_degrees = __LL_ADC_CALC_TEMPERATURE(3300, ADC_raw_temp, LL_ADC_RESOLUTION_12B);
+						smoothedADCtemp = ((7* (uint32_t)smoothedADCtemp + ADC_raw_temp )) >>3;
+            converted_degrees = __LL_ADC_CALC_TEMPERATURE(3300, smoothedADCtemp, LL_ADC_RESOLUTION_12B);
 #endif
 #ifdef MCU_GDE23
             ADC_DMA_Callback();
