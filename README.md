@@ -23,8 +23,7 @@ AM32 has the following features:
 
 To configure AM32 and upload firmware you can use the Multi_ESC config tool using Betaflight passthrough. They can be downloaded from here:
 
-[WINDOWS](https://drive.google.com/file/d/1fO9hSQXID2EZnVr5cmi54BLtMpFt9l10/view?usp=sharing)
-
+[WINDOWS](https://drive.google.com/file/d/1fX8EEmHOVC6wkJ1K-cf0KUevaaFpsrv4/view?usp=sharing) 
 ## Installation & Documentation
 
 To use AM32 firmware on a blank ESC, a bootloader must first be installed using a ST-LINK. Choose the bootloader that matches the signal input pin of the ESC.
