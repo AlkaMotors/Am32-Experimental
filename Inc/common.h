@@ -26,6 +26,8 @@ extern char ic_timer_prescaler;
 extern uint8_t buffersize;
 extern char output_timer_prescaler;
 extern uint8_t compute_dshot_flag;
+extern uint32_t average_interval;
+
 #ifdef STMICRO
 extern GPIO_TypeDef* current_GPIO_PORT;
 #ifndef MCU_F031

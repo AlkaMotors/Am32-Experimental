@@ -6,8 +6,8 @@
  */
 
 #include "comparator.h"
-
 #include "targets.h"
+#include "common.h"
 
 uint8_t
 getCompOutputLevel()
@@ -50,16 +50,14 @@ void changeCompInput()
         //	COMP->CTRLSTS1 |= PHASE_B_COMP;
         CMP->ctrlsts = PHASE_B_COMP;
     }
-    if (rising) {
-        //	EXTI->RTSR = 0x0;
-        //	EXTI->FTSR = 0x200000;
-        EXINT->polcfg1 &= ~(uint32_t)EXTI_LINE;
-        EXINT->polcfg2 |= (uint32_t)EXTI_LINE;
-    } else {
-        // falling bemf
-        //	EXTI->FTSR = 0x0;
-        //	EXTI->RTSR = 0x200000;
-        EXINT->polcfg1 |= (uint32_t)EXTI_LINE;
-        EXINT->polcfg2 &= ~(uint32_t)EXTI_LINE;
+    if((average_interval < 150)){ 
+        //set comp to high speed mode
+        CMP->ctrlsts = CMP->ctrlsts & ~(1<<2);
     }
+    if((average_interval > 250)){
+        //set comp to medium speed mode
+        CMP->ctrlsts  = CMP->ctrlsts | 1<<2;
+    }
+	EXINT->polcfg1 = !rising << 21;
+    EXINT->polcfg2 = rising << 21;
 }

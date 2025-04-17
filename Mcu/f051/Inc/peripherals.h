@@ -60,3 +60,4 @@ void LED_GPIO_init(void);
 void setPrescalerPWM(uint16_t presc);
 void crsf_UART_Init(void);
 void receiveCRSF();
+void setIndividualRGBLed(uint8_t red, uint8_t green, uint8_t blue);

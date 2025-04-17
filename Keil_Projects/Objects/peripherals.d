@@ -1,35 +1,29 @@
-./objects/peripherals.o: ..\Mcu\f421\Src\peripherals.c \
-  ..\mcu\f421\Inc\peripherals.h ..\mcu\f421\Inc\main.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\device_support\at32f421.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\core_support\core_cm4.h \
+./objects/peripherals.o: ..\Mcu\f051\Src\peripherals.c \
+  ..\mcu\f051\Inc\peripherals.h ..\mcu\f051\Inc\main.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_adc.h \
+  ..\mcu\f051\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h \
+  ..\mcu\f051\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f051x8.h \
+  ..\mcu\f051\Drivers\CMSIS\Include\core_cm0.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\core_support\cmsis_version.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\core_support\cmsis_compiler.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\core_support\cmsis_armclang.h \
+  ..\mcu\f051\Drivers\CMSIS\Include\cmsis_version.h \
+  ..\mcu\f051\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\mcu\f051\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\Mcu\f421\Drivers\CMSIS\cm4\core_support\mpu_armv7.h \
-  ..\mcu\f421\Inc\system_at32f421.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_def.h \
-  ..\mcu\f421\Inc\at32f421_conf.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_crm.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_cmp.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_tmr.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_ertc.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_gpio.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_i2c.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_usart.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_pwc.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_adc.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_spi.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_dma.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_debug.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_flash.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_crc.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_wwdt.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_wdt.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_exint.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_misc.h \
-  ..\Mcu\f421\Drivers\drivers\inc\at32f421_scfg.h ..\mcu\f421\Inc\ADC.h \
-  ..\Inc\targets.h ..\Inc\common.h ..\Inc\functions.h \
-  ..\mcu\f421\Inc\serial_telemetry.h
+  ..\mcu\f051\Drivers\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_bus.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_comp.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_cortex.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_crs.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_dma.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_exti.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_gpio.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_iwdg.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_pwr.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_rcc.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_system.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_tim.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_usart.h \
+  ..\mcu\f051\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_utils.h \
+  ..\mcu\f051\Inc\ADC.h ..\inc\targets.h \
+  ..\mcu\f051\Inc\serial_telemetry.h ..\inc\common.h

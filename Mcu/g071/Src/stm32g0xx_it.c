@@ -31,6 +31,9 @@
 #include "targets.h"
 #include "peripherals.h"
 #include "crsf.h"
+#include "comparator.h"
+#include "common.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef
@@ -86,7 +89,7 @@ extern char dshot_telemetry;
 extern char armed;
 extern char out_put;
 extern uint8_t compute_dshot_flag;
-extern uint8_t serial_mode; 
+extern uint32_t average_interval;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -236,28 +239,56 @@ void DMA1_Channel2_3_IRQHandler(void)
  */
 void ADC1_COMP_IRQHandler(void)
 {
-    if (LL_EXTI_IsActiveFallingFlag_0_31(LL_EXTI_LINE_18)) {
-        LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_18);
-        interruptRoutine();
+  if (LL_EXTI_IsActiveFallingFlag_0_31(LL_EXTI_LINE_18)) {
+    if((INTERVAL_TIMER->CNT) > (average_interval >> 1)){
+      LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_18);
+      interruptRoutine();
+    }else{
+      if(getCompOutputLevel() == rising){
+          LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_18);
+          return;
+      }
+    }
+    return;
+  }
 
-        return;
+  if (LL_EXTI_IsActiveRisingFlag_0_31(LL_EXTI_LINE_18)) {
+    if((INTERVAL_TIMER->CNT) > (average_interval >> 1)){
+      LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_18);
+      interruptRoutine();
+    }else{
+      if(getCompOutputLevel() == rising){
+          LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_18);
+          return;
+      }
     }
+    return;
+  }
+  if (LL_EXTI_IsActiveFallingFlag_0_31(LL_EXTI_LINE_17)) {
+    if((INTERVAL_TIMER->CNT) > (average_interval >> 1)){
+      LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_17);
+      interruptRoutine();
+    }else{
+      if(getCompOutputLevel() == rising){
+          LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_17);
+          return;
+      }
+    }
+    return;
+  }
 
-    if (LL_EXTI_IsActiveRisingFlag_0_31(LL_EXTI_LINE_18)) {
-        LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_18);
-        interruptRoutine();
-        return;
+  if (LL_EXTI_IsActiveRisingFlag_0_31(LL_EXTI_LINE_17)) {
+    if((INTERVAL_TIMER->CNT) > (average_interval >> 1)){
+      LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_17);
+      interruptRoutine();
+    }else{
+      if(getCompOutputLevel() == rising){
+          LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_17);
+          return;
+      }
     }
-    if (LL_EXTI_IsActiveFallingFlag_0_31(LL_EXTI_LINE_17)) {
-        LL_EXTI_ClearFallingFlag_0_31(LL_EXTI_LINE_17);
-        interruptRoutine();
-        return;
-    }
-    if (LL_EXTI_IsActiveRisingFlag_0_31(LL_EXTI_LINE_17)) {
-        LL_EXTI_ClearRisingFlag_0_31(LL_EXTI_LINE_17);
-        interruptRoutine();
-        return;
-    }
+    return;
+  }
 }
 
 /**
@@ -322,9 +353,9 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
  */
 void TIM14_IRQHandler(void)
 {
-//interrupt_time = UTILITY_TIMER->CNT;
-    PeriodElapsedCallback();
     LL_TIM_ClearFlag_UPDATE(TIM14);
+    PeriodElapsedCallback();
+
   //  interrupt_time = UTILITY_TIMER->CNT - interrupt_time;
 }
 

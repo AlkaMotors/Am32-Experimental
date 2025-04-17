@@ -209,7 +209,7 @@
 #endif
 
 #define VERSION_MAJOR 3
-#define VERSION_MINOR 04
+#define VERSION_MINOR 05
 
 void zcfoundroutine(void);
 
@@ -361,10 +361,10 @@ char return_to_center = 0;
 uint16_t target_e_com_time = 0;
 int16_t Speed_pid_output;
 char use_speed_control_loop = 0;
-float input_override = 0;
+uint32_t input_override = 0;
 int16_t use_current_limit_adjust = 2000;
 char use_current_limit = 0;
-float stall_protection_adjust = 0;
+uint32_t stall_protection_adjust = 0;
 
 uint32_t MCU_Id = 0;
 uint32_t REV_Id = 0;
@@ -389,7 +389,7 @@ char cell_count = 0;
 char brushed_direction_set = 0;
 
 uint16_t tenkhzcounter = 0;
-float consumed_current = 0;
+uint32_t consumed_current = 0;
 int32_t smoothed_raw_current = 0;
 int16_t actual_current = 0;
 
@@ -569,7 +569,7 @@ uint16_t signaltimeout = 0;
 uint8_t ubAnalogWatchdogStatus = RESET;
 
 
-float doPidCalculations(struct fastPID* pidnow, int actual, int target)
+uint32_t doPidCalculations(struct fastPID* pidnow, int actual, int target)
 {
 
     pidnow->error = actual - target;
@@ -809,11 +809,11 @@ void loadEEpromSettings()
 				}
 				
 				ROTC_divider = eepromBuffer[62];
-				if(eepromBuffer[63] < 101){
+				if(eepromBuffer[63] < 150){
 				minimum_duty_cycle = (eepromBuffer[63] * 20);
-				
+				}
 				min_startup_duty = (startup_boost + minimum_duty_cycle);
-                }
+				
         throttle_max_at_low_rpm = throttle_max_at_low_rpm + dead_time_override;
         startup_max_duty_cycle = minimum_duty_cycle + startup_max_duty_cycle + dead_time_override;
 				if(eepromBuffer[64] == 85){
@@ -966,9 +966,9 @@ void commutate()
     }
     __enable_irq();
     changeCompInput();
-//	if (average_interval > 1700) {
-//      old_routine = 1;
-//   }
+	if (average_interval > 2500) {
+      old_routine = 1;
+   }
     bemfcounter = 0;
     zcfound = 0;
    commutation_intervals[step - 1] = commutation_interval; // just used to calulate average
@@ -1040,11 +1040,11 @@ void interruptRoutine()
     maskPhaseInterrupts();
     __disable_irq();
 		thiszctime = INTERVAL_TIMER_COUNT;
-    if (INTERVAL_TIMER_COUNT > thiszctime) {
-        SET_INTERVAL_TIMER_COUNT(INTERVAL_TIMER_COUNT - thiszctime);
-    } else {
+//    if (INTERVAL_TIMER_COUNT > thiszctime) {
+//        SET_INTERVAL_TIMER_COUNT(INTERVAL_TIMER_COUNT - thiszctime);
+//    } else {
         SET_INTERVAL_TIMER_COUNT(0);
-    }
+//    }
     waitTime = waitTime >> fast_accel;
     SET_AND_ENABLE_COM_INT(waitTime+1); // enable COM_TIMER interrupt
     __enable_irq();
@@ -1188,9 +1188,7 @@ if(!brushed_mode){
         input = 0;
         bemf_timeout_happened = 102;
 #ifdef USE_RGB_LED
-        RED_PORT->BRR = RED_PIN; // on red
-        GREEN_PORT->BSRR = GREEN_PIN; //
-        BLUE_PORT->BSRR = BLUE_PIN;
+        setIndividualRGBLed(1, 0, 0);
 #endif
     } else {
 #ifdef FIXED_DUTY_MODE
@@ -1215,21 +1213,21 @@ if(!brushed_mode){
                         speedPid.error = 0;
                         input_override = 0;
                     } else {
-                        input = (uint16_t)input_override; // speed control pid override
-                        if (input_override > 2047) {
+                        input = (uint16_t)(input_override / 10000); // speed control pid override
+                        if (input > 2047) {
                             input = 2047;
                         }
-                        if (input_override < 48) {
+                        if (input < 48) {
                             input = 48;
                         }
                     }
                 } else {
 
-                    input = (uint16_t)input_override; // speed control pid override
-                    if (input_override > 2047) {
+                    input = (uint16_t)input_override / 10000; // speed control pid override
+                    if (input > 2047) {
                         input = 2047;
                     }
-                    if (input_override < 48) {
+                    if (input < 48) {
                         input = 48;
                     }
                 }
@@ -1376,7 +1374,7 @@ if(!brushed_mode){
 
             if (stall_protection_adjust > 0 && input > 47) {
 
-                duty_cycle_setpoint = duty_cycle_setpoint + (uint16_t)stall_protection_adjust;
+            duty_cycle_setpoint = duty_cycle_setpoint + (uint16_t)(stall_protection_adjust/10000);
             }
         }
     }
@@ -1400,29 +1398,11 @@ void tenKhzRoutine()
                         if (zero_input_count > 30) {
                             armed = 1;
 #ifdef USE_LED_STRIP
-                            //	send_LED_RGB(0,0,0);
                             delayMicros(1000);
                             send_LED_RGB(red_level, green_level, blue_level);
 #endif
 #ifdef USE_RGB_LED
-													if(red_level > 1){
-														RED_PORT->BRR = RED_PIN;
-													}else{
-														RED_PORT->BSRR = RED_PIN;
-												  }
-													if(green_level > 1){
-														GREEN_PORT->BRR = GREEN_PIN;
-													}else{
-														GREEN_PORT->BSRR = GREEN_PIN;
-												  }
-													if(blue_level > 1){
-														BLUE_PORT->BRR = BLUE_PIN;
-													}else{
-														BLUE_PORT->BSRR = BLUE_PIN;
-												  }
-                   //         GPIOB->BSRR = LL_GPIO_PIN_3; // green
-                   //         GPIOA->BRR = LL_GPIO_PIN_15; // red
-                   //         GPIOB->BSRR = LL_GPIO_PIN_4;  // blue
+                         setIndividualRGBLed(red_level, green_level, blue_level);
 #endif
                             if ((cell_count == 0) && (LOW_VOLTAGE_CUTOFF==1)) {
                                 cell_count = battery_voltage / 370;
@@ -1493,18 +1473,18 @@ if(!brushed_mode){
                 }
             }
             if (stall_protection && running) { // this boosts throttle as the rpm gets lower, for crawlers and rc cars only, do not use for multirotors.
-                stall_protection_adjust += (doPidCalculations(&stallPid, commutation_interval, stall_protect_target_interval)) / 10000;
-                if (stall_protection_adjust > 150) {
-                    stall_protection_adjust = 150;
+                stall_protection_adjust += (doPidCalculations(&stallPid, commutation_interval, stall_protect_target_interval));
+                if (stall_protection_adjust > 150 * 10000) {
+                    stall_protection_adjust = 150 * 10000;
                 }
                 if (stall_protection_adjust <= 0) {
                     stall_protection_adjust = 0;
                 }
             }
             if (use_speed_control_loop && running) {
-                input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time) / 10000;
-                if (input_override > 2047) {
-                    input_override = 2047;
+                input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time);
+                if (input_override > 2047 * 10000) {
+                    input_override = 2047 * 10000;
                 }
                 if (input_override < 0) {
                     input_override = 0;
@@ -1677,20 +1657,11 @@ void zcfoundroutine()
     commutate();
     bemfcounter = 0;
     bad_count = 0;
-
     zero_crosses++;
-    if (stall_protection || RC_CAR_REVERSE) {
         if (zero_crosses >= 20 && commutation_interval <= 2000) {
             old_routine = 0;
             enableCompInterrupts(); // enable interrupt
         }
-    } else {
-        if (zero_crosses >  40
-					) {
-            old_routine = 0;
-            enableCompInterrupts(); // enable interrupt
-        }
-    }
 }
 //#ifdef BRUSHED_MODE
 void runBrushedLoop()
@@ -1880,6 +1851,9 @@ int main(void)
 #ifdef USE_LED_STRIP
     send_LED_RGB(125, 0, 0);
 #endif
+#ifdef USE_RGB_LED
+     setIndividualRGBLed(1,0,0);
+#endif
 
 	
 #if defined(FIXED_DUTY_MODE) || defined(FIXED_SPEED_MODE)
@@ -2032,7 +2006,7 @@ if(zero_crosses < 5){
 #endif
 
         if (tenkhzcounter > LOOP_FREQUENCY_HZ) { // 1s sample interval 10000
-            consumed_current = (float)actual_current / 360 + consumed_current;
+            consumed_current += (actual_current << 16) / 360;
             switch (dshot_extended_telemetry) {
 
             case 1:
@@ -2127,7 +2101,7 @@ if(serial_mode == 0) {// kiss telem
             makeTelemPackage(degrees_celsius,
                 battery_voltage,
                 actual_current,
-                (uint16_t)consumed_current,
+                (uint16_t)(consumed_current>>16),
                 e_rpm);
             send_telem_DMA();
             send_telemetry = 0;
@@ -2147,18 +2121,20 @@ if(serial_mode == 0) {// kiss telem
             LL_ADC_REG_StartConversion(ADC1);
 						smoothedADCtemp = ((7* (uint32_t)smoothedADCtemp + ADC_raw_temp )) >>3;
             converted_degrees = __LL_ADC_CALC_TEMPERATURE(3300, smoothedADCtemp, LL_ADC_RESOLUTION_12B);
+ //           converted_degrees = (14300 - (int32_t)ADC_raw_temp * 33000/4096)  / 43 + 25 ;
 #endif
 #ifdef MCU_GDE23
             ADC_DMA_Callback();
-       //     converted_degrees = (1.43 - ADC_raw_temp * 3.3 / 4096) * 1000 / 4.3 + 25;
-					  converted_degrees = (14300 - (int32_t)ADC_raw_temp * 33000/4096)  / 43 + 25 ;
+         //   converted_degrees = (1.43 - ADC_raw_temp * 3.3 / 4096) * 1000 / 4.3 + 25;
+			    converted_degrees = (14300 - (int32_t)ADC_raw_temp * 33000/4096)  / 43 + 25 ;
+        //    converted_degrees = ((int32_t)(357.5581395348837f * (1 << 16)) - ADC_raw_temp * (int32_t)(0.18736373546511628f * (1 << 16))) >> 16;
             adc_software_trigger_enable(ADC_REGULAR_CHANNEL);
 #endif
 #ifdef ARTERY
             ADC_DMA_Callback();
             adc_ordinary_software_trigger_enable(ADC1, TRUE);
       //      converted_degrees = getConvertedDegrees(ADC_raw_temp);
-			converted_degrees = (12600 - (int32_t)ADC_raw_temp * 33000 / 4096) / -42 + 15;
+			      converted_degrees = (12600 - (int32_t)ADC_raw_temp * 33000 / 4096) / -42 + 15;
 #endif
             degrees_celsius = converted_degrees;
             battery_voltage = ((7 * battery_voltage) + ((ADC_raw_volts * 3300 / 4095 * VOLTAGE_DIVIDER) / 100)) >> 3;

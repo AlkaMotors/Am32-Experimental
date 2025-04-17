@@ -488,6 +488,25 @@ void LED_GPIO_init()
     LL_GPIO_Init(GREEN_PORT, &GPIO_InitStruct);
 }
 
+void setIndividualRGBLed(uint8_t red, uint8_t green, uint8_t blue){
+
+if(red > 1){
+	RED_PORT->BRR = RED_PIN;
+}else{
+	RED_PORT->BSRR = RED_PIN;
+}
+if(green > 1){
+	GREEN_PORT->BRR = GREEN_PIN;
+}else{
+	GREEN_PORT->BSRR = GREEN_PIN;
+}
+	if(blue > 1){
+BLUE_PORT->BRR = BLUE_PIN;
+}else{
+BLUE_PORT->BSRR = BLUE_PIN;
+	}
+}
+
 #endif
 
 #ifdef USE_CUSTOM_LED

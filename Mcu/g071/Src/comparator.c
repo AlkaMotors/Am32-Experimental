@@ -36,6 +36,7 @@
 
 COMP_TypeDef* active_COMP = COMP2;
 uint32_t current_EXTI_LINE = LL_EXTI_LINE_18;
+uint8_t medium_speed_set;
 
 uint8_t
 getCompOutputLevel()
@@ -62,6 +63,14 @@ void enableCompInterrupts()
 
 void changeCompInput()
 {
+if((average_interval < 400) && medium_speed_set){
+LL_COMP_SetPowerMode(active_COMP, LL_COMP_POWERMODE_HIGHSPEED);
+medium_speed_set = 0;
+}
+if((average_interval > 600) && !medium_speed_set){
+LL_COMP_SetPowerMode(active_COMP, LL_COMP_POWERMODE_MEDIUMSPEED);
+medium_speed_set = 1;
+}
     if (step == 1 || step == 4) { // c floating
 #ifdef N_VARIANT
         current_EXTI_LINE = PHASE_C_EXTI_LINE;

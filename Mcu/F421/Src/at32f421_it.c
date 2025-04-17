@@ -8,6 +8,8 @@
 #include "crsf.h"
 #include "peripherals.h"
 #include "common.h"
+#include "comparator.h"
+
 
 extern void transfercomplete();
 extern void PeriodElapsedCallback();
@@ -216,12 +218,14 @@ void DMA1_Channel5_4_IRQHandler(void)
  */
 void ADC1_CMP_IRQHandler(void)
 {
-    if ((EXINT->intsts & EXTI_LINE) != (uint32_t)RESET) {
-        EXINT->intsts = EXTI_LINE;
-    	if((INTERVAL_TIMER->cval) > ((average_interval >> 1)-(average_interval>>2))){
+  if((INTERVAL_TIMER->cval) > ((average_interval>>1))){
+       EXINT->intsts = EXTI_LINE;
        interruptRoutine();
+    }else{ 
+      if (getCompOutputLevel() == rising){
+        EXINT->intsts = EXTI_LINE;
     }
-    }
+  }
 }
 
 /**
@@ -241,13 +245,6 @@ void TMR16_GLOBAL_IRQHandler(void)
 
     TMR16->ists = 0x00;
     PeriodElapsedCallback();
-
-    //	  }
-
-    /* USER CODE END TIM14_IRQn 0 */
-    /* USER CODE BEGIN TIM14_IRQn 1 */
-
-    /* USER CODE END TIM14_IRQn 1 */
 }
 
 void TMR15_GLOBAL_IRQHandler(void)
